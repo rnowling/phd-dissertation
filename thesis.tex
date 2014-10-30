@@ -1,0 +1,53 @@
+\documentclass[11pt, letterpaper]{article}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{float}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[nottoc]{tocbibind}
+\usepackage{subcaption}
+\usepackage{url}
+\setlength{\pdfpagewidth}{\paperwidth}
+\setlength{\pdfpageheight}{\paperheight}
+
+\renewcommand{\captionfont}{\small}
+
+\newcommand{\degrees}{$^{\circ}$ \,}
+% \newcommand{\question}[1]{\textbf{#1}}
+
+\begin{document}
+\title{\textbf{Title}\\
+{\Large Ph.D. Thesis}}
+\author{Ronald J. Nowling}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\input{introduction}
+\newpage
+\input{gpcr_classifier}
+\newpage
+\input{chemosensory_receptors}
+\newpage
+\input{synteny}
+\newpage
+\input{rnaseq}
+\newpage
+\input{conclusion}
+\newpage
+
+\appendix
+\input{bigpetstore}
+\newpage
+
+\bibliography{proposal}
+\bibliographystyle{abbrv}
+
+\end{document}
