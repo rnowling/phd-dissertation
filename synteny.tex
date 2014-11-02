@@ -4,6 +4,8 @@
 
 \subsection{Methods}
 
+\subsubsection{Calculation of Scaffold Gene CDF}
+
 \subsubsection{Generation of Dot Plots for Macrosynteny}
 
 The workflow in Figure~\ref{fig:synteny-workflow} describes a process for preparing the dot plots for qualitative analysis of synteny.  Since synteny is the comparison of the order in which genes appear in the genome, the first step is to build data structures containing the gene names and positions along each scaffold.  We ignore the actual contents of the genes.
@@ -28,6 +30,8 @@ In the last step, we produce a scatter plot.  The axes correspond to the ordered
 
 \subsubsection{Microsynteny}
 \textcolor{red}{Synchro}
+
+
 
 \subsection{Results}
 
@@ -59,27 +63,35 @@ In the last step, we produce a scatter plot.  The axes correspond to the ordered
 \end{figure}
 
 \subsubsection{\emph{L. longipalpis} vs. \emph{P. papatasi} Do Not Exhibit Macrosynteny}
+Qualitative comparison of the \emph{L. longipalpis} and \emph{P. papatasi} genomes does not indicate the presence of macrosynteny (Figure~\ref{fig:synteny-dotplots-sandflies}).  Similarly, comparison of the \emph{Ae. aegypti} and \emph{A. gambiae} genomes also fail to demonstrate the presence of synteny (Figure~\ref{fig:synteny-dotplots-mosquitoes}).
+
+In contrast, comparison of the \emph{D. melanogaster} and \emph{D. simulans} genomes indicates extensive presence of synteny (Figure~\ref{fig:synteny-dotplots-drosophila}).  Comparison of the \emph{A. gambiae} and \emph{D. melanogaster} genomes suggest some evidence of synteny but qualitative analysis alone is not sufficient to make a determination (Figure~\ref{fig:synteny-dotplots-anopheles-drosophila}).
+
 
 \begin{figure}[H]
   \centering
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/synteny/papatasi_longipalpis_plot}
     \caption{\emph{L. longipalpis} vs. \emph{P. papatasi}}
-  \end{subfigure}
-  ~
-  \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{figures/synteny/dmel_dsim_plot}
-    \caption{\emph{D. melanogaster} vs. \emph{D. simulans}}
+    \label{fig:synteny-dotplots-sandflies}
   \end{subfigure}
   ~
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/synteny/aedes_anopheles_plot}
     \caption{\emph{Ae. aegypti} vs. \emph{A. gambiae}}
+    \label{fig:synteny-dotplots-mosquitoes}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{figures/synteny/dmel_dsim_plot}
+    \caption{\emph{D. melanogaster} vs. \emph{D. simulans}}
+    \label{fig:synteny-dotplots-drosophila}
   \end{subfigure}
   ~
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/synteny/dmel_anopheles_plot}
     \caption{\emph{A. gambiae} vs. \emph{D. melanogaster}}
+    \label{fig:synteny-dotplots-anopheles-drosophila}
   \end{subfigure}
 \label{fig:dot-plots}
 \caption{}
