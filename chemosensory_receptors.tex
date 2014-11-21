@@ -4,11 +4,26 @@
 
 \subsection{Methods}
 
-\subsubsection{Characterization}
+\subsubsection{Data Sets}
+
+Protein sequences for known chemosensory receptors from 12 \emph{Drosophila} and 3 mosquito species (\textcolor{red}{TODO TABLE}) were downloaded from their respective databases.
+
+The chemosensory receptor protein sequences from the 12 species of \emph{Drosophila} and 3 species of mosquitoes were separated into separate sets of olfactory and gustatory receptors.
+
+\textcolor{red}{TODO how were these sequences identified?}
+
+\subsubsection{Characterization of Amino Acid Conservation}
+Clustal-$\Omega$ (\textcolor{red}{TODO CITE, version}) was used to perform separate multiple sequence alignments (MSAs) of the olfactory and gustatory receptors from the 12 species of \emph{Drosophila} and 3 species of mosquitoes.  \textcolor{red}{TODO REMOVE outliers}.  The observed frequencies of each amino acid was computed for each position in the MSAs.  The maximum frequency and its associated amino acid was found for each position.  The maximum frequencies were plotted to identify highly-conserved residues.
 
 \subsubsection{Identification Approach 1: Digrams, Weighting, and Clustering}
 
 \subsubsection{Identification Approach 2: Profile Hidden Markov Models (HMMs)}
+
+Clustal-$\Omega$ (\textcolor{red}{TODO CITE}) was used to perform separate multiple sequence alignments (MSAs) of the olfactory and gustatory receptors from the 12 species of \emph{Drosophila} and 3 species of mosquitoes.  The program \texttt{hmmbuild} from the HMMER (\textcolor{red}{TODO CITE, version}) package was used to build separate HMMs for the olfactory (OR HMM) and gustatory (GR HMM) receptors.  Two additional chemosensory HMMs (7tm\_6, 7tm\_7) were retrieved from the Pfam database \textcolor{red}{TODO CITE, version}) for a total of four HMMs.
+
+The four HMMs were used to search the proteomes of the 12 \emph{Drosophila} and 3 mosquito species for chemosensory receptors using \texttt{hmmscan} from the HMMER (\textcolor{red}{TODO CITE, version}) package.  Each HMM was evaluated based on the number of olfactory and gustatory receptors correctly identified and other sequences incorrectly identified as potential chemosensory receptors.
+
+Using \texttt{hmmscan} from the HMMER (\textcolor{red}{TODO CITE, version}) package, the four HMMs were used to search the proteome of \emph{D. suzukii} to find potential chemosensory receptors.
 
 \begin{figure}[H]
   \centering
