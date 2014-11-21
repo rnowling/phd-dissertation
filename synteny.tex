@@ -29,6 +29,8 @@ The identifiers, scaffolds, locations, and sense in the FASTA headers were extac
 \subsubsection{Microsynteny} \label{sec:synteny-methods-synchro}
 For each genome, the identifiers, protein sequences, orientations, scaffolds, and locations extracted from FASTA files for each genome and reformatted as input for the program \texttt{Synchro} \textcolor{red}{TODO CITE}.  \texttt{Synchro} ($\Delta=5$) was run on the pairs \emph{D. melanogaster} and \emph{D. simulans}, \emph{An. gambiae} and \emph{L. longipalpis}, \emph{An. gambiae} and \emph{Ae. aegypti}, and \emph{L. longipalpis} and \emph{P. papatasi}.  Synteny blocks were extracted from the \texttt{OrthBlocks synt} files.  Three-way synteny blocks for \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi} were constructed by finding all pairs of synteny blocks for \emph{An. gambiae} and \emph{L. longipalpis} and \emph{L. longipalpis} and \emph{P. papatasi} that overlapped by at least one gene.  
 
+The CDF for the distribution of synteny block gene counts for each pair of organisms was computed as follows: The gene counts for each synteny block were normalized by dividing the gene counts by the total number of genes found in synteny blocks. Lists of the normalized gene counts were sorted largest to smallest.  Cumulative sums were computed over the normalized gene counts. The synteny block indices were normalized by the total number of synteny blocks.
+
 \textcolor{red}{TODO annotation of synteny blocks, distribution plots}
 
 
