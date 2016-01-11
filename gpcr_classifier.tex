@@ -1,7 +1,6 @@
-\section{Identification of Novel Arthropod Vector G Protein-Coupled Receptors}
+\chapter{Identification of Novel Arthropod Vector G Protein-Coupled Receptors}
 
-\subsection{Abstract}
-
+\begin{abstract}
 \paragraph*{Background:}
 The control of vector-borne diseases, such as malaria, dengue fever, and typhus fever is often achieved with the use of insecticides. Unfortunately, insecticide resistance is becoming common among different vector species. There are currently no chemical alternatives to these insecticides because new human-safe classes of molecules have yet to be brought to the vector-control market.  The identification of novel targets offer opportunities for rational design of new chemistries to control vector populations. One target family, G-Protein Coupled Receptors (GPCRs), has remained relatively under explored in terms of insecticide development.
 
@@ -10,8 +9,9 @@ We present a new analysis of GPCRs in the genomes of \emph{Aedes aegypti}, a vec
 
 \paragraph*{Conclusions:}
 A novel GPCR classifier for insect vectors, Ensemble*, was developed and GPCR predictions were validated. Ensemble* and the validation pipeline were applied to the genomes of three insect vectors (\emph{Ae. aegypti}, \emph{An. gambiae}, and \emph{Pe. humanus}), resulting in the identification of 52 GPCRs not previously identified, of which 11 are predicted GPCRs, and 19 are predicted and confirmed GPCRs.
+\end{abstract}
 
-\subsection{Introduction}
+\section{Introduction}
 
 G-Protein Coupled Receptors (GPCRs) are a class of seven transmembrane (7TM) proteins involved in signal transduction \cite{Pierce2002, Broeck2001} that respond to a diverse assemblage of stimuli.  These proteins play roles in essential invertebrate functions and are highly ``druggable,'' being targets for roughly 30\% of drugs on the human pharmaceutical market \cite{Wise2002}. The relative specificity of ligand binding combined with their abundance in metazoan genomes (1\% of \emph{Drosophila melanogaster} genome, 1.6\% of \emph{Anopheles gambiae} genome \cite{Adams2000, Hill2002}) makes these proteins attractive targets for insecticide development. The availability of insect genomes enables the identification of novel targets such as GPCRs and rational drug design processes which can produce insecticides, repellents, and other products for the control of vectors such as \emph{An. gambiae} \cite{Grimmelikhuijzen2007, Justice2003}.
 
@@ -33,22 +33,22 @@ We began by evaluating existing GPCR classifiers such as GPCRHMM \cite{Wistrand2
 
 These results will be of interest to the research community due to their potential applicability to insect vector population control via insecticide development \cite{Meyer2012}.  Further, Ensemble* identified a high number of previously-unidentified GPCRs in vector species.  The availability of better tools for the identification of signal transduction proteins such as GPCRs will be valuable as more insect genomes are sequenced.
 
-\subsection{Methods}
+\section{Methods}
 	
-\subsubsection{Data Sets}
+\subsection{Data Sets}
 
 Positive training sets of known GPCRs were built from multiple sources, including published GPCR sequences from \emph{An. gambiae} \cite{Hill2002, Holt2002},  \emph{Ae. aegypti} \cite{Nene2007}, and \emph{Pe. humanus} \cite{Kirkness2010}, searching VectorBase \cite{Lawson2007, Lawson2009} for GPCR annotations and GO terms G-protein coupled receptor activity (GO:0004930), G-protein coupled receptor signaling pathway (GO:0007186), and receptor activity (GO:0004872), and querying GPCRDB \cite{Horn2003,Vroling2011}. Duplicate entries were identified and removed using BLAST. For \emph{Ap. mellifera}, we obtained the pre-release 2 \emph{in silico} peptide translations of the genome from Beebase \cite{Munoz-Torres2011, Weinstock2006}.  A positive training set of known GPCRs was then compiled from a search of GPCRDB.  A positive training set of GPCRs for \emph{Dr. melanogaster} was compiled by searching GPCRDB and Flybase \cite{Adams2000, Gelbart1997, Crosby2007, Tweedie2009, McQuilton2011} for sequences annotated with the above GO terms.  The \textit{in silico} peptide translations of the \emph{Ho. sapiens} genome were obtained from Ensembl \cite{Hubbard2002}.  The positive training set for \emph{Ho. sapiens} consisted of GPCRs identified through a search of Ensembl for GO terms (see above) and sequences identified by Zhang et al. \cite{Zhang2006}.
 
 The \textit{in silico} peptide translations of the genomes for all of the organisms were current as of August 2010.  For the purposes of this study, we assumed that odorant receptors were not GPCRs \cite{Sato2008, Touhara2009, Wicher2008} and removed them from the positive training sets.  The negative training sets for each organism were defined as the remaining sequences in the peptide translations from each organism.
 
 
-\subsubsection{Development of the Ensemble* Classifier}
+\subsection{Development of the Ensemble* Classifier}
 
 Ensemble* combined the prediction capabilities of GPCRHMM and the Pfam A GPCR clan Hidden Markov Models (HMMs).
 Discrete likelihood score functions were used to map the GPCRHMM global scores and logarithms of the Pfam HMM e-values to likelihood scores.
 The discrete likelihood scores were combined using a linear weighting to produce an overall likelihood score.
 
-\subsubsection{GPCRHMM*}
+\subsection{GPCRHMM*}
 GPCRHMM* extends the functionality of GPCRHMM by mapping GPCRHMM's global scores to likelihood scores using a discrete likelihood score function.
 
 GPCRHMM was run on the combined data set sequences to compute global and local scores. Analysis of the global and local scores indicated that the global score is an effective predictor of a given input sequence's known classification but the correlation did not fit a simple function (Supplemental Figure 1).  
@@ -64,7 +64,7 @@ L_{\text{GPCRHMM*}}&\text{(x is a GPCR} | \text{x global score)} = \\
 &\frac{\text{\# of GPCRs in bin(x global score)}}{\text{\# of all sequences in bin(x global score)}}
 \end{align*} 
 
-\subsubsection{Pfam* Classifier}
+\subsection{Pfam* Classifier}
 Pfam* maps whole-protein expectation value (e-value) computed using Pfam A GPCR clan HMMs (retrieved from the Pfam database \cite{Punta2012} (Supplemental Table 3) to likelihood scores using a discrete likelihood score function.
 
 We used HMMER \cite{Finn2011} to compute the e-values for the sequences in the combined training set against the Pfam A GPCR clan HMMs. We then analyzed the resulting distribution of e-values with respect to the known classifications for the sequences in the combined training set.  In the case of matches against multiple HMMs for a single sequence, we selected the lowest e-value.  (Smaller e-values indicate better agreement.)  We found that the distribution of the logarithms of the e-values could be used to accurately discriminate between GPCRs and non-GPCRs. (Supplemental Materials Section Section 2 contains a discussion of the analysis of the e-value distributions.) We used HMMER's default threshold for the e-values; any sequences for which e-values were not reported (the e-values were larger than the threshold) were classified as non-GPCRs.
@@ -79,7 +79,7 @@ L_{\text{Pfam*}}&\text{(x is a GPCR} | \text{x\_evalue)} =\\
 &\frac{\text{\# of GPCRs in bin(log(x\_evalue))}}{\text{\# of all sequences in bin(log(x\_evalue))}}
 \end{align*}
 
-\subsubsection*{Ensemble* Classifier}
+\section*{Ensemble* Classifier}
 Ensemble* computed a discrete likelihood score for each input sequence as a linear combination of the likelihood scores computed by GPCRHMM* and Pfam*.
 
 \begin{equation*}
@@ -91,22 +91,22 @@ The function $L_{\text{Ensemble*}}(x)$ computed the predicted likelihood score t
 \subsection*{Prediction and Validation Pipeline}
 Potential GPCRs from \emph{Ae. aegypti}, \emph{An. gambiae}, and \emph{Pe. humanus} were initially identified using Ensemble*.  Ensemble* was trained on the combined data set.  A multi-step validation was performed on the GPCRs predicted by the Ensemble* classifier (Figure~\ref{fig:validation-pipeline}). First, database annotations were obtained for all positive predictions and ScanPROSITE \cite{Gattiker2002} was used to confirm the presence of a GPCR domain or profile. A likelihood threshold value for the Ensemble* likelihood score was chosen after this step using the Minimum Error Rate method \cite{Wistrand2006} (as determined by ScanPROSITE and database annotation). The threshold value of 0.085 was chosen independently for each vector, despite the differences between the vectors. All sequences that contained domains or profiles other than GPCR domains or profiles, or which were identified as something other than GPCRs in the database were filtered out. For the remaining sequences, two other validations were performed: similarity searches using BLAST against the NCBI nr database \cite{Pruitt2007} and structure prediction using I-TASSER \cite{Zhang2007, Roy2010}, a program for predicting 3D atomic structures from amino acid sequences and function through structural matches to proteins for which the structures and functions are known.  Lastly, sequences that were predicted as GPCRs by two out of three other criteria (unambiguous BLAST results indicating similarity to a known GPCR, presence of a GPCR domain or profile as identified by ScanPROSITE, or a high I-TASSER TM-score to a known GPCR) were considered to be confirmed GPCRs. Annotations for newly-discovered GPCRs were submitted to VectorBase.
 
-\subsubsection{Expression Analysis of Predicted GPCR Genes}
+\subsection{Expression Analysis of Predicted GPCR Genes}
 Vector sequences predicted as GPCRs with likelihood values above the threshold and that also had ScanProsite predicted GPCR domains or that were annotated as GPCRs in VectorBase \cite{Lawson2009} were selected for similarity searches against the available Expressed Sequence Tag (EST) datasets in VectorBase using the BLAST search algorithm. \emph{Ae. aegypti} sequences without an EST match were then selected for confirmation of expression by quantitative real-time PCR. The objective was to assess whether the predicted GPCRs correspond to expressed genes.
 
 Total RNA was isolated from whole female, and female heads of \emph{Ae. aegypti} mosquitoes using the Trizol reagent (Invitrogen).  DNAse treated (Fermentas) total RNA was used as template for first strand synthesis using oligo (dT) and Superscript III (Invitrogen).  Real-time PCR was performed using SybrGreen (ABI) with an ABI 7900 Real-Time PCR System.  Real-time PCR was carried out using primers (Supplemental Table 4) designed to the various GPCRs spanned by introns, where possible, and the internal control gene, 40S Ribosomal Subunit 5.  Each GPCR and control was carried out in quadruplicate for both whole bodies and heads.  Experimental cycle threshold ($\text{C}_\text{T})$ values were normalized to 40S Ribosomal Subunit 5 $\text{C}_{\text{T}}$ values.
 
-\subsection{Results and Discussion}
+\section{Results and Discussion}
 \label{sec:results}
 Multiple classification	methods	exist for identifying GPCRs. Two particular classification methods, GPCRHMM and	the Pfam A GPCR	clan hidden Markov models (HMMs), are both accurate and	sensitive on their own but do not necessarily predict the same set of sequences as GPCRs. We developed a new classifier, Ensemble*, that combines the prediction capabilities of GPCRHMM and the Pfam A GPCR clan Hidden Markov Models (HMMs) to improve the accuracy and sensitivity of predicting GPCRs from \emph{in silico} peptide translations of vector genomes. Discrete likelihood score functions were developed incorporating likelihood scores from the GPCRHMM global scores and logarithms of Pfam HMM e-values. The discrete likelihood scores were combined using a linear weighting to produce an overall likelihood score (Figure~\ref{fig:ensemble-diagram}).
 
-\subsubsection{Formation of Test Sets}
+\subsection{Formation of Test Sets}
 
 For training and validation of the classifiers, we assembled test sets that contained validated GPCR sequences (Table~\ref{tab:data-sources}).  \emph{Ae. aegypti}, \emph{An. gambiae}, and \emph{Pe. humanus} were chosen as representative vector organisms.   Published GPCR sequences from \emph{An. gambiae} \cite{Hill2002, Holt2002},  \emph{Ae. aegypti} \cite{Nene2007}, and \emph{Pe. humanus} \cite{Kirkness2010}, VectorBase \cite{Lawson2007, Lawson2009} searches for GPCR annotations and GO terms, and GPCRDB \cite{Horn2003,Vroling2011} searches were used as sources for compiling the test sets for these organisms.
 
 For further validation, the GPCR datasets of the honey bee, \emph{Ap. mellifera}, the fruitfly, \emph{Dr. melanogaster}, and humans were chosen because they are well annotated and used as the basis of other GPCR studies \cite{Bjarnadottir2004, Bjarnadottir2006, Fredriksson2003,Fredriksson2005, Gloriam2005, Haitina2009, Lagerstrom2006, Metpally2005, Metpally2005a, Vassilatis2003, Zhang2002, Zozulya2001}. GPCRDB was used to find GPCRs from \emph{Ap. mellifera} and \emph{Dr. melanogaster}. Additional GPCRs from \emph{Dr. melanogaster} were found by searching Flybase \cite{Adams2000, Gelbart1997, Crosby2007, Tweedie2009, McQuilton2011} for GO terms. The positive test set for \emph{Ho. sapiens} consisted of GPCRs identified through a search of Ensembl \cite{Hubbard2002} for GO terms and sequences identified by Zhang et al. \cite{Zhang2006}.
 
-\subsubsection{Design of the Ensemble* Classifier}
+\subsection{Design of the Ensemble* Classifier}
 After evaluating the existing classifiers, we designed a new classifier, Ensemble*, that improves predictionsensitivity and accuracy on vector organisms.
 An ensemble approach which combines multiclassifiers was chosen.
 Several of the best-performing existing classifiers use different methods for predicting GPCRs which results in recognizing different but overlapping sets of GPCRs.
@@ -130,14 +130,14 @@ A simple linear-weighting was used: Ensemble*'s likelihood scores are computed b
 
 The Ensemble* classifier offers	several	features that make it advantageous when	compared with the other	classifiers. First, the	confidence of each prediction for each sequence is represented as a discrete likelihood score normalized to a value between 0 and 1. Inexperienced users can easily interpret the discrete likelihood score, while experienced users can use the information provided by the discrete likelihood score to provide more advanced analysis. For example, we found	it was useful to identify a threshold value such that only sequences with predicted likelihood scores higher than or equal to that threshold value were classified as predicted GPCRs. However,	a user may choose to sort predictions into more nuanced	categories such	as high, neutral, and low confidence predictions. The discrete likelihood score also allows the	Ensemble* classifier to	be more	easily incorporated into a pipeline or other analysis tools. Secondly, Ensemble* can be	``tuned'' for different needs through the choice of training set and the relative weights given to different component classifiers, i.e., GPCRHMM* and Pfam*. See the Supplemental Materials for discussion concerning the choice of test sets and $\alpha$ value, which determine the relative weights of GPCRHMM* and Pfam*.
 
-\subsubsection{Ensemble* Classifier Improves Prediction Performance on Combined Dataset}
+\subsection{Ensemble* Classifier Improves Prediction Performance on Combined Dataset}
 
 Ensemble*'s overall classification performance was evaluated on the combined inferred proteomes of the organisms \emph{Ae. aegypti}, \emph{An. gambiae}, \emph{Ap. mellifera}, \emph{Dr. melanogaster}, \emph{Ho. sapiens}, and \emph{Pe. humanus}.  GPCRHMM*, Pfam*, and Ensemble* were trained using the combined data set, while GPCRHMM, Pfam, and PredCouple were used as provided by their authors.  By training and evaluating the classifiers on the same data set, we are able to test the ability of the classifiers to exactly reproduce the classifications of the sequences. The Ensemble* classifier achieved a higher true positives rate than the other classifiers for the same false positive rates (Figure~\ref{fig:combined-roc-curve}).  For this evaluation, we considered a sequence predicted as a GPCR by a classifier but not in the test set to be a ``false positive,'' while a ``true positive'' is when a sequence in the test set is correctly predicted to be a GPCR.
 
 To enable direct comparison of the classifiers, we evaluated each classifier at the false positive rates generated by GPCHMM (0.0061), Pfam (0.0067), and PredCouple (0.0064) on the combined training set, and 0.01, the false positive rate at which Ensemble*'s true positive rate plateaus (Table~\ref{tab:ensemble-results}).  Ensemble* had a true positive rate (87\%) at least 6\% higher than GPCRHMM (81\%), GPCRHMM* (81\%) and Pfam* (80\%) at GPCRHMM's false positive rate (0.0061).  Using Pfam's false positive rate (0.0067), Ensemble* had a true positive rate (89\%) at least 7\% higher than GPCRHMM* (81\%), Pfam (82\%), and Pfam* (80\%). When compared at PredCouple's false positive rate (0.0064), Ensemble* had a true positive rate (89\%) at least 3\% higher than GPCRHMM* (81\%), Pfam* (80\%), and PredCouple (86\%).  At 0.01, where Ensemble*'s true positive rate plateaus at 91\%, Ensemble* performed at least 11\% better than GPCRHMM* at 83\% and Pfam* at 80\%.  When comparing the highest true positive rates found by each of the classifiers, Ensemble* (91\%) had a true positive rate at least 5\% higher than that of GPCRHMM (81\%), GPCRHMM* (81\%), Pfam (82\%), Pfam* (80\%), and PredCouple (86\%).  Overall, Ensemble* correctly identified more GPCRs and with greater accuracy than any of the other classifiers.
 
 
-\subsubsection{Prediction Performance Improvement is More Marked for Vector Sequences}
+\subsection{Prediction Performance Improvement is More Marked for Vector Sequences}
 
 Efficacy was evaluated in two ways.  First, a per-organism hold-out validation was performed to simulate realistic use cases where the classifiers will be used to identify GPCRs in the predicted proteomes of novel organisms after being trained on proteomes of organisms for which the GPCRs are known.  Six validation trials were performed where sequences from one species was designated as the validation hold-out set, while sequences from the remaining five organisms were used to train the classifiers. Ensemble* showed marked improvement in sensitivity of at least 13\%, 6\%, 7\%, and 8\%, respectively, for \emph{Ae. aegypti} (89\%), \emph{An. gambiae} (89\%), and \emph{Pe. humanus} (91\%) GPCRs when compared with GPCRHMM (54\%, 77\%, 70\%), Pfam (83\%, 84\%, 86\%), PredCouple (75\%, 82\%, 83\%), Pfam* (76\%, 82\%, 83\%), and GPCRHMM* (60\%, 79\%, 75\%) (Figure~\ref{fig:individual-roc-curves}).
 
@@ -145,7 +145,7 @@ Efficacy was evaluated in two ways.  First, a per-organism hold-out validation w
 
 Secondly, we compared the number of test set sequences that Ensemble*, GPCRHMM, Pfam, and PredCouple failed to predict as GPCRs (``false negatives'') by species (Table~\ref{tab:missed-sequences}). GPCRHMM, Pfam, and Predcouple were run with the default settings, while a positive likelihood score was considered a prediction for Ensemble*. Ensemble* missed fewer sequences than all of the other classifiers for all six species and  was able to find \emph{all} of the \emph{Ap. mellifera} test set sequences.
 
-\subsubsection{Independent Validation Confirms Prediction of Putative GPCRs}
+\subsection{Independent Validation Confirms Prediction of Putative GPCRs}
 
 A multi-step validation process combining database annotations, similarity searches, domain identification, and structure prediction of the Ensemble* classifier predictions was performed (Figure~\ref{fig:validation-pipeline}). A total of 1,369 arthropod sequences, of which 697 belong to the vector species, had positive likelihood scores.  Using a threshold value of 0.085, 416 (148 for \emph{Ae. aegypti}; 148 for \emph{An. gambiae}; and 120 for \emph{Pe. humanus}) sequences were predicted as putative vector GPCRs. Of the 416 predicted sequences, 329 were in the original training set, confirming them as known GPCRs (Figure~\ref{fig:validation-pipeline}). Eighty-seven predicted sequences were not in the training set and required further validation and confirmation.  Of these 87 predicted sequences, 12 sequences are false positives: either their database annotation or identification of domains by ScanPROSITE \cite{DeCastro2006} indicated the sequences as something other than a GPCR.  From their respective database annotations, 23 predicted sequences were identified as previously-known GPCRs. Of the remaining 52 sequences, 27 were validated as having GPCR domains by ScanPROSITE but did not have a database GPCR annotation and 25 could be neither confirmed by their respective database annotation nor validated by ScanPROSITE as containing a GPCR domain (Supplemental Table 1).
 
@@ -154,17 +154,17 @@ The 52 predicted but unconfirmed sequences were validated using a combination of
 Forty-seven, or 11\%, of the vector training set sequences were not identified as GPCRs as they did not have likelihood scores above the threshold. There are several possible reasons for the omission of the 47 sequences, including sequences that were too short to accurately determine if they were GPCRs, too much divergence from known GPCR sequences and structural features, and positive likelihood scores less than the threshold value.
 
 
-\subsubsection{Thirty Previously-Unidentified Vector GPCRs Were Predicted by the Classifier}
+\subsection{Thirty Previously-Unidentified Vector GPCRs Were Predicted by the Classifier}
 
 Ensemble* predicted 30 previously-unidentified putative vector GPCRs of which 19 were confirmed (2 for \emph{Ae. Aegypti}, 11 for \emph{An. gambiae}, and 6 for \emph{Pe. humanus}).  While GPCRs from \emph{Ae. Aegypti} and \emph{An. gambiae} sequences were used as part of the training sets for the Pfam HMMs, \emph{Pe. humanus} sequences were not.  Most of the \emph{Pe. humanus} predicted GPCR sequences (Table~\ref{tab:novel-gpcrs}) were confirmed as GPCRs by using motif identification (ScanPROSITE) and protein modeling (I-TASSER); only one of the six \emph{Pe. humanus} GPCR predictions lacked a good match in the NCBI nr database. The identification of \emph{Pe. humanus} putative GPCRs that had no close homologs in the NCBI nr database indicated the improved ability of Ensemble* to identify GPCRs in an novel organism. The usefulness of Ensemble* to identify new GPCRs in already well-studied organisms was demonstrated by the prediction of 13 new GPCRs in the two mosquito species: \emph{Ae. aegypti}  and \emph{An. gambiae}.  The remaining 11 (4 for \emph{Ae. aegypti}, 5 for \emph{An. gambiae}, and 2 for \emph{Pe. humanus}) putative GPCRs could not be confirmed due to low levels of similarity to known GPCR structures or sequences. The identification of additional GPCRs by Ensemble* is likely due to the improved sensitivity in comparison with other classifiers and the use of newer gene sets with improved gene annotations. As the gene sets for \emph{Ae. aegypti}, \emph{An. gambiae}, and \emph{Pe. humanus} improve, Ensemble* may be able to identify more GPCRs.
 
-\subsubsection{Predicted GPCR Genes are Expressed}
+\subsection{Predicted GPCR Genes are Expressed}
 
 Expressed sequence tags (ESTs) represent fragments of cDNA that were generated by reverse transcribing mRNA available in the cells or organisms being analyzed. A match against an EST sequence in a database indicates the sequence is expressed and the organism at some point is likely synthesizing the equivalent protein in its lifetime. In the current study, matches against the VectorBase respective EST datasets were found for only two of the three vector species of interest: \emph{An. gambiae} and \emph{Ae. aegypti}, respectively. One hundred and forty six (146, 35\%) of the 416 vector GPCRs predicted by the Ensemble* classifier had EST matches in VectorBase. No EST matches were found for \emph{Pe. humanus}, likely due to the smaller number of EST studies that have been performed on the species. 
 
 Sixty-three \emph{Ae. aegypti} sequences were validated as GPCRs but had no EST matches in VectorBase, including 10 sequences that were not part of the original training set. These ten, plus an additional 28 randomly-selected sequences were assessed by quantitative RT-PCR.  All but one of these 38 selected sequences were expressed in either the mosquito head, body, or both (Supplemental Table 2).   
 
-\subsection{Conclusion}
+\section{Conclusion}
 
 Ensemble*, a novel GPCR classifier for insect vectors, was developed.  A validation pipeline was described and used to validate the predictions of Ensemble*.  As the genomes of more vectors species are sequenced, the availability of better tools for predicting and validating GPCRs such as the Ensemble* classifier and the validation pipepline presented here will continue to be of great interest.
 
@@ -173,7 +173,7 @@ We also provided a new analysis of the GPCR repertoires of the three vector spec
 
 \newpage
 
-\subsection{Figures}
+\section*{Figures}
 
 
 \begin{figure}[H]
