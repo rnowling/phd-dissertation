@@ -1,16 +1,46 @@
 \chapter{Introduction}
-As the most populous multi-celled organisms on Earth \textcolor{red}{cite}, insects are of great interest due to their impact on agriculture and role as vectors of human diseases.  \emph{Drosophila suzukii} Matsumura, one of $\approx$ 1,500 species of \emph{Drosophila} flies, has proven to be quite a particularly onerous pest of fruit crops with predicted yield losses of up to 80\% due ot the pest.  \emph{D. suzukii} was originally identified in the early 1900's in Japan, Korea, and China where the flies were found on strawberry and cherry fruits. \emph{D. suzukii} has spread worldwide, first spotted in the mainland United States in Santa Cruz, CA in August 2008. With up to 76\% of the United States' combined cherry, strawberry, raspberry, blackberry, and blueberry commerical production occuring in California, \emph{D. suzukii} has the potential to impact a \$2.6 billion industry. \textcolor{red}{cite Walsh, Hauser, Cini}  
 
-Multiple insect species serve as vectors of human disease.  The mosquito \emph{Anopheles gambiae} is the primary carrier of the \emph{Plasmodium falciparum} parasite that causes malaria. Another mosquito, \emph{Aedes aegypti}, is a vector dengue and yellow fever. The human body louse \emph{Pediculus humanus} spreads thypoid fever. \cite{Fournier2002, Foucault2006, Grimmelikhuijzen2007}
+\section{Background and Motivation}
+Bioinformatic analysis plays a key role in understanding the biology of insect vectors and pests, which in turn, directly impacts population control efforts.
+
+Nearly half of the world's population are at risk of contracting malaria.  In 2015, 214 million malaria infections, resulting in 438,000 deaths, were reported. Nearly 90\% of the reported infections and deaths have occurred in Sub-Saharan Africa.  The parasites responsible for malaria are transmitted by \emph{Anopheles} mosquitoes \cite{Fournier2002}.
+
+Population genetics revealed the existence of \emph{Anopheles coluzzii}, a species separate but physically-indistinguishable from the well-known \emph{Anopheles gambiae}. These two species differ in their feeding and mating habits, and while \emph{An. gambiae} is resistant pyrethroid insecticides, \emph{An. coluzzii} is not.  Comparative genomic analysis is enabling researchers to understand the molecular basis of these differences.  Genomic analysis is also revealing the molecular evolution responsible for insecticide resistance and leading to the identification of new drug targets.  Using PCR-based assays, researchers can distinguish between the two species and employ appropiate population control strategies for a given area. 
+
+\emph{Drosophila suzukii} Matsumura, one of $\approx$ 1,500 species of \emph{Drosophila} flies, has proven to be quite a particularly onerous pest of fruit crops resulting in predicted yield losses of up to 80\%.  \emph{D. suzukii} was originally identified in the early 1900's in Japan, Korea, and China where the flies were found on strawberry and cherry fruits. \emph{D. suzukii} has spread worldwide, first spotted in the mainland United States in Santa Cruz, CA in August 2008. With up to 76\% of the United States' combined cherry, strawberry, raspberry, blackberry, and blueberry commerical production occuring in California, \emph{D. suzukii} has the potential to impact a \$2.6 billion industry. \textcolor{red}{cite Walsh, Hauser, Cini}
+
+Feeding preferences of \emph{Drosophila} species have been connected with the expansion and contraction of olfactory receptor families.
 
 two sand fly species, L. Longipalpis and P. papatasi. Sand flies are ...
 
-Despite their immense impact, many insect species have not yet been studied extensively.  With short life spans and large numbers of offspring, insects undergo relatively rapid evolution, resulting in a broad spectrum of differing biological traits. Feeding preferences, tsetse fly, hosts to pathogens. \textcolor{red}{importance of study to identifying pest management strategies, i5k project}.
+With the rise in the importance of bioinformatics, the number of new algorithms and software implementions released and published every year has exploded.  Much like the gene flow between separate populations studied by the biologists, bioinformaticians have been successful at adopting and adapting ideas from the fields of algorithms and machine learning, while contributing improvements back.  Adaptions and improvements include the Smith-Waterman pairwise string alignment algorithms. Work on applying Hidden Markov Models to speech recognition was adapted to conserved domains in proteins.  And, bioinformatics introduced so-called Markov clustering, or Affinity Propagation, which is now a popular tool in the broader machine learning world.
 
-The availability of insect genomes enables the identification of novel targets such as GPCRs and rational drug design processes which can produce insecticides, repellents, and other products for the control of vectors such as \emph{An. gambiae} \cite{Grimmelikhuijzen2007, Justice2003}.
+Despite these successes, bioinformatics is facing a crisis.  The software implementations of these novel algorithms are crucial to bioinformatics analysis.  Yet, the software is often abandoned after short, 3-5 year funding cycles end, significantly frustrating efforts at reproducibility and standardization around a common implementation.  Changes or modifications to techniques are often achieved via a new, from-scratch implementation rather than a contribution to the original implementation.  Not only is the continual re-implementation of the software counter-productive and costly, the chance of introducing bugs or variations is higher.  As data volumes increase, bioinformaticians will face the additional complexity of employing distributed and parallel computing to achieve the necessary scale.
 
-As divergent, non-model organisms, insects also present a challenge for bioinformatics. Existing computational tools and mathematical frameworks are often designed with model organisms in mind, needing adaptations to be used with the unique challenges present in the study of non-model insect genomes.
+The machine learning community has invested significant effort into developing mature, standardized libraries for a variety of languages and platforms.  Due to their large user bases and maturity, most bugs have identified and fixed and offer optimal performance.  Actively supported by communities of developers, new methods are added reasonably quickly and users can expect continued support.  Some of these libraries are able to utilize GPUs and distributed computing to scale to massive data volumes. By finding ways to utilize common machine learning techniques, bioinformatics can sidestep some of the issues above by utilizing these well-supported, commonly-available libraries.
 
-In this thesis, we perform bioinformatic analyses of several insect genomes. Throughout the analysis process, we use a combination of existing tools and create new tools where necessary to improve upon the analysis of insect genomes in the face of their unique challenges.  As part of our work, we developing new tools specific to the study of insects.
 
-This thesis is organized as follows: Chapter 2 provides background on the biological and molecular frameworks as well relevant mathematical and algorithmic formalisms. Chapter 3 comparative analysis of synteny and ka/ks. Chapter 4 differential expression. Chapter 5 - gene annotation GPCRs. Chapter 6 chemosensory receptors. Chapter 7 pop gen. Appendix, bigpetstore
+%Multiple insect species serve as vectors of human disease.  The mosquito \emph{Anopheles gambiae} is the primary carrier of the \emph{Plasmodium falciparum} parasite that causes malaria. Another mosquito, \emph{Aedes aegypti}, is a vector dengue and yellow fever. The human body louse \emph{Pediculus humanus} spreads thypoid fever. \cite{Fournier2002, Foucault2006, Grimmelikhuijzen2007}
+
+
+%Despite their immense impact, many insect species have not yet been studied extensively.  With% short life spans and large numbers of offspring, insects undergo relatively rapid evolution, resulting in a broad spectrum of differing biological traits. Feeding preferences, tsetse fly, hosts to pathogens. \textcolor{red}{importance of study to identifying pest management strategies, i5k project}.
+
+%The availability of insect genomes enables the identification of novel targets such as GPCRs and rational drug design processes which can produce insecticides, repellents, and other products for the control of vectors such as \emph{An. gambiae} \cite{Grimmelikhuijzen2007, Justice2003}.
+
+%As divergent, non-model organisms, insects also present a challenge for bioinformatics. Existing computational tools and mathematical frameworks are often designed with model organisms in mind, needing adaptations to be used with the unique challenges present in the study of non-model insect genomes.
+
+\section{Contributions}
+In this dissertation, we evaluate the applicability of common machine learning techniques to challenges in the bioinformatic analysis of insect vector genomes.  
+
+%In this thesis, we perform bioinformatic analyses of several insect genomes. Throughout the analysis process, we use a combination of existing tools and create new tools where necessary to improve upon the analysis of insect genomes in the face of their unique challenges.  As part of our work, we developing new tools specific to the study of insects.
+
+\section{Synopsis}
+In this document, we
+
+\begin{enumerate}
+\item Perform a comparative analysis of the recently-sequenced genomes of two sand fly species, \emph{L. longipalpis} and \emph{P. papatasi}. (Chapter 2)
+\item Evaluate existing Hidden Markov Model (HMM)-based tools for identifying G Protein-Coupled Receptors (GPCRs) on insect vector genomes and demonstrate how the simple approach of creating an ensemble of existing classifiers can improve accuracy by at least 5-11\%. (Chapter 3)
+\item Apply Random Forests to ranking SNPs from incipient species of insect vectors.  We identify multiple sources of bias that can arise and provide solutions that utilize ``out-of-the-box'' implementations of decision trees.  We provide a software implementation of our workflow using the popular machine learning library sci-kit learn and apply it to studying SNPs of \emph{Anopheles} mosquitoes. (Chapter 4)
+\end{enumerate}
+
+We conclude by identifying topics for further investigation.
