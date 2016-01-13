@@ -78,7 +78,7 @@ L_{\text{Pfam*}}&\text{(x is a GPCR} | \text{x\_evalue)} =\\
 &\frac{\text{\# of GPCRs in bin(log(x\_evalue))}}{\text{\# of all sequences in bin(log(x\_evalue))}}
 \end{align*}
 
-\section*{Ensemble* Classifier}
+\subsection{Ensemble* Classifier}
 Ensemble* computed a discrete likelihood score for each input sequence as a linear combination of the likelihood scores computed by GPCRHMM* and Pfam*.
 
 \begin{equation*}
@@ -87,7 +87,7 @@ L_{\text{Ensemble*}}(x) = \alpha L_{\text{Pfam*}}(x) + (1 - \alpha) L_{\text{GPC
 
 The function $L_{\text{Ensemble*}}(x)$ computed the predicted likelihood score that a given sequence $x$ was a GPCR. The functions $L_{\text{Pfam*}}(x)$ and $L_{\text{GPCRHMM*}}$(x) were the likelihood scores that $x$ was a GPCR as predicted by the Pfam* and GPCRHMM* classifiers, respectively. The variable $\alpha$, where $0 \le \alpha \le 1$, determines the relative weight of the two classifiers in computing the overall likelihood. More complex weighting schemes were not considered as this simple linear weighting performed well with $\alpha = 0.5$ (Supplemental Materials Section 3 contains an analysis of different $\alpha$ values.).
 
-\subsection*{Prediction and Validation Pipeline}
+\subsection{Prediction and Validation Pipeline}
 Potential GPCRs from \emph{Ae. aegypti}, \emph{An. gambiae}, and \emph{Pe. humanus} were initially identified using Ensemble*.  Ensemble* was trained on the combined data set.  A multi-step validation was performed on the GPCRs predicted by the Ensemble* classifier (Figure~\ref{fig:validation-pipeline}). First, database annotations were obtained for all positive predictions and ScanPROSITE \cite{Gattiker2002} was used to confirm the presence of a GPCR domain or profile. A likelihood threshold value for the Ensemble* likelihood score was chosen after this step using the Minimum Error Rate method \cite{Wistrand2006} (as determined by ScanPROSITE and database annotation). The threshold value of 0.085 was chosen independently for each vector, despite the differences between the vectors. All sequences that contained domains or profiles other than GPCR domains or profiles, or which were identified as something other than GPCRs in the database were filtered out. For the remaining sequences, two other validations were performed: similarity searches using BLAST against the NCBI nr database \cite{Pruitt2007} and structure prediction using I-TASSER \cite{Zhang2007, Roy2010}, a program for predicting 3D atomic structures from amino acid sequences and function through structural matches to proteins for which the structures and functions are known.  Lastly, sequences that were predicted as GPCRs by two out of three other criteria (unambiguous BLAST results indicating similarity to a known GPCR, presence of a GPCR domain or profile as identified by ScanPROSITE, or a high I-TASSER TM-score to a known GPCR) were considered to be confirmed GPCRs. Annotations for newly-discovered GPCRs were submitted to VectorBase.
 
 \subsection{Expression Analysis of Predicted GPCR Genes}
