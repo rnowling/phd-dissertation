@@ -1,55 +1,69 @@
-\documentclass[11pt, letterpaper]{report}
-\usepackage{amsmath}
-\usepackage{caption}
-\usepackage{color}
-\usepackage{float}
-\usepackage{fullpage}
-\usepackage{graphicx}
-\usepackage{longtable}
-\usepackage{multirow}
-\usepackage[nottoc]{tocbibind}
+\documentclass[review,numrefs,twoadvisors,sort&compress]{nddiss2e}
+%\usepackage{amsmath}
+%\usepackage{caption}
+%\usepackage{color}
+%\usepackage{float}
+%\usepackage{fullpage}
+%\usepackage{graphicx}
+%\usepackage{longtable}
+%\usepackage{multirow}
+%\usepackage[nottoc]{tocbibind}
 \usepackage{subcaption}
 \usepackage{url}
-\setlength{\pdfpagewidth}{\paperwidth}
-\setlength{\pdfpageheight}{\paperheight}
-\setcounter{tocdepth}{0}
+%\setlength{\pdfpagewidth}{\paperwidth}
+%\setlength{\pdfpageheight}{\paperheight}
+%\setcounter{tocdepth}{0}
 
-\renewcommand{\captionfont}{\small}
+%\renewcommand{\captionfont}{\small}
 
 \newcommand{\degrees}{$^{\circ}$ \,}
 % \newcommand{\question}[1]{\textbf{#1}}
 
 \begin{document}
-\title{\textbf{Title}\\
-{\Large Ph.D. Thesis}}
+\frontmatter
+
+\title{TITLE}
+
 \author{Ronald J. Nowling}
+
+\work{Dissertation}
+
+\degaward{Doctor of Philosophy}
+
+\advisor{Scott Emrich}
+\secondadvisor{Mary Ann McDowell}
+
+\department{Computer Science \& Engineering}
 
 \maketitle
 
-\newpage
+\makecopyright
+
+\include{abstract}
 
 \tableofcontents
+\listoffigures
+\listoftables
 
-\newpage
+\include{acknowledgements}
 
-\input{introduction}
-\pagebreak
-\input{gpcr_classifier}
-\pagebreak
-\input{random_forests}
-\pagebreak
-\input{sandfly_genomes}
-\pagebreak
-%\input{chemosensory_receptors}
-%\pagebreak
-\input{conclusion}
-\pagebreak
+\mainmatter
+
+
+\include{introduction}
+\include{sandfly_genomes}
+\include{gpcr_classifier}
+\include{random_forests}
+\include{conclusion}
 
 \appendix
-\input{bigpetstore}
-\newpage
+
+\include{bigpetstore}
+
+\backmatter
 
 \bibliography{thesis}
-\bibliographystyle{abbrv}
+\bibliographystyle{abbrvnat}
 
 \end{document}
+
