@@ -10,20 +10,26 @@ The larger bioinformatics community is adept at developing algorithms and accomp
 
 The larger scientific community has good reason to be skeptical of new methods and software packages. It can take years to identify all of the bugs in software and ensure that the results are correct.  With high turn over due to graduating students and relatively short funding cycles, research groups rarely have the resources to maintain software implementations beyond an initial proof of concept, leading to a flood of new tools without adequate testing which are poorly maintained.
 
-Development time and number of bugs can be reduced through writing \emph{less new code} and and re-using more existing libraries. The machine learning community has invested significant effort into developing mature, standardized libraries for a variety of languages and platforms.  Due to their large user bases and maturity, most bugs have identified and fixed and offer optimal performance.  Actively supported by communities of developers, new methods are added reasonably quickly and users can expect continued support.  Some of these libraries are able to utilize GPUs and distributed computing to scale to massive data volumes.
+Development time and number of bugs can be reduced through writing \emph{less new code} and and using more existing libraries. The machine learning community has invested significant effort into developing and standardizing around libraries for a variety of languages and platforms.  Libraries such as scikit-learn \cite{scikit-learn} are have large users bases and have gained the respect of the scientific community for their quality, performance, active community of developers, and maturity. New methods are added reasonably quickly, releases occur on a regular schedule, and users can expect continued support.  Some of these libraries \textcolor{red}{CITE} are able to utilize GPUs and distributed computing to scale to massive data volumes.
 
 \section{Contributions}
-The key challenge is to demonstrate that standard machine learning techniques can be adapted to overcome the challenges facing bioinformatic analysis of insect vector genomes in place of more specialized methods.  In this dissertation, we demonstrate exactly that.
+The key challenge is to demonstrate that standard machine learning techniques can be adapted to overcome the challenges facing bioinformatic analysis of insect vector genomes in place of more specialized methods.  In this dissertation, we demonstrate the role of machine learning methods in insect bioinformatics. 
 
-%In this thesis, we perform bioinformatic analyses of several insect genomes. Throughout the analysis process, we use a combination of existing tools and create new tools where necessary to improve upon the analysis of insect genomes in the face of their unique challenges.  As part of our work, we developing new tools specific to the study of insects.
+We begin by analyzing the genomes and RNASeq expression of genes from two sand fly species, \emph{Lutzomyia longipalpis} and \emph{Phlebotomus papatasi}, which are vectors of leishmaniasis.  These analyses provide background into the types of questions that biologists seek to answer and the challenges associated with insect genome bioinformatics.
+
+Secondly, we evaluate methods for identifying G Protein-Coupled Receptors (GPCRs) for their sensitivity and accuracy when applied to insect genomes.  We use our evalution to design an ensemble that combines GPCRHMM and Pfam HMMs with empirical likelihood functions to identify and rank potential GPCRs.
+
+Lastly, we describe a workflow for ranking SNPs from incipient \emph{Anopheles} species using Random Forests.  Along the way, we demonstrate the presence of bias using numerical experiments and describe appropriate solutions that can be used with standard, \emph{unmodified} implementations of decision trees available in popular machine learning libraries. We provide a software package called Asaph that implements the workflow using Python, numpy, scipy, and scikit-learn.  Asaph is applied to SNPs from \emph{Anopheles gambiae}, \emph{Anopheles coluzzii}, and two forms of \emph{Anopeheles funestus}, Folonzo and Kiribina, resulting in the identification of SNPs in genes previously reportedly to be associated with differences in insecticide resistance between the populations.
+
+\textcolor{red}{draw conclusion, bringing argument back to original goal}
 
 \section{Synopsis}
-In this document, we
+The rest of this dissertation is organized as follows:
 
 \begin{enumerate}
-\item Perform a comparative analysis of the recently-sequenced genomes of two sand fly species, \emph{L. longipalpis} and \emph{P. papatasi}. (Chapter 2)
-\item Evaluate existing Hidden Markov Model (HMM)-based tools for identifying G Protein-Coupled Receptors (GPCRs) on insect vector genomes and demonstrate how the simple approach of creating an ensemble of existing classifiers can improve accuracy by at least 5-11\%. (Chapter 3)
-\item Apply Random Forests to ranking SNPs from incipient species of insect vectors.  We identify multiple sources of bias that can arise and provide solutions that utilize ``out-of-the-box'' implementations of decision trees.  We provide a software implementation of our workflow using the popular machine learning library sci-kit learn and apply it to studying SNPs of \emph{Anopheles} mosquitoes. (Chapter 4)
+\item Chapter 2: Comparative analysis of the genomes of and RNASeq expression of genes from two sand fly species, \emph{L. longipalpis} and \emph{P. papatasi}.
+\item Chapter 3: Evaluation of Hidden Markov Model (HMM)-based tools for identifying G Protein-Coupled Receptors (GPCRs) in insect vector genomes and demonstratation of how a simple approach for creating an ensemble of existing classifiers can improve accuracy by at least 5-11\%.
+\item Chapter 4: Application of Random Forests to ranking SNPs from incipient species of \emph{Anopheles} mosquitoes.  We identify multiple sources of bias that can arise and provide solutions that utilize ``out-of-the-box'' implementations of decision trees.  We provide a software implementation of our workflow using the popular machine learning library sci-kit learn, which we apply to the study of SNPs from several \emph{Anopheles} species.
 \end{enumerate}
 
-We conclude by identifying topics for further investigation.
+We conclude by identifying topics for further investigation. \textcolor{red}{expand}
