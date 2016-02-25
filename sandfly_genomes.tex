@@ -1,4 +1,4 @@
-\chapter{Comparative Analysis of \emph{P. papatasi} and \emph{L. longipalpis} Sand Fly Genomes}
+\chapter{Comparative Genomic Analysis of \emph{P. papatasi} and \emph{L. longipalpis} Sand Fly Genomes}
 
 \section{Introduction}
 
@@ -75,10 +75,17 @@ Analysis of \emph{Ph. papatasi}, \emph{Lu. longipalpis}, and \emph{Ae. aegypti} 
 \end{figure}
 
 \subsection{Qualitative Analysis of Synteny}
+Rearrangements of chromosomes are rare events and tend to happen in a block-wise fashion that mainly preserves the local order of genes on the chromosome. Thus, even after long periods of divergence between species, synteny blocks, defined as conserved runs of consecutive orthologous genes, remain discernible. \textcolor{red}{CITE Heger}.  The presence of synteny can be used to infer evolutionary relationships between organisms at a macroscopic level, complementing analyses such as gene family expansions and reductions and changes within pairs of orthologous genes \textcolor{red}{CITE Zdobnov}.
+
 Synteny between pairs of dipterans was analyzed qualitatively by generating scatter plots where each axis represents genes locations for one species and dots are drawn where orthologs occur (see Section~\ref{sec:synteny-methods-dotplots}). The presence of synteny was not detectable in a qualitative comparison of \emph{L. longipalpis} and \emph{P. papatasi} and \emph{Ae. aegypti} and \emph{A. gambiae} (Figures~\ref{fig:synteny-dotplots-sandflies}~and~\ref{fig:synteny-dotplots-mosquitoes}).  In contrast, there was extensive qualitative evidence of synteny between \emph{D. melanogaster} and \emph{D. simulans} (Figure~\ref{fig:synteny-dotplots-drosophila}).  Qualitative comparison of \emph{A. gambiae} and \emph{D. melanogaster} indicated the co-location of orthologous genes on the same chromosomes but not synteny (Figure~\ref{fig:synteny-dotplots-anopheles-drosophila}). \textcolor{red}{TODO CITE co-location}
+
+\textcolor{red}{compare Anopheles vs Dmel to Zdobnov paper}
+
+\textcolor{red}{how long ago have the genomes diverged?}
 
 \textcolor{red}{TODO CITE synteny of insects}
 
+\textcolor{red}{comparison of sand flies to mosquitoes and drosophila}
 
 \begin{figure}[H]
   \centering
@@ -87,13 +94,37 @@ Synteny between pairs of dipterans was analyzed qualitatively by generating scat
     \caption{\emph{L. longipalpis} vs. \emph{P. papatasi}}
     \label{fig:synteny-dotplots-sandflies}
   \end{subfigure}
-  ~
+  \\
   \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{figures/synteny/aedes_anopheles_plot}
-    \caption{\emph{Ae. aegypti} vs. \emph{A. gambiae}}
-    \label{fig:synteny-dotplots-mosquitoes}
+    \includegraphics[width=\textwidth]{figures/synteny/longipalpis_anopheles_plot}
+    \caption{\emph{L. longipalpis} vs. \emph{An. gambiae}}
+    \label{fig:synteny-dotplots-longipalpis-anopheles}
   \end{subfigure}
   ~
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{figures/synteny/papatasi_anopheles_plot}
+    \caption{\emph{P. papatasi} vs. \emph{An. gambiae}}
+    \label{fig:synteny-dotplots-papatasi-anopheles}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{figures/synteny/longipalpis_dmel_plot}
+    \caption{\emph{L. longipalpis} vs. \emph{D. melanogaster}}
+    \label{fig:synteny-dotplots-longipalpis-dmel}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{figures/synteny/papatasi_dmel_plot}
+    \caption{\emph{P. papatasi} vs. \emph{D. melanogaster}}
+    \label{fig:synteny-dotplots-papatasi-dmel}
+  \end{subfigure}
+  ~
+%  \begin{subfigure}[b]{0.45\textwidth}
+%    \includegraphics[width=\textwidth]{figures/synteny/aedes_anopheles_plot}
+%    \caption{\emph{Ae. aegypti} vs. \emph{A. gambiae}}
+%    \label{fig:synteny-dotplots-mosquitoes}
+%  \end{subfigure}
+%  ~
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/synteny/dmel_dsim_plot}
     \caption{\emph{D. melanogaster} vs. \emph{D. simulans}}
@@ -109,12 +140,11 @@ Synteny between pairs of dipterans was analyzed qualitatively by generating scat
 \caption{Qualitative Analysis of Synteny}
 \end{figure}
 
-\textcolor{red}{TODO Muller elements}
-
-\subsection{Quantitative Analysis of Synteny}
-Synteny blocks were found between pairs of dipterans using the program SynChro (see Section~\ref{sec:synteny-methods-synchro}). Analysis of the cumulative gene densities of the synteny blocks agreed with observations made from the qualitative analysis of synteny (see Figure~\ref{fig:synteny-dist-cdf}).  Over 80\% of the \emph{D. melanogaster} and \emph{D. simulans} genes found in synteny blocks were located in 20\% of the synteny blocks.  The genes of \emph{L. longipalpis} and \emph{P. papatasi}, \emph{Ae. aegypti} and \emph{A. gambiae}, and \emph{A. gambiae} and \emph{D. melanogaster} were distributed nearly uniformally over their corresponding synteny blocks, indicating an absence of large synteny blocks.
+Failing to find the presence of macrosynteny when comparing \emph{L. longipalpis} and \emph{P. papatasi}, we analyzed individual microsynteny blocks. Synteny blocks were found between pairs of dipterans using the program SynChro (see Section~\ref{sec:synteny-methods-synchro}). Analysis of the cumulative gene densities of the synteny blocks agreed with observations made from the qualitative analysis of synteny (see Figure~\ref{fig:synteny-dist-cdf}).  Over 80\% of the \emph{D. melanogaster} and \emph{D. simulans} genes found in synteny blocks were located in 20\% of the synteny blocks.  The genes of \emph{L. longipalpis} and \emph{P. papatasi}, \emph{Ae. aegypti} and \emph{A. gambiae}, and \emph{A. gambiae} and \emph{D. melanogaster} were distributed nearly uniformally over their corresponding synteny blocks, indicating an absence of large synteny blocks.
 
 \textcolor{red}{TODO bar plot of average, std of synteny block sizes}
+
+\textcolor{red}{compare percentage of genes in synteny blocks}
 
 \begin{figure}[H]
   \centering
@@ -135,7 +165,6 @@ Synteny blocks were found between pairs of dipterans using the program SynChro (
 
 \textcolor{red}{analysis of individual blocks}
 
-\subsection{Annotation of Sand Fly Synteny Blocks}
 The five largest synteny blocks for \emph{L. longipalpis} and \emph{P. papatasi} and \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi} were extracted from the output of SynChro (see Section~\ref{sec:synteny-methods-synchro}).  The gene composition of the blocks were annotated using BLAST.
 
 \textcolor{red}{TODO diagrams, analysis}
