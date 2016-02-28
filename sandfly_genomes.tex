@@ -150,12 +150,79 @@ Synteny between pairs of dipterans was analyzed qualitatively by generating scat
   \label{tab:synteny-block-stats}
 \end{table}
 
-We followed up the qualitative analysis up with a quantitative analysis of synteny blocks. Synteny blocks were found between pairs of dipterans using the program SynChro (see Section~\ref{sec:synteny-methods-synchro}). As indicated by the qualitative analysis, synteny was most conserved between \emph{D. melanogaster} and \emph{D. simulans} (243 synteny blocks with the largest block size of 700 genes, an average size of 41.6 genes, and a median size of 5 genes).  When compared to each other or \emph{An. gambiae}, the sand flies exhibited little conservation of synteny with the largest blocks consisting of far fewer genes than those of \emph{D. melanogaster} and \emph{D. simulans} (24 genes for \emph{L. longipalpis} and \emph{P. papatasi}, 39 genes for \emph{L. longipalpis} vs. \emph{An. gambiae}, and 21 genes for \emph{P. papatasi} vs. \emph{An. gambiae}).
+We followed up the qualitative analysis up with a quantitative analysis of synteny blocks. Synteny blocks were found between pairs of dipterans using the program SynChro (see Section~\ref{sec:synteny-methods-synchro}). As indicated by the qualitative analysis, synteny was most conserved between \emph{D. melanogaster} and \emph{D. simulans} (243 synteny blocks with the largest block size of 700 genes, an average size of 41.6 genes, and a median size of 5 genes).  When compared to each other or \emph{An. gambiae}, the sand flies exhibited little conservation of synteny with the largest blocks consisting of far fewer genes than those from \emph{D. melanogaster} and \emph{D. simulans} (24 genes from \emph{L. longipalpis} and \emph{P. papatasi}, 39 genes from \emph{L. longipalpis} vs. \emph{An. gambiae}, and 21 genes from \emph{P. papatasi} vs. \emph{An. gambiae}).
 
-\textcolor{red}{analysis of individual blocks}
+We annotated and analyzed the largest synteny blocks from \emph{L. longipalpis} and \emph{P. papatasi}. and a three-way comparison of \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi}.  Four of the largest synteny blocks from \emph{L. longipalpis} and \emph{P. papatasi} contained genes associated with peritrophic matrices (see Table~\ref{tab:synteny-llot-ppat-peritrophic}), membrane-bound or -associated genes (see Table~\ref{tab:synteny-llot-ppat-membrane}), RNA regulation and synthesis (see Table~\ref{tab:synteny-llot-ppat-rna}), and intracellular processes (see Table~\ref{tab:synteny-llot-ppat-intracellular}). \textcolor{red}{bookkeeping genes?}
 
-The five largest synteny blocks for \emph{L. longipalpis} and \emph{P. papatasi} and \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi} were extracted from the output of SynChro (see Section~\ref{sec:synteny-methods-synchro}).  The gene composition of the blocks were annotated using BLAST.
 
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c l} \hline
+    \emph{L. longipalpis} & \emph{P. papatasi} & \emph{Description} \\ \hline
+    LLOTMP006493 & PPATMP009348 & SCP-related protein \\
+    LLOTMP006494 & PPATMP009349 & ribosomal protein S23 \\
+    LLOTMP006495 & PPATMP009350 & obstructor-like \\
+    LLOTMP006496 & PPATMP009351 & obstructor-like \\
+    LLOTMP006497 & PPATMP009352 & obstructor-like \\
+    LLOTMP006498 & PPATMP009353 & obstructor-like \\
+    LLOTMP006499 & PPATMP009355 & obstructor-like \\
+    LLOTMP006500 & PPATMP009356 & obstructor-like
+  \end{tabular}
+  \caption{Synteny block of peritrophic matrix-associated genes from \emph{L. longipalpis} vs. \emph{P. papatasi}.}
+  \label{tab:synteny-llot-ppat-peritrophic}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c l} \hline
+    \emph{L. longipalpis} & \emph{P. papatasi} & \emph{Description} \\ \hline
+    LLOTMP010087 & PPATMP006236 & G Protein-Coupled Receptor (GPCR) \\
+    LLOTMP010088 & PPATMP006238 & LIM containing protein \\
+    LLOTMP010090 & PPATMP006239 & Angiotensin-converting enzyme part of the DUF1279 Superfamily \\
+    LLOTMP010089 & PPATMP006241 & mitochondrial uncoupling (transporter) protein \\
+    LLOTMP010091 & PPATMP006242 & farnesoic acid O-methyltransferase \\
+    LLOTMP010092 & PPATMP006243 & GPI-anchored Ly-6 like \\
+    LLOTMP010093 & PPATMP006244 & GPI-anchored Ly-6 like \\
+    LLOTMP010095 & PPATMP006245 & tensin (actin binding)
+    \end{tabular}
+    \caption{Synteny block of membrane-bound or -associated genes from \emph{L. longipalpis} vs. \emph{P. papatasi}.}
+  \label{tab:synteny-llot-ppat-membrane}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c l} \hline
+    \emph{L. longipalpis} & \emph{P. papatasi} & \emph{Description} \\ \hline
+    LLOTMP003539 & PPATMP002224 & activin receptor \\
+    LLOTMP003538 & PPATMP002225 & MED20 \\
+    LLOTMP003537 & PPATMP002226 & cAMP-dependent protein kinase 3 \\
+    LLOTMP003535 & PPATMP002228 & Spase 25-subunit 2 \\
+    LLOTMP003534 & PPATMP002229 & Sterile20-like kinase \\
+    LLOTMP003530 & PPATMP002230 & upstream of RpIII128 (GTP-binding) \\
+    LLOTMP003532 & PPATMP002231 & Furin 2 \\
+    LLOTMP003533 & PPATMP002232 & H/ACA ribonucleoprotein complex, subunit Gar1
+    \end{tabular}
+    \caption{Synteny block of genes involved in RNA regulation and synthesis from \emph{L. longipalpis} vs. \emph{P. papatasi}.}
+  \label{tab:synteny-llot-ppat-rna}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c l} \hline
+    \emph{L. longipalpis} & \emph{P. papatasi} & \emph{Description} \\ \hline
+    LLOTMP002369 & PPATMP010432 & zinc finger containing protein \\
+    LLOTMP002371 & PPATMP010432 & queuine tRNA ribosyltransferase \\
+    LLOTMP002372 & PPATMP010433 & Biogenesis of lysosome-related organelles complex 1, subunit 1 \\
+    LLOTMP002377 & PPATMP010437 & Ecdysone-induced protein 75B \\
+    LLOTMP002378 & PPATMP010438 & AdoMet-dependent rRNA methyltransferase, Spb1 \\
+    LLOTMP002383 & PPATMP010440 & Gram-negative bacteria binding protein 3 \\
+    LLOTMP002384 & PPATMP010441 & forkhead domain 68A containing protein
+    \end{tabular}
+    \caption{Synteny block of genes involved in intracellular processes from \emph{L. longipalpis} vs. \emph{P. papatasi}.}
+  \label{tab:synteny-llot-ppat-intracellular}
+\end{table}
+    
 \textcolor{red}{TODO diagrams, analysis}
 
 \subsection{Comparison of $d_N$/$d_S$ Distributions}
