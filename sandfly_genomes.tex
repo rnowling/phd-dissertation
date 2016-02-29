@@ -154,7 +154,7 @@ We followed up the qualitative analysis up with a quantitative analysis of synte
 
 We annotated and analyzed the largest synteny blocks from \emph{L. longipalpis} and \emph{P. papatasi}. and a three-way comparison of \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi}.  Four of the largest synteny blocks from \emph{L. longipalpis} and \emph{P. papatasi} contained genes associated with peritrophic matrices (see Table~\ref{tab:synteny-llot-ppat-peritrophic}), membrane-bound or -associated genes (see Table~\ref{tab:synteny-llot-ppat-membrane}), RNA regulation and synthesis (see Table~\ref{tab:synteny-llot-ppat-rna}), and intracellular processes (see Table~\ref{tab:synteny-llot-ppat-intracellular}). \textcolor{red}{bookkeeping genes?}
 
-
+\textcolor{red}{three-way comparison}
 
 \begin{table}[H]
   \centering
@@ -222,8 +222,70 @@ We annotated and analyzed the largest synteny blocks from \emph{L. longipalpis} 
     \caption{Synteny block of genes involved in intracellular processes from \emph{L. longipalpis} vs. \emph{P. papatasi}.}
   \label{tab:synteny-llot-ppat-intracellular}
 \end{table}
-    
-\textcolor{red}{TODO diagrams, analysis}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c c l} \hline
+    \emph{L. longipalpis} & \emph{P. papatasi} & \emph{An. gambiae} & \emph{Description} \\ \hline
+    LLOTMP008393 & PPATMP010957 & & Cadherin \\
+    LLOTMP008394 & PPATMP010954 & AGAP009084 & PHLPP \\
+    LLOTMP008396 & PPATMP010953 & AGAP009085 & cysteine-rich secretory protein 2 \\
+    LLOTMP008397 & PPATMP010951 & AGAP009087 & PHLPP \\
+    LLOTMP008398 & PPATMP010950 & AGAP009088 & LIM homeobox protein \\
+    LLOTMP008399 & PPATMP010949 & AGAP009090 & Dopa decarboxylase \\
+    LLOTMP008401 & PPATMP010948 & AGAP009091 & Dopa decarboxylase
+    \end{tabular}
+    \caption{Synteny block of genes involved in a dopamine signaling pathway and enzyme regulation from \emph{L. longipalpis} vs. \emph{P. papatasi} vs. \emph{An. gambiae}.}
+  \label{tab:synteny-three-way-dopamine}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c c l} \hline
+    \emph{L. longipalpis} & \emph{P. papatasi} & \emph{An. gambiae} & \emph{Description} \\ \hline
+    LLOTMP001853 & PPATMP007803 & AGAP002847 & Niemann-Pick like \\
+    LLOTMP001854 & PPATMP007804 & AGAP002848 & Niemann-Pick like \\
+    LLOTMP001855 & PPATMP007805 & AGAP002849 & Niemann-Pick like \\
+    LLOTMP001857 & PPATMP007806 & AGAP002850 & Niemann-Pick like \\
+    LLOTMP001858 & PPATMP007807 & AGAP002851 & Niemann-Pick like \\
+    LLOTMP001859 & PPATMP007808 & AGAP002852 & Niemann-Pick like \\
+    LLOTMP001861 & & AGAP002853 & Niemann-Pick like \\
+    LLOTMP001863 & & AGAP002854 & Niemann-Pick like \\
+    LLOTMP001864 & & AGAP002855 & Niemann-Pick like \\
+    LLOTMP001865 & & AGAP002857 & Niemann-Pick like
+    \end{tabular}
+    \caption{Synteny block of Niemann-Pick like genes from \emph{L. longipalpis} vs. \emph{P. papatasi} vs. \emph{An. gambiae}.}
+  \label{tab:synteny-three-way-np2}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c c l} \hline
+    \emph{L. longipalpis} & \emph{P. papatasi} & \emph{An. gambiae} & \emph{Description} \\ \hline
+    LLOTMP004534 & PPATMP002862 & AGAP006946 & prefoldin subunit 4 \\
+    LLOTMP004533 & PPATMP002863 & AGAP006945 & okra/SNF-2/RAD54 \\
+    LLOTMP004535 & PPATMP002865 & AGAP006944 & eIF3/Int6 \\
+    LLOTMP004536 & PPATMP002864 & AGAP006939 & Armitage \\
+    LLOTMP004537 & PPATMP002868 & AGAP006942 & importin-beta \\
+    LLOTMP004538 & PPATMP002870 & & (carboxyl)esterase
+    \end{tabular}
+    \caption{Synteny block of transcription-regulating or protein-modifying genes from \emph{L. longipalpis} vs. \emph{P. papatasi} vs. \emph{An. gambiae}.}
+  \label{tab:synteny-three-way-transcription}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c c l} \hline
+    \emph{L. longipalpis} & \emph{P. papatasi} & \emph{An. gambiae} & \emph{Description} \\ \hline
+    LLOTMP001529 & PPATMP004782 & AGAP010568 & lipoyl synthase \\
+    LLOTMP001530 & PPATMP004783 & AGAP010567 & slimfast (amino acid transporter) \\
+    LLOTMP001531 & PPATMP004784 & AGAP010566 & ORMDL \\
+    LLOTMP001532 & PPATMP004785 & AGAP010563 & amino acid transporter \\
+    LLOTMP001533 & PPATMP004786 & AGAP010561 & slimfast (amino acid transporter)
+    \end{tabular}
+    \caption{Synteny block of amino acid transport or protein-modifying genes from \emph{L. longipalpis} vs. \emph{P. papatasi} vs. \emph{An. gambiae}.}
+  \label{tab:synteny-three-way-amino}
+\end{table}
 
 \subsection{Comparison of $d_N$/$d_S$ Distributions}
 \begin{figure}[H]
