@@ -281,6 +281,12 @@ We annotated and analyzed the largest synteny blocks from \emph{L. longipalpis} 
 \end{table}
 
 \subsection{Comparison of $d_N$/$d_S$ Distributions}
+DNA base pairs are subject to random substitutions as organisms reproduce.  Substitutions in protein-coding open-reading frames can be divided into two types: silent mutations which do not affect the resulting amino acid sequences and non-silent mutations which do affect the resulting amino acid sequences and can affect gene function.  Silent mutations are assumed not to be under any sort of selection process, correlating with an organism's rate of evolutionary change.  Non-silent mutations are less likely to be passed on since they may impair the function of important genes; those that are inherited either do not impact gene function or are under selection pressure as an organism adapts.
+
+dN/dS measures the ratio of the rate of substitutions at silent sites (dS), which are presumed neutral, to the rate of substitutions at non-silent sites (dN) \textcolor{red}{Kryazhimskiy2008, others}. Genes with dN/dS $>$ 1 have non-silent substitions at a higher rate than the background rate of the organism's evolutionary change would suggest.  As such, these genes are assumed to be under selection pressure.  dN/dS is applied to orthologous genes from separate populations to identify genes which are likely associated with differences in populations' environments and ecological niches.
+
+We analyzed dN/dS ratios between single-copy orthologs in pairwise comparisons of the sand flies \emph{L. longipalpis} and \emph{P. papatasi}, mosquito \emph{An. gambiae}, and fruit fly \emph{D. melanogaster}.  The distributions of dN/dS ratios are given in Figure~\ref{dnds-distr}.  Except for the comparison between \emph{L. longipalpis} and \emph{P. papatasi}, the distributions are remarkedly similar.  The dN/dS distribution for \emph{L. longipalpis} vs \emph{P. papatasi} is skewed towards zero, indicating fewer non-silent substitutions than expected when the comparison to the other distributions.
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.75\textwidth]{figures/ka_ks/dN_dS}
@@ -313,7 +319,7 @@ Microsynteny was, however, observed between the sand flies and the sand flies an
 
 \textcolor{red}{cross-comparison of sand flies and anopheles, especially NP2 like genes}
 
-
+Evolutionary changes at the level of indidividual genes was analyzed through comparing distributions of dN/dS ratios of single-copy orthologs.  The dN/dS distribution for \emph{L. longipalpis} vs \emph{P. papatasi} is skewed towards zero, indicating fewer non-silent substitutions than expected when the comparison to the distributions from pairwise comparisons with \emph{An. gambiae} and \emph{D. melanogaster}.  The skew is more likely explained by issues with the \emph{L. longipalpis} vs \emph{P. papatasi} genomes assemblies than a biological cause.  In particular, the assemblies contain incomplete genes with only the most conserved regions present.  As such, regions of the sequences that likely diverged from their orthologous counterparts in other species are not present, biasing the dN/dS ratios towards zero.
 
 
 
