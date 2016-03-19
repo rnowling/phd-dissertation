@@ -96,6 +96,8 @@ We followed up the qualitative analysis up with a quantitative analysis of synte
 
 We annotated and analyzed the largest synteny blocks from \emph{L. longipalpis} and \emph{P. papatasi}. and a three-way comparison of \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi}.  Four of the largest synteny blocks from \emph{L. longipalpis} and \emph{P. papatasi} contained genes associated with peritrophic matrices (see Table~\ref{tab:synteny-llot-ppat-peritrophic}), membrane-bound or -associated genes (see Table~\ref{tab:synteny-llot-ppat-membrane}), RNA regulation and synthesis (see Table~\ref{tab:synteny-llot-ppat-rna}), and intracellular processes (see Table~\ref{tab:synteny-llot-ppat-intracellular}). \textcolor{red}{bookkeeping genes?}
 
+A three-way comparison of synteny between \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi} revealed a block of Niemann Pick type C2-like genes (Table~\ref{tab:synteny-three-way-npc2}). In insects, NPC genes are involved with sterol (e.g., cholesterol) homeostasis and biosynthesis of ecdysteroids, insect sex and moulting hormones. In humans, mutations in either of two Niemann Pick type C (NPC) genes, \emph{NPC1} and \emph{NPC2}, cause a fatal neurogenerative disorder associated with abnormal cholesterol accumulation in cells.  Previous work on NPC 2 in \emph{D. melanogaster} found that \emph{npc2a} and \emph{npc2b}, play a redundant role such that mutations in one have little discernable effect on biology; concurrent mutations in both genes lead to mortality and apoptotic neurodegeneration \cite{Huang2007}.  \emph{npc2e} and \emph{npc2a} have also been associated with the immune defiency (Imd) pathways in \emph{D. melanogaster} \cite{Shi2012}. Studies of NPC2-like genes in \emph{Ae. aegypti} have implicated ecdysteroids in a signaling cascade linking blood meal intake with vitellogenesis \cite{Sirot2011}.  Thus, the synteny of NPC2-like genes between \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi}, may indicate similarity in sex, moulting, immunity, and feeding pathways between sand flies and mosquitoes.
+
 \begin{figure}[H]
   \centering
   \begin{subfigure}[b]{0.45\textwidth}
@@ -158,7 +160,7 @@ We annotated and analyzed the largest synteny blocks from \emph{L. longipalpis} 
 \end{table}
 
 
-\textcolor{red}{three-way comparison}
+
 
 \begin{table}[H]
   \centering
@@ -259,7 +261,7 @@ We annotated and analyzed the largest synteny blocks from \emph{L. longipalpis} 
     LLOTMP001865 & & AGAP002857 & Niemann-Pick like
     \end{tabular}
     \caption{Synteny block of Niemann-Pick like genes from \emph{L. longipalpis} vs. \emph{P. papatasi} vs. \emph{An. gambiae}.}
-  \label{tab:synteny-three-way-np2}
+  \label{tab:synteny-three-way-npc2}
 \end{table}
 
 \begin{table}[H]
@@ -306,6 +308,10 @@ We analyzed dN/dS ratios between single-copy orthologs in pairwise comparisons o
 \end{figure}
 
 \subsection{Differential Gene Expression from RNASeq}
+We analyzed the differential gene expression in \emph{L. longipalpis} of the Niemann Pick type C2-like (NPC2) genes found to be in synteny between \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi}.  Two genes (LLOTMP001859 and LLOTMP001861) presented statistically-significant differences in expression. Both genes had higher expression levels in blood fed or infected blood fed individuals 24 hours compared with sugar-fed individuals; by 144 hours elapsed, the genes' expression levels were significantly reduced compared to sugar-fed individuals.  The differences in expression levels between blood fed and sugar fed individuals seems to support the involvement of NPC2-like genes in a signaling cascade linking blood meal intake with vitellogenesis as observed in \emph{Ae. aegypti} \cite{Sirot2011}.
+
+Whereas LLOTMP001861 presented little difference in expression between blood fed and infected blood fed individuals, LLOTMP001859 had significantly higher expression levels in infected blood fed individuals at 6 and 24 hours.  \emph{npc2e} and \emph{npc2a} have also been associated with the immune defiency (Imd) pathways in \emph{D. melanogaster} \cite{Shi2012}.  The differences in expression may indicate that LLOTMP001859 plays role in ab immune response to the leishmaniasis parasite. 
+
 \textcolor{red}{GO-slim term distributions}
 
 \textcolor{red}{analysis of gene family expression}
