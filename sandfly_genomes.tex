@@ -96,7 +96,7 @@ We followed up the qualitative analysis up with a quantitative analysis of synte
 
 We annotated and analyzed the largest synteny blocks from \emph{L. longipalpis} and \emph{P. papatasi}. and a three-way comparison of \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi}.  Four of the largest synteny blocks from \emph{L. longipalpis} and \emph{P. papatasi} contained genes associated with peritrophic matrices (see Table~\ref{tab:synteny-llot-ppat-peritrophic}), membrane-bound or -associated genes (see Table~\ref{tab:synteny-llot-ppat-membrane}), RNA regulation and synthesis (see Table~\ref{tab:synteny-llot-ppat-rna}), and intracellular processes (see Table~\ref{tab:synteny-llot-ppat-intracellular}). \textcolor{red}{bookkeeping genes?}
 
-A three-way comparison of synteny between \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi} revealed a block of Niemann Pick type C2-like genes (Table~\ref{tab:synteny-three-way-npc2}). In insects, NPC genes are involved with sterol (e.g., cholesterol) homeostasis and biosynthesis of ecdysteroids, insect sex and moulting hormones. In humans, mutations in either of two Niemann Pick type C (NPC) genes, \emph{NPC1} and \emph{NPC2}, cause a fatal neurogenerative disorder associated with abnormal cholesterol accumulation in cells.  Previous work on NPC 2 in \emph{D. melanogaster} found that \emph{npc2a} and \emph{npc2b}, play a redundant role such that mutations in one have little discernable effect on biology; concurrent mutations in both genes lead to mortality and apoptotic neurodegeneration \cite{Huang2007}.  \emph{npc2e} and \emph{npc2a} have also been associated with the immune defiency (Imd) pathways in \emph{D. melanogaster} \cite{Shi2012}. Studies of NPC2-like genes in \emph{Ae. aegypti} have implicated ecdysteroids in a signaling cascade linking blood meal intake with vitellogenesis \cite{Sirot2011}.  Thus, the synteny of NPC2-like genes between \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi}, may indicate similarity in sex, moulting, immunity, and feeding pathways between sand flies and mosquitoes.
+
 
 \begin{figure}[H]
   \centering
@@ -245,24 +245,7 @@ A three-way comparison of synteny between \emph{An. gambiae}, \emph{L. longipalp
   \label{tab:synteny-three-way-dopamine}
 \end{table}
 
-\begin{table}[H]
-  \centering
-  \begin{tabular}{c c c l} \hline
-    \emph{L. longipalpis} & \emph{P. papatasi} & \emph{An. gambiae} & \emph{Description} \\ \hline
-    LLOTMP001853 & PPATMP007803 & AGAP002847 & Niemann-Pick like \\
-    LLOTMP001854 & PPATMP007804 & AGAP002848 & Niemann-Pick like \\
-    LLOTMP001855 & PPATMP007805 & AGAP002849 & Niemann-Pick like \\
-    LLOTMP001857 & PPATMP007806 & AGAP002850 & Niemann-Pick like \\
-    LLOTMP001858 & PPATMP007807 & AGAP002851 & Niemann-Pick like \\
-    LLOTMP001859 & PPATMP007808 & AGAP002852 & Niemann-Pick like \\
-    LLOTMP001861 & & AGAP002853 & Niemann-Pick like \\
-    LLOTMP001863 & & AGAP002854 & Niemann-Pick like \\
-    LLOTMP001864 & & AGAP002855 & Niemann-Pick like \\
-    LLOTMP001865 & & AGAP002857 & Niemann-Pick like
-    \end{tabular}
-    \caption{Synteny block of Niemann-Pick like genes from \emph{L. longipalpis} vs. \emph{P. papatasi} vs. \emph{An. gambiae}.}
-  \label{tab:synteny-three-way-npc2}
-\end{table}
+
 
 \begin{table}[H]
   \centering
@@ -307,14 +290,14 @@ We analyzed dN/dS ratios between single-copy orthologs in pairwise comparisons o
   \label{fig:dnds-distr}
 \end{figure}
 
-\subsection{Differential Gene Expression from RNASeq}
-We analyzed the differential gene expression in \emph{L. longipalpis} of the Niemann Pick type C2-like (NPC2) genes found to be in synteny between \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi}.  Two genes (LLOTMP001859 and LLOTMP001861) presented statistically-significant differences in expression. Both genes had higher expression levels in blood fed or infected blood fed individuals 24 hours compared with sugar-fed individuals; by 144 hours elapsed, the genes' expression levels were significantly reduced compared to sugar-fed individuals.  The differences in expression levels between blood fed and sugar fed individuals seems to support the involvement of NPC2-like genes in a signaling cascade linking blood meal intake with vitellogenesis as observed in \emph{Ae. aegypti} \cite{Sirot2011}.
+\subsection{RNASeq Differential Gene Expression Analysis in Sugar-Fed, Blood-Fed, and Infected Blood-Fed \emph{L. longipalpis} Females}
+RNASeq differental gene expression data was collected from \emph{L. longipalpis} females 6, 24, and 144 hours after being fed sugar, bloodmeals, and bloodmeals infected with the Leishmaniasis parasite. The expression data was analyzed using CuffDiff to identify genes with statisticaly-significant differences in expression levels when compared between conditions.
 
-Whereas LLOTMP001861 presented little difference in expression between blood fed and infected blood fed individuals, LLOTMP001859 had significantly higher expression levels in infected blood fed individuals at 6 and 24 hours.  \emph{npc2e} and \emph{npc2a} have also been associated with the immune defiency (Imd) pathways in \emph{D. melanogaster} \cite{Shi2012}.  The differences in expression may indicate that LLOTMP001859 plays role in ab immune response to the leishmaniasis parasite. 
+We first attempted to analyze the differential gene expression data to identify interesting genes based on enrichement in associated GO term distributions.  Using BLAST2Go, we mapped the genes identified to have statistically-significant differences in expression to GO-slim terms.  We compared the distribution of GO-slim terms between blood fed vs. sugar fed and blood fed vs. infected blood fed.  All distribution were compared using the Fisher's exact test, which indicated statistically-significant differences in call cases.  The distributions were plotted and analyzed visually, but due to the overwhelming number of genes with statistically-significant differences in expression, no genes of particular interested were identified.
 
-\textcolor{red}{GO-slim term distributions}
+Following the analysis with BLAST2Go, we focused our analysis on genes from families and pathways which had been annotated and studied by collaboratives in the sand fly genome project.  The analyzed pathways include genes associated with the immune system such as Toll and immune deficiency (imd) and digestion.
 
-\textcolor{red}{analysis of gene family expression}
+
 
 \begin{table}[H]
   \centering
@@ -326,6 +309,32 @@ Whereas LLOTMP001861 presented little difference in expression between blood fed
   \end{tabular}
   \caption{Number of Genes with Statistically-Significant Differential Expression}
   \label{tab:stat-sig-genes}
+\end{table}
+
+\subsection{Niemann Pick type C-like Genes}
+A three-way comparison of synteny between \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi} revealed a block of Niemann Pick type C2-like genes (Table~\ref{tab:synteny-three-way-npc2}). In insects, NPC genes are involved with sterol (e.g., cholesterol) homeostasis and biosynthesis of ecdysteroids, insect sex and moulting hormones. In humans, mutations in either of two Niemann Pick type C (NPC) genes, \emph{NPC1} and \emph{NPC2}, cause a fatal neurogenerative disorder associated with abnormal cholesterol accumulation in cells.  Previous work on NPC 2 in \emph{D. melanogaster} found that \emph{npc2a} and \emph{npc2b}, play a redundant role such that mutations in one have little discernable effect on biology; concurrent mutations in both genes lead to mortality and apoptotic neurodegeneration \cite{Huang2007}.  \emph{npc2e} and \emph{npc2a} have also been associated with the immune defiency (Imd) pathways in \emph{D. melanogaster} \cite{Shi2012}. Studies of NPC2-like genes in \emph{Ae. aegypti} have implicated ecdysteroids in a signaling cascade linking blood meal intake with vitellogenesis \cite{Sirot2011}.  Thus, the synteny of NPC2-like genes between \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi}, may indicate similarity in sex, moulting, immunity, and feeding pathways between sand flies and mosquitoes.
+
+We analyzed the differential gene expression in \emph{L. longipalpis} of the Niemann Pick type C2-like (NPC2) genes found to be in synteny between \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi}.  Two genes (LLOTMP001859 and LLOTMP001861) presented statistically-significant differences in expression. Both genes had higher expression levels in blood fed or infected blood fed individuals 24 hours compared with sugar-fed individuals; by 144 hours elapsed, the genes' expression levels were significantly reduced compared to sugar-fed individuals.  The differences in expression levels between blood fed and sugar fed individuals seems to support the involvement of NPC2-like genes in a signaling cascade linking blood meal intake with vitellogenesis as observed in \emph{Ae. aegypti} \cite{Sirot2011}.
+
+Whereas LLOTMP001861 presented little difference in expression between blood fed and infected blood fed individuals, LLOTMP001859 had significantly higher expression levels in infected blood fed individuals at 6 and 24 hours.  \emph{npc2e} and \emph{npc2a} have also been associated with the immune defiency (Imd) pathways in \emph{D. melanogaster} \cite{Shi2012}.  The differences in expression may indicate that LLOTMP001859 plays role in ab immune response to the leishmaniasis parasite.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c c l} \hline
+    \emph{L. longipalpis} & \emph{P. papatasi} & \emph{An. gambiae} & \emph{Description} \\ \hline
+    LLOTMP001853 & PPATMP007803 & AGAP002847 & Niemann-Pick like \\
+    LLOTMP001854 & PPATMP007804 & AGAP002848 & Niemann-Pick like \\
+    LLOTMP001855 & PPATMP007805 & AGAP002849 & Niemann-Pick like \\
+    LLOTMP001857 & PPATMP007806 & AGAP002850 & Niemann-Pick like \\
+    LLOTMP001858 & PPATMP007807 & AGAP002851 & Niemann-Pick like \\
+    LLOTMP001859 & PPATMP007808 & AGAP002852 & Niemann-Pick like \\
+    LLOTMP001861 & & AGAP002853 & Niemann-Pick like \\
+    LLOTMP001863 & & AGAP002854 & Niemann-Pick like \\
+    LLOTMP001864 & & AGAP002855 & Niemann-Pick like \\
+    LLOTMP001865 & & AGAP002857 & Niemann-Pick like
+    \end{tabular}
+    \caption{Synteny block of Niemann-Pick like genes from \emph{L. longipalpis} vs. \emph{P. papatasi} vs. \emph{An. gambiae}.}
+  \label{tab:synteny-three-way-npc2}
 \end{table}
 
 \section{Discussion}
