@@ -94,9 +94,7 @@ Synteny between pairs of dipterans was analyzed qualitatively by generating scat
 
 We followed up the qualitative analysis up with a quantitative analysis of synteny blocks computed using the program SynChro (see Section~\ref{sec:synteny-methods-synchro}). As indicated by the qualitative analysis, synteny was most conserved between \emph{D. melanogaster} and \emph{D. simulans} (243 synteny blocks with the largest block size of 700 genes, an average size of 41.6 genes, and a median size of 5 genes).  When compared to each other or \emph{An. gambiae}, the sand flies exhibited little conservation of synteny with the largest blocks consisting of far fewer genes than those from \emph{D. melanogaster} and \emph{D. simulans} (24 genes from \emph{L. longipalpis} and \emph{P. papatasi}, 39 genes from \emph{L. longipalpis} vs. \emph{An. gambiae}, and 21 genes from \emph{P. papatasi} vs. \emph{An. gambiae}).
 
-We annotated and analyzed the largest synteny blocks from \emph{L. longipalpis} and \emph{P. papatasi}. and a three-way comparison of \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi}.  Four of the largest synteny blocks from \emph{L. longipalpis} and \emph{P. papatasi} contained genes associated with peritrophic matrices (see Table~\ref{tab:synteny-llot-ppat-peritrophic}), membrane-bound or -associated genes (see Table~\ref{tab:synteny-llot-ppat-membrane}), RNA regulation and synthesis (see Table~\ref{tab:synteny-llot-ppat-rna}), and intracellular processes (see Table~\ref{tab:synteny-llot-ppat-intracellular}). \textcolor{red}{bookkeeping genes?}
-
-
+We annotated and analyzed the largest synteny blocks from \emph{L. longipalpis} and \emph{P. papatasi}. and a three-way comparison of \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi}.  Four of the largest synteny blocks from \emph{L. longipalpis} and \emph{P. papatasi} contained peritrophin-like, membrane-bound or -associated, RNA regulation and synthesis, and intracellular processes genes. \textcolor{red}{three-way comparison}
 
 \begin{figure}[H]
   \centering
@@ -159,127 +157,10 @@ We annotated and analyzed the largest synteny blocks from \emph{L. longipalpis} 
   \label{tab:synteny-block-stats}
 \end{table}
 
-
-
-
-\begin{table}[H]
-  \centering
-  \begin{tabular}{c c l} \hline
-    \emph{L. longipalpis} & \emph{P. papatasi} & \emph{Description} \\ \hline
-    LLOTMP006493 & PPATMP009348 & SCP-related protein \\
-    LLOTMP006494 & PPATMP009349 & ribosomal protein S23 \\
-    LLOTMP006495 & PPATMP009350 & obstructor-like \\
-    LLOTMP006496 & PPATMP009351 & obstructor-like \\
-    LLOTMP006497 & PPATMP009352 & obstructor-like \\
-    LLOTMP006498 & PPATMP009353 & obstructor-like \\
-    LLOTMP006499 & PPATMP009355 & obstructor-like \\
-    LLOTMP006500 & PPATMP009356 & obstructor-like
-  \end{tabular}
-  \caption{Synteny block of peritrophic matrix-associated genes from \emph{L. longipalpis} vs. \emph{P. papatasi}.}
-  \label{tab:synteny-llot-ppat-peritrophic}
-\end{table}
-
-\begin{table}[H]
-  \centering
-  \begin{tabular}{c c l} \hline
-    \emph{L. longipalpis} & \emph{P. papatasi} & \emph{Description} \\ \hline
-    LLOTMP010087 & PPATMP006236 & G Protein-Coupled Receptor (GPCR) \\
-    LLOTMP010088 & PPATMP006238 & LIM containing protein \\
-    LLOTMP010090 & PPATMP006239 & Angiotensin-converting enzyme part of the DUF1279 Superfamily \\
-    LLOTMP010089 & PPATMP006241 & mitochondrial uncoupling (transporter) protein \\
-    LLOTMP010091 & PPATMP006242 & farnesoic acid O-methyltransferase \\
-    LLOTMP010092 & PPATMP006243 & GPI-anchored Ly-6 like \\
-    LLOTMP010093 & PPATMP006244 & GPI-anchored Ly-6 like \\
-    LLOTMP010095 & PPATMP006245 & tensin (actin binding)
-    \end{tabular}
-    \caption{Synteny block of membrane-bound or -associated genes from \emph{L. longipalpis} vs. \emph{P. papatasi}.}
-  \label{tab:synteny-llot-ppat-membrane}
-\end{table}
-
-\begin{table}[H]
-  \centering
-  \begin{tabular}{c c l} \hline
-    \emph{L. longipalpis} & \emph{P. papatasi} & \emph{Description} \\ \hline
-    LLOTMP003539 & PPATMP002224 & activin receptor \\
-    LLOTMP003538 & PPATMP002225 & MED20 \\
-    LLOTMP003537 & PPATMP002226 & cAMP-dependent protein kinase 3 \\
-    LLOTMP003535 & PPATMP002228 & Spase 25-subunit 2 \\
-    LLOTMP003534 & PPATMP002229 & Sterile20-like kinase \\
-    LLOTMP003530 & PPATMP002230 & upstream of RpIII128 (GTP-binding) \\
-    LLOTMP003532 & PPATMP002231 & Furin 2 \\
-    LLOTMP003533 & PPATMP002232 & H/ACA ribonucleoprotein complex, subunit Gar1
-    \end{tabular}
-    \caption{Synteny block of genes involved in RNA regulation and synthesis from \emph{L. longipalpis} vs. \emph{P. papatasi}.}
-  \label{tab:synteny-llot-ppat-rna}
-\end{table}
-
-\begin{table}[H]
-  \centering
-  \begin{tabular}{c c l} \hline
-    \emph{L. longipalpis} & \emph{P. papatasi} & \emph{Description} \\ \hline
-    LLOTMP002369 & PPATMP010432 & zinc finger containing protein \\
-    LLOTMP002371 & PPATMP010432 & queuine tRNA ribosyltransferase \\
-    LLOTMP002372 & PPATMP010433 & Biogenesis of lysosome-related organelles complex 1, subunit 1 \\
-    LLOTMP002377 & PPATMP010437 & Ecdysone-induced protein 75B \\
-    LLOTMP002378 & PPATMP010438 & AdoMet-dependent rRNA methyltransferase, Spb1 \\
-    LLOTMP002383 & PPATMP010440 & Gram-negative bacteria binding protein 3 \\
-    LLOTMP002384 & PPATMP010441 & forkhead domain 68A containing protein
-    \end{tabular}
-    \caption{Synteny block of genes involved in intracellular processes from \emph{L. longipalpis} vs. \emph{P. papatasi}.}
-  \label{tab:synteny-llot-ppat-intracellular}
-\end{table}
-
-\begin{table}[H]
-  \centering
-  \begin{tabular}{c c c l} \hline
-    \emph{L. longipalpis} & \emph{P. papatasi} & \emph{An. gambiae} & \emph{Description} \\ \hline
-    LLOTMP008393 & PPATMP010957 & & Cadherin \\
-    LLOTMP008394 & PPATMP010954 & AGAP009084 & PHLPP \\
-    LLOTMP008396 & PPATMP010953 & AGAP009085 & cysteine-rich secretory protein 2 \\
-    LLOTMP008397 & PPATMP010951 & AGAP009087 & PHLPP \\
-    LLOTMP008398 & PPATMP010950 & AGAP009088 & LIM homeobox protein \\
-    LLOTMP008399 & PPATMP010949 & AGAP009090 & Dopa decarboxylase \\
-    LLOTMP008401 & PPATMP010948 & AGAP009091 & Dopa decarboxylase
-    \end{tabular}
-    \caption{Synteny block of genes involved in a dopamine signaling pathway and enzyme regulation from \emph{L. longipalpis} vs. \emph{P. papatasi} vs. \emph{An. gambiae}.}
-  \label{tab:synteny-three-way-dopamine}
-\end{table}
-
-
-
-\begin{table}[H]
-  \centering
-  \begin{tabular}{c c c l} \hline
-    \emph{L. longipalpis} & \emph{P. papatasi} & \emph{An. gambiae} & \emph{Description} \\ \hline
-    LLOTMP004534 & PPATMP002862 & AGAP006946 & prefoldin subunit 4 \\
-    LLOTMP004533 & PPATMP002863 & AGAP006945 & okra/SNF-2/RAD54 \\
-    LLOTMP004535 & PPATMP002865 & AGAP006944 & eIF3/Int6 \\
-    LLOTMP004536 & PPATMP002864 & AGAP006939 & Armitage \\
-    LLOTMP004537 & PPATMP002868 & AGAP006942 & importin-beta \\
-    LLOTMP004538 & PPATMP002870 & & (carboxyl)esterase
-    \end{tabular}
-    \caption{Synteny block of transcription-regulating or protein-modifying genes from \emph{L. longipalpis} vs. \emph{P. papatasi} vs. \emph{An. gambiae}.}
-  \label{tab:synteny-three-way-transcription}
-\end{table}
-
-\begin{table}[H]
-  \centering
-  \begin{tabular}{c c c l} \hline
-    \emph{L. longipalpis} & \emph{P. papatasi} & \emph{An. gambiae} & \emph{Description} \\ \hline
-    LLOTMP001529 & PPATMP004782 & AGAP010568 & lipoyl synthase \\
-    LLOTMP001530 & PPATMP004783 & AGAP010567 & slimfast (amino acid transporter) \\
-    LLOTMP001531 & PPATMP004784 & AGAP010566 & ORMDL \\
-    LLOTMP001532 & PPATMP004785 & AGAP010563 & amino acid transporter \\
-    LLOTMP001533 & PPATMP004786 & AGAP010561 & slimfast (amino acid transporter)
-    \end{tabular}
-    \caption{Synteny block of amino acid transport or protein-modifying genes from \emph{L. longipalpis} vs. \emph{P. papatasi} vs. \emph{An. gambiae}.}
-  \label{tab:synteny-three-way-amino}
-\end{table}
-
 \subsection{Comparison of $d_N$/$d_S$ Distributions}
 DNA base pairs are subject to random substitutions as organisms reproduce.  Substitutions in protein-coding open-reading frames can be divided into two types: silent mutations which do not affect the resulting amino acid sequences and non-silent mutations which do affect the resulting amino acid sequences and can affect gene function.  Silent mutations are assumed not to be under any sort of selection process, correlating with an organism's rate of evolutionary change.  Non-silent mutations are less likely to be passed on since they may impair the function of important genes; those that are inherited either do not impact gene function or are under selection pressure as an organism adapts.
 
-dN/dS measures the ratio of the rate of substitutions at silent sites (dS), which are presumed neutral, to the rate of substitutions at non-silent sites (dN) \textcolor{red}{Kryazhimskiy2008, others}. Genes with dN/dS $>$ 1 have non-silent substitions at a higher rate than the background rate of the organism's evolutionary change would suggest.  As such, these genes are assumed to be under selection pressure.  dN/dS is applied to orthologous genes from separate populations to identify genes which are likely associated with differences in populations' environments and ecological niches.
+dN/dS measures the ratio of the rate of substitutions at silent sites (dS), which are presumed neutral, to the rate of substitutions at non-silent sites (dN) \cite{Kryazhimskiy2008}. Genes with dN/dS $>$ 1 have non-silent substitions at a higher rate than the background rate of the organism's evolutionary change would suggest.  As such, these genes are assumed to be under selection pressure.  dN/dS is applied to orthologous genes from separate populations to identify genes which are likely associated with differences in populations' environments and ecological niches.
 
 We analyzed dN/dS ratios between single-copy orthologs in pairwise comparisons of the sand flies \emph{L. longipalpis} and \emph{P. papatasi}, mosquito \emph{An. gambiae}, and fruit fly \emph{D. melanogaster}.  The distributions of dN/dS ratios are given in Figure~\ref{fig:dnds-distr}.  Except for the comparison between \emph{L. longipalpis} and \emph{P. papatasi}, the distributions are remarkedly similar.  The dN/dS distribution for \emph{L. longipalpis} vs \emph{P. papatasi} is skewed towards zero, indicating fewer non-silent substitutions than expected when the comparison to the other distributions.
 
@@ -291,13 +172,7 @@ We analyzed dN/dS ratios between single-copy orthologs in pairwise comparisons o
 \end{figure}
 
 \subsection{RNASeq Differential Gene Expression Analysis in Sugar-Fed, Blood-Fed, and Infected Blood-Fed \emph{L. longipalpis} Females}
-RNASeq differental gene expression data was collected from \emph{L. longipalpis} females 6, 24, and 144 hours after being fed sugar, bloodmeals, and bloodmeals infected with the Leishmaniasis parasite. The expression data was analyzed using CuffDiff to identify genes with statisticaly-significant differences in expression levels when compared between conditions.
-
-We first attempted to analyze the differential gene expression data to identify interesting genes based on enrichement in associated GO term distributions.  Using BLAST2Go, we mapped the genes identified to have statistically-significant differences in expression to GO-slim terms.  We compared the distribution of GO-slim terms between blood fed vs. sugar fed and blood fed vs. infected blood fed.  All distribution were compared using the Fisher's exact test, which indicated statistically-significant differences in call cases.  The distributions were plotted and analyzed visually, but due to the overwhelming number of genes with statistically-significant differences in expression, no genes of particular interested were identified.
-
-Following the analysis with BLAST2Go, we focused our analysis on genes from families and pathways which had been annotated and studied by collaboratives in the sand fly genome project.  The analyzed pathways include genes associated with the immune system such as Toll and immune deficiency (imd) and digestion.
-
-
+RNASeq differental gene expression data was collected from \emph{L. longipalpis} females 6, 24, and 144 hours after being fed sugar, bloodmeals, and bloodmeals infected with the Leishmaniasis parasite, \emph{Leishmania major}. CuffDiff \textcolor{red}{CITE} was used to compare expression levels between different conditions at the same time points to identify genes with statisticaly-significant differences in expression. We identified approximately 3,000 to 4,500 genes with statistically-significant differences in expression between blood-fed and sugar-fed females over the three time points (see Table~\ref{tab:stat-sig-genes}).  Fewer genes (about 250 to 670) had statistically-significantly differences in expression when compared between blood-fed and infected blood-fed females.
 
 \begin{table}[H]
   \centering
@@ -311,12 +186,18 @@ Following the analysis with BLAST2Go, we focused our analysis on genes from fami
   \label{tab:stat-sig-genes}
 \end{table}
 
+Comparison of GO-slim term distributions yielded little insight into differences in expression between the conditions due to the overwhelming number of genes with statistically-significant differences in expression.
+
+As such, we focused on comparing expression of genes from families and pathways associated with immunity between blood fed and infected blood fed conditions.  The expression levels of Attacin-C (LLOTMP005408, IMD), LuloGalecC (LLOTMP007344, Galectins), and LuloDifA (LLOTMP002098, Toll) were increased under infected blood fed conditions for all time points.  MAP4K4 (MAPK), Caspar (LLOTMP002950, IMD), Rel (LLOTMP002098, IMD), and IAP2 (LLOTMP000523, IMD) had reduced expression levels under infected blood fed conditions for all time points.  MAP3K7 (MAPK), LuloToll3 (LLOTMP001885, Toll), LuloDifB (LLOTMP002097, Toll), CalcinuerinB (LLOTMP006044, IMD), COX (LLOTMP003300, IMD), and Prohenoloxidase (LLOTMP001742, IMD) had both increased and decreased in expression at various time points.
+
+We also compared expression of genes involved with digestion from the peritrophin, chitin deacetylases, and chitinase families between blood fed and infected blood fed conditions. Increased expression of LuloPer1 (LLOTMP006497), LuloPer3a (LLOTMP002647), and LuloPer32 (LLOTMP00451) of the peritrophin familyand LlIDGF4 (LLOTMP004095) and chitinase like protein (LLOTMP006041) of the chitinase family was observed under infected blood fed conditions.  LuloPer3b (LLOTMP00490) and LuloPer2 (LLOTMP003676) of the peritropin family and LuloCDA1 (LLOTMP007910) of the chitin deacetylase family had both increased and decreased differences in expression between blood fed and infected blood fed conditions.
+
 \subsection{Niemann Pick type C-like Genes}
 A three-way comparison of synteny between \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi} revealed a block of Niemann Pick type C2-like genes (Table~\ref{tab:synteny-three-way-npc2}). In insects, NPC genes are involved with sterol (e.g., cholesterol) homeostasis and biosynthesis of ecdysteroids, insect sex and moulting hormones. In humans, mutations in either of two Niemann Pick type C (NPC) genes, \emph{NPC1} and \emph{NPC2}, cause a fatal neurogenerative disorder associated with abnormal cholesterol accumulation in cells.  Previous work on NPC 2 in \emph{D. melanogaster} found that \emph{npc2a} and \emph{npc2b}, play a redundant role such that mutations in one have little discernable effect on biology; concurrent mutations in both genes lead to mortality and apoptotic neurodegeneration \cite{Huang2007}.  \emph{npc2e} and \emph{npc2a} have also been associated with the immune defiency (Imd) pathways in \emph{D. melanogaster} \cite{Shi2012}. Studies of NPC2-like genes in \emph{Ae. aegypti} have implicated ecdysteroids in a signaling cascade linking blood meal intake with vitellogenesis \cite{Sirot2011}.  Thus, the synteny of NPC2-like genes between \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi}, may indicate similarity in sex, moulting, immunity, and feeding pathways between sand flies and mosquitoes.
 
 We analyzed the differential gene expression in \emph{L. longipalpis} of the Niemann Pick type C2-like (NPC2) genes found to be in synteny between \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi}.  Two genes (LLOTMP001859 and LLOTMP001861) presented statistically-significant differences in expression. Both genes had higher expression levels in blood fed or infected blood fed individuals 24 hours compared with sugar-fed individuals; by 144 hours elapsed, the genes' expression levels were significantly reduced compared to sugar-fed individuals.  The differences in expression levels between blood fed and sugar fed individuals seems to support the involvement of NPC2-like genes in a signaling cascade linking blood meal intake with vitellogenesis as observed in \emph{Ae. aegypti} \cite{Sirot2011}.
 
-Whereas LLOTMP001861 presented little difference in expression between blood fed and infected blood fed individuals, LLOTMP001859 had significantly higher expression levels in infected blood fed individuals at 6 and 24 hours.  \emph{npc2e} and \emph{npc2a} have also been associated with the immune defiency (Imd) pathways in \emph{D. melanogaster} \cite{Shi2012}.  The differences in expression may indicate that LLOTMP001859 plays role in ab immune response to the leishmaniasis parasite.
+Whereas LLOTMP001861 presented little difference in expression between blood fed and infected blood fed individuals, LLOTMP001859 had significantly higher expression levels in infected blood fed individuals at 6 and 24 hours.  \emph{npc2e} and \emph{npc2a} have also been associated with the immune defiency (Imd) pathways in \emph{D. melanogaster} \cite{Shi2012}.  The differences in expression may indicate that LLOTMP001859 plays role in immune response to the leishmaniasis parasite.
 
 \begin{table}[H]
   \centering
@@ -337,6 +218,28 @@ Whereas LLOTMP001861 presented little difference in expression between blood fed
   \label{tab:synteny-three-way-npc2}
 \end{table}
 
+\subsection{Digestion-Related Genes}
+
+
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c l} \hline
+    \emph{L. longipalpis} & \emph{P. papatasi} & \emph{Description} \\ \hline
+    LLOTMP006493 & PPATMP009348 & SCP-related protein \\
+    LLOTMP006494 & PPATMP009349 & ribosomal protein S23 \\
+    LLOTMP006495 & PPATMP009350 & Chitin-Binding Domain \\
+    LLOTMP006496 & PPATMP009351 & Chitin-Binding Domain \\
+    LLOTMP006497 & PPATMP009352 & Chitin-Binding Domain \\
+    LLOTMP006498 & PPATMP009353 & Chitin-Binding Domain \\
+    LLOTMP006499 & PPATMP009355 & Chitin-Binding Domain \\
+    LLOTMP006500 & PPATMP009356 & Chitin-Binding Domain
+  \end{tabular}
+  \caption{Synteny block of peritrophic matrix-associated genes from \emph{L. longipalpis} vs. \emph{P. papatasi}.}
+  \label{tab:synteny-llot-ppat-peritrophic}
+\end{table}
+
+
 \section{Discussion}
 Comparative studies of synteny and gene order between insect genomes have indicated significant levels of genome shuffling, more so than observed in fish and humans \cite{Zdobnov2007}. A quantitative comparison of synteny and protein sequence identity using single-copy othologs from twelve insect genomes observed a linear relationship between the two metrics and the loss of all synteny
 
@@ -346,10 +249,11 @@ Synteny analysis is dependent on the completeness of genome assemblies \cite{Heg
 
 Microsynteny was, however, observed between the sand flies and the sand flies and \emph{An. gambiae}.  Annotation of the sand fly microsynteny blocks found common ``bookkeeping'' genes conserved across a large number of organisms such as genes associated with membrane transport, RNA regulation and synthesis, and intracellular processes \cite{Zdobnov2007}.  Genes associated with peritrophic matrices found primarily in insects were also found to be in microsynteny but are known to be well conserved across insects \textcolor{red}{cite}.  Microsynteny of such highly-conserved genes is expected.
 
-\textcolor{red}{cross-comparison of sand flies and anopheles, especially NP2 like genes}
+Evolutionary changes at the level of indidividual genes was analyzed through comparing distributions of dN/dS ratios of single-copy orthologs.  The dN/dS distribution for \emph{L. longipalpis} vs \emph{P. papatasi} is skewed towards zero, indicating fewer non-silent substitutions than expected when the comparison to the distributions from pairwise comparisons with \emph{An. gambiae} and \emph{D. melanogaster}.  \textcolor{red}{closer evolutionarily?} The skew is more likely explained by issues with the \emph{L. longipalpis} vs \emph{P. papatasi} genomes assemblies than a biological cause.  In particular, the assemblies contain incomplete genes with only the most conserved regions present.  As such, regions of the sequences that likely diverged from their orthologous counterparts in other species are not present, biasing the dN/dS ratios towards zero.
 
-Evolutionary changes at the level of indidividual genes was analyzed through comparing distributions of dN/dS ratios of single-copy orthologs.  The dN/dS distribution for \emph{L. longipalpis} vs \emph{P. papatasi} is skewed towards zero, indicating fewer non-silent substitutions than expected when the comparison to the distributions from pairwise comparisons with \emph{An. gambiae} and \emph{D. melanogaster}.  The skew is more likely explained by issues with the \emph{L. longipalpis} vs \emph{P. papatasi} genomes assemblies than a biological cause.  In particular, the assemblies contain incomplete genes with only the most conserved regions present.  As such, regions of the sequences that likely diverged from their orthologous counterparts in other species are not present, biasing the dN/dS ratios towards zero.
+Depletion of Caspar, a negative regulator of the immune deficiency (IMD) pathway, with RNA interference was previously shown to reduce population infection rates from 85\% to 45\% suggesting that the IMD pathway plays a role frustrates infection by \emph{L. major} \cite{Telleria2012}.  Our observation of reduced expression of Caspar under infected blood fed conditions warrants further analysis
 
+Peritrophins 
 
 
 
