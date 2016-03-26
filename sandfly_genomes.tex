@@ -42,15 +42,15 @@ Additionally, genes from manually-annotated families were analyzed.  Genes with 
 \section{Results}
 
 \subsection{Analysis of Genome Assembly Fragmentation}
-Fragmentation of a genome assembly significantly effects comparative genomic analysis.  In particular, if the assembly produces a large number of scaffolds with only or two genes that cannot be mapped back to chromosomes, analyses such as synteny will not produce interpretable results.  To place our analyses discussed below in context, we analyzed the amount of fragmentation occurring in the sand fly genomes.  We our analysis found evidence of significant fragmentation.
+%Fragmentation of a genome assembly significantly effects comparative genomic analysis.  In particular, if the assembly produces a large number of scaffolds with only or two genes that cannot be mapped back to chromosomes, analyses such as synteny will not produce interpretable results.  To place our analyses discussed below in context, we analyzed the amount of fragmentation occurring in the sand fly genomes.  We our analysis found evidence of significant fragmentation.
 
 \textcolor{red}{why the choices of species?}
 
-We analyzed and compared the distribution of genes across the scaffolds from the genomes of the sand flies \emph{Ph. papatasi} and \emph{Lu. longipalpis}, mosquitoes \emph{Ae. aegypti} and \emph{An. gambiae}, and fruit flies \emph{Dr. melonagaster} and \emph{Dr. simulans} (Figure~\ref{fig:scaffolds}).  The six organisms have between 10,100 and 17,294 genes.  Assemblies of the \emph{An. gambiae} and \emph{Dr. melonagaster} genomes are relatively complete and are used as our standard for comparison.  \emph{An. gambiae} and \emph{Dr. melonagaster} both have one scaffold per chromosome with between 1,000 and 4,000 genes located on the five largest scaffolds.
+We analyzed and compared the distribution of genes across the scaffolds from the genomes of the sand flies \emph{P. papatasi} and \emph{L. longipalpis}, mosquitoes \emph{Ae. aegypti} and \emph{An. gambiae}, and fruit flies \emph{D. melonagaster} and \emph{Dr. simulans} (Figure~\ref{fig:scaffolds}).  The six organisms have between 10,100 and 17,294 genes.  Assemblies of the \emph{An. gambiae} and \emph{D. melonagaster} genomes are relatively complete and are used as our standard for comparison; both have one scaffold per chromosome with between 1,000 and 4,000 genes located on the five largest scaffolds.
 
-The assembly of the \emph{Dr. simulans} genome is partially fragmented but still relatively complete.  The assembly has more scaffolds (1,131) than chromosomes, but sizes (in terms of genes) of the five largest scaffolds are comparable to \emph{An. gambiae} and \emph{Dr. melonagaster}.  Comparison of the cumulative distribution of gene locations from largest to smallest scaffolds suggests that a majority of \emph{Dr. simulans}'s genes are located on a small number of large scaffolds with about 10\% of the genes distributed across a number of small scaffolds.
+The assembly of the \emph{D. simulans} genome is partially fragmented but still relatively complete.  The assembly has more scaffolds (1,131) than chromosomes, but sizes (in terms of genes) of the five largest scaffolds are comparable to \emph{An. gambiae} and \emph{D. melonagaster}.  Comparison of the cumulative distribution of gene locations from largest to smallest scaffolds suggests that a majority of \emph{D. simulans}'s genes are located on a small number of large scaffolds with about 10\% of the genes distributed across a number of small scaffolds.
 
-Analysis of \emph{Ph. papatasi}, \emph{Lu. longipalpis}, and \emph{Ae. aegypti} suggest a different story, with high levels of fragmentation.  \emph{Ph. papatasi} has more than 4,300 scaffolds.  Fewer than 100 genes are located on each of the top five largest scaffolds of all three organisms.  The cumulative distribution of genes indicates that the genes of \emph{Ph. papatasi} are nearly uniformly distributed across the scaffolds.  while the genes of \emph{Lu. longipalpis} and \emph{Ae. aegypti} are mostly concentrated among a smaller number of scaffolds, more than 10\% of the genes appear to be distributed across a large number of small scaffolds.
+Analysis of \emph{P. papatasi}, \emph{L. longipalpis}, and \emph{Ae. aegypti} suggest a different story, with high levels of fragmentation.  All three organisms have a large number of scaffolds (4,350, 1,928, and 1,633 scaffolds, respectively) and fewer than 100 genes are located on each of their five largest scaffolds (see Figure~\ref{fig:scaffolds}).  The cumulative distribution of genes indicates that the genes of \emph{P. papatasi} are nearly uniformly distributed across the scaffolds.  While not uniformally distributed, 90\% of the genes of \emph{L. longipalpis} and \emph{Ae. aegypti} are spread scross 1,000 scaffolds. The largest scaffolds of \emph{Ae. aegypti} (104 genes), \emph{L. longipalpis} (73), and \emph{P. papatasi} (84) are much smaller than the largest scaffolds sizes of \emph{D. melonagaster} (3,991 genes), \emph{D. simulans} (3,767 genes), and \emph{An. gambiae} (3,684) (see Table~\ref{tab:scaffold-sizes}).
 
 \begin{figure}[H]
   \centering
@@ -78,7 +78,22 @@ Analysis of \emph{Ph. papatasi}, \emph{Lu. longipalpis}, and \emph{Ae. aegypti} 
   \label{fig:scaffolds}
 \end{figure}
 
-\subsection{Qualitative Analysis of Synteny}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c c c c c} \hline
+    \emph{Species} & \emph{Scaffolds} & \emph{Genes} & \emph{Average Size} & \emph{Median Size} & \emph{Maximumum Size} \\ \hline
+    \emph{Ae. aegypti} & 1,633 & 15,797 & 9.7 & 5 & 104 \\
+    \emph{An. gambiae} & 7 & 12,843 & 1834.7 & 2093 & 3,684 \\
+    \emph{D. melonagaster} & 14 & 17,294 & 1235.3 & 74 & 3,991 \\ 
+    \emph{D. simulans} & 1,131 & 16,196 & 14.3 & 1 & 3,767 \\ 
+    \emph{L. longipalpis} & 1,928 & 10,100 & 5.2 & 1 & 73\\
+    \emph{P. papatasi} & 4,350 & 11,164 & 2.6 & 1 & 84
+  \end{tabular}
+  \caption{Scaffold size data}
+  \label{tab:scaffold-sizes}
+\end{table}
+
+\subsection{Conservation of Gene Order (Synteny)}
 Rearrangements of chromosomes are rare events and tend to happen in a block-wise fashion that mainly preserves the local order of genes on the chromosome. Thus, even after long periods of divergence between species, synteny blocks, defined as conserved runs of consecutive orthologous genes, remain discernible \cite{Heger2007}.  The presence of synteny can be used to infer evolutionary relationships between organisms' genomes at a macroscopic level, complementing analyses such as gene family expansions and reductions and changes within pairs of orthologous genes \cite{Zdobnov2002,Zdobnov2007}.
 
 Synteny between pairs of dipterans was analyzed qualitatively by generating scatter plots where each axis represents genes locations for one species and dots are drawn where orthologs occur (see Section~\ref{sec:synteny-methods-dotplots}). The presence of significant synteny was not detectable between any pair of \emph{An. gambiae}, \emph{D. melanogaster}, \emph{L. longipalpis}, and \emph{P. papatasi} (Figure~\ref{fig:synteny-dotplots-sandflies}).  In contrast, we compared the synteny between \emph{D. melanogaster} and \emph{D. simulans} (Figure~\ref{fig:synteny-dotplots-drosophila}) as a control and found significant presence of synteny, including an inversion.
@@ -148,7 +163,7 @@ We annotated and analyzed the largest synteny blocks from \emph{L. longipalpis} 
   \label{tab:synteny-block-stats}
 \end{table}
 
-\subsection{Comparison of $d_N$/$d_S$ Distributions}
+\subsection{Comparison of Protein Sequence Identity with $d_N$/$d_S$}
 DNA base pairs are subject to random substitutions as organisms reproduce.  Substitutions in protein-coding open-reading frames can be divided into two types: silent mutations which do not affect the resulting amino acid sequences and non-silent mutations which do affect the resulting amino acid sequences and can affect gene function.  Silent mutations are assumed not to be under any sort of selection process, correlating with an organism's rate of evolutionary change.  Non-silent mutations are less likely to be passed on since they may impair the function of important genes; those that are inherited either do not impact gene function or are under selection pressure as an organism adapts.
 
 dN/dS measures the ratio of the rate of substitutions at silent sites (dS), which are presumed neutral, to the rate of substitutions at non-silent sites (dN) \cite{Kryazhimskiy2008}. Genes with dN/dS $>$ 1 have non-silent substitions at a higher rate than the background rate of the organism's evolutionary change would suggest.  As such, these genes are assumed to be under selection pressure.  dN/dS is applied to orthologous genes from separate populations to identify genes which are likely associated with differences in populations' environments and ecological niches.
