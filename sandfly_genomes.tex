@@ -178,9 +178,9 @@ RNASeq differental gene expression data was collected from \emph{L. longipalpis}
   \centering
   \begin{tabular}{c c c} \hline
   \emph{Time Point} & \emph{Blood Fed vs Sugar Fed} & \emph{Infected Blood Fed vs Blood Fed} \\ \hline
-  6H & 3,111 & 271 \\ \hline
-  24H & 4,120 & 658 \\ \hline
-  144H & 4,571 & 290 \\ \hline
+  6H & 3,111 & 271 \\
+  24H & 4,120 & 658 \\
+  144H & 4,571 & 290 \\
   \end{tabular}
   \caption{Number of Genes with Statistically-Significant Differential Expression}
   \label{tab:stat-sig-genes}
@@ -190,7 +190,34 @@ Comparison of GO-slim term distributions yielded little insight into differences
 
 As such, we focused on comparing expression of genes from families and pathways associated with immunity between blood fed and infected blood fed conditions.  The expression levels of Attacin-C (LLOTMP005408, IMD), LuloGalecC (LLOTMP007344, Galectins), and LuloDifA (LLOTMP002098, Toll) were increased under infected blood fed conditions for all time points.  MAP4K4 (MAPK), Caspar (LLOTMP002950, IMD), Rel (LLOTMP002098, IMD), and IAP2 (LLOTMP000523, IMD) had reduced expression levels under infected blood fed conditions for all time points.  MAP3K7 (MAPK), LuloToll3 (LLOTMP001885, Toll), LuloDifB (LLOTMP002097, Toll), CalcinuerinB (LLOTMP006044, IMD), COX (LLOTMP003300, IMD), and Prohenoloxidase (LLOTMP001742, IMD) had both increased and decreased in expression at various time points.
 
-We also compared expression of genes involved with digestion from the peritrophin, chitin deacetylases, and chitinase families between blood fed and infected blood fed conditions. Increased expression of LuloPer1 (LLOTMP006497), LuloPer3a (LLOTMP002647), and LuloPer32 (LLOTMP00451) of the peritrophin familyand LlIDGF4 (LLOTMP004095) and chitinase like protein (LLOTMP006041) of the chitinase family was observed under infected blood fed conditions.  LuloPer3b (LLOTMP00490) and LuloPer2 (LLOTMP003676) of the peritropin family and LuloCDA1 (LLOTMP007910) of the chitin deacetylase family had both increased and decreased differences in expression between blood fed and infected blood fed conditions.
+We also compared expression of genes involved with digestion from the peritrophin, chitin deacetylases, and chitinase families between blood fed and infected blood fed conditions. Increased expression of LuloPer1 (LLOTMP006497), LuloPer3a (LLOTMP002647), and LuloPer32 (LLOTMP00451) of the peritrophin family and LlIDGF4 (LLOTMP004095) and chitinase like protein (LLOTMP006041) of the chitinase family was observed under infected blood fed conditions.  LuloPer3b (LLOTMP00490) and LuloPer2 (LLOTMP003676) of the peritropin family and LuloCDA1 (LLOTMP007910) of the chitin deacetylase family had both increased and decreased differences in expression between blood fed and infected blood fed conditions.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{ c c c c c } \hline
+    \emph{Gene} & \emph{Identifier} & \emph{6 hours} & \emph{24 hours} & \emph{144 hours} \\ \hline
+    LuloPer1 & LLOTMP006497 & Yes (3.96028) & Yes (10.5884) & No \\
+    LuloPer2 & LLOTMP003676 & Yes (0.41318) & Yes (1.61758) & Yes (-0.608263) \\
+    LuloPer3b & LLOTMP004906 & Yes (1.32142) & Yes (0.940809) & Yes (0.603129) \\
+    LuloPer32 & LLOTMP004516 & Yes (-0.985627) & Yes (2.27779) & Yes (-2.2308)
+  \end{tabular}
+  \caption{Peritrophins with statistically-significant differences in expression between sugar fed and blood fed conditions. Log-fold change is given in parentheses. Positive and negative values indicate up- and down-regulation in blood fed, respectively.}
+  \label{tab:sandflies:stat-sig-peritrophins-sb}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{ c c c c c } \hline
+    \emph{Gene} & \emph{Identifier} & \emph{6 hours} & \emph{24 hours} & \emph{144 hours} \\ \hline
+    LuloPer1 & LLOTMP006497 & Yes (1.2595) & Yes (0.384657) & No \\
+    LuloPer2 & LLOTMP003676 & No & Yes (0.183758) & Yes (-0.684151) \\
+    LuloPer3a & LLOTMP002647 & Yes (0.283665) & Yes (0.152629) & Yes (0.358638) \\
+    LuloPer3b & LLOTMP004906 & Yes (-0.137809) & Yes (1.20303) & No \\
+    LuloPer32 & LLOTMP004516 & Yes (1.14581) & Yes (0.612843) & No
+  \end{tabular}
+  \caption{Peritrophins with statistically-significant differences in expression between blood fed and infected blood fed conditions. Log-fold change is given in parentheses. Positive and negative values indicate up- and down-regulation in infected blood fed, respectively.}
+  \label{tab:sandflies:stat-sig-peritrophins-bi}
+\end{table}
 
 \subsection{Niemann Pick type C-like Genes}
 A three-way comparison of synteny between \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi} revealed a block of Niemann Pick type C2-like genes (Table~\ref{tab:synteny-three-way-npc2}). In insects, NPC genes are involved with sterol (e.g., cholesterol) homeostasis and biosynthesis of ecdysteroids, insect sex and moulting hormones. In humans, mutations in either of two Niemann Pick type C (NPC) genes, \emph{NPC1} and \emph{NPC2}, cause a fatal neurogenerative disorder associated with abnormal cholesterol accumulation in cells.  Previous work on NPC 2 in \emph{D. melanogaster} found that \emph{npc2a} and \emph{npc2b}, play a redundant role such that mutations in one have little discernable effect on biology; concurrent mutations in both genes lead to mortality and apoptotic neurodegeneration \cite{Huang2007}.  \emph{npc2e} and \emph{npc2a} have also been associated with the immune defiency (Imd) pathways in \emph{D. melanogaster} \cite{Shi2012}. Studies of NPC2-like genes in \emph{Ae. aegypti} have implicated ecdysteroids in a signaling cascade linking blood meal intake with vitellogenesis \cite{Sirot2011}.  Thus, the synteny of NPC2-like genes between \emph{An. gambiae}, \emph{L. longipalpis}, and \emph{P. papatasi}, may indicate similarity in sex, moulting, immunity, and feeding pathways between sand flies and mosquitoes.
@@ -228,14 +255,14 @@ Whereas LLOTMP001861 presented little difference in expression between blood fed
     \emph{L. longipalpis} & \emph{P. papatasi} & \emph{Description} \\ \hline
     LLOTMP006493 & PPATMP009348 & SCP-related protein \\
     LLOTMP006494 & PPATMP009349 & ribosomal protein S23 \\
-    LLOTMP006495 & PPATMP009350 & Chitin-Binding Domain \\
-    LLOTMP006496 & PPATMP009351 & Chitin-Binding Domain \\
-    LLOTMP006497 & PPATMP009352 & Chitin-Binding Domain \\
-    LLOTMP006498 & PPATMP009353 & Chitin-Binding Domain \\
-    LLOTMP006499 & PPATMP009355 & Chitin-Binding Domain \\
-    LLOTMP006500 & PPATMP009356 & Chitin-Binding Domain
+    LLOTMP006495 & PPATMP009350 & LuloPer22 \\
+    LLOTMP006496 & PPATMP009351 & LuloPer14 \\
+    LLOTMP006497 & PPATMP009352 & LuloPer1 \\
+    LLOTMP006498 & PPATMP009353 &  \\
+    LLOTMP006499 & PPATMP009355 & LuloPer18 \\
+    LLOTMP006500 & PPATMP009356 & LuloPer17
   \end{tabular}
-  \caption{Synteny block of peritrophic matrix-associated genes from \emph{L. longipalpis} vs. \emph{P. papatasi}.}
+  \caption{Synteny block of peritrophins from \emph{L. longipalpis} vs. \emph{P. papatasi}.}
   \label{tab:synteny-llot-ppat-peritrophic}
 \end{table}
 
@@ -255,23 +282,37 @@ Microsynteny was, however, observed between the sand flies and the sand flies an
 
 Microsynteny is more robust to genome assembly fragmentation \cite{Zdobnov2002} and expected in organisms with the evolutionary distances of the sand flies and \emph{An. gambiae} \textcolor{red}{CITE}. Noncoding elements, particularly associated with gene regulation, have been found to be highly-conserved in insect microsynteny blocks, suggesting a cause for the preservation of small-scale gene order \cite{Engstrom2007}.
 
-%Annotation of the sand fly microsynteny blocks found common ``bookkeeping'' genes conserved across a large number of organisms such as genes associated with membrane transport, RNA regulation and synthesis, and intracellular processes \cite{Zdobnov2007}.  Genes associated with peritrophic matrices found primarily in insects were also found to be in microsynteny but are known to be well conserved across insects \textcolor{red}{cite}.  Microsynteny of such highly-conserved genes is expected.
-
 Evolutionary changes at the level of individual genes was analyzed through comparing distributions of dN/dS ratios of single-copy orthologs. DNA base pairs are subject to random substitutions as organisms reproduce.  Substitutions in protein-coding open-reading frames can be divided into two types: silent mutations which do not affect the resulting amino acid sequences and non-silent mutations which do affect the resulting amino acid sequences and can affect gene function.  Silent mutations are assumed not to be under any sort of selection process, correlating with an organism's rate of evolutionary change.  Non-silent mutations are less likely to be passed on since they may impair the function of important genes; those that are inherited either do not impact gene function or are under selection pressure as an organism adapts.
 
-dN/dS measures the ratio of the rate of substitutions at silent sites (dS), which are presumed neutral, to the rate of substitutions at non-silent sites (dN) \cite{Kryazhimskiy2008}. Genes with dN/dS $>$ 1 have non-silent substitutions at a higher rate than the background rate of the organism's evolutionary change would suggest.  As such, these genes are assumed to be under positive selection pressure.  Genes with dN/dS $<1$ have fewer non-silent substitutions, suggesting negative selection pressure and greater conservation in their sequences. \textcolor{red}{plos paper} 
-
-%dN/dS is applied to orthologous genes from separate populations to identify genes which are likely associated with differences in populations' environments and ecological niches.
+dN/dS measures the ratio of the rate of substitutions at silent sites (dS), which are presumed neutral, to the rate of substitutions at non-silent sites (dN) \cite{Kryazhimskiy2008}. Genes with dN/dS $>$ 1 have non-silent substitutions at a higher rate than the background rate of the organism's evolutionary change would suggest.  As such, these genes are assumed to be under positive selection pressure.  Genes with dN/dS $<1$ have fewer non-silent substitutions, suggesting negative selection pressure and greater conservation in their sequences.
 
 The dN/dS distribution for single-copy orthologs from \emph{L. longipalpis} and \emph{P. papatasi} is skewed towards zero when compared with distributions with and between \emph{An. gambiae} and \emph{D. melanogaster}.  The smaller dN/dS values indicate fewer non-silent substitutions relative to the number of silent substitutions.  The smaller vlaues could be a result of the shorter evolutionary distance between \emph{L. longipalpis} and \emph{P. papatasi} versus any other pair of species we compared.  However, we also found, in line with the fragmentation of the genome assemblies, that many gene models are shorter than their orthologs in other species, indicating that the gene models may not be complete (results not shown).  Thus, the lower dN/dS values could also caused by truncated gene models that contain only the most conserved segments of genes.
 
-\textcolor{red}{RNASeq}
-  
+Host-parasite interactions are of particular interest.  Within a few hours, a peritrophic matrix forms around the blood bolus.  The peritrophic matrix thickens and matures around 12 to 24 hours, depending on the sand fly species.  After 48 to 72 hours, the peritrophix matric structure starts to break down.  The peritrophic matrix seems to play a dual role with respect to \emph{Leishmania} development: the peritrophic matrix protects the parasite against attack by proteolytic proteins at the beginning of digestion yet becomes a barrier to parasite escape when mature \cite{Dostalova2012}.
+
+We analyzed differences in expression of peritrophins between sugar-fed and blood-fed conditions and blood-fed and infected blood-fed conditions.  Due to data quality issues, CuffDiff only performed statistical tests on 8 of the 28 identified of the peritrophins.  LuloPer4 (LLOTMP003410), LuloPer10 (LLOTMP007615), and LuloPer11 (LLOTMP002676) had no statistically-significant differences at two or more time points.
+
+A previous (expression tag sequence) EST study reported increased expression of LuloPer1 (LLOTMP006497), LuloPer2 (LLOTMP003676), and LuloPer32 (LLOTMP004516) after blood feeding \cite{Jochim2008}. Similarly, we observed up-regulation of LuloPer1, LuloPer2, and LuloPer32 at 24 hours after blood-feeding, after the peritrophic matrix thickens and matures.  We also observed increased expression of LuloPer1 and LuloPer2 but decreased expression of LuloPer32 at 6 hours, prior to the maturation of the peritrophic matrix. At 144 hours, after the peritrophic matrix starts to degrade, we observed down-regulation of LuloPer2 and LuloPer32 but no change in expression of LuloPer1.
+
+Differential expression of LuloPer1 was observed to be increased with infected blood feeding at 6 and 24 hours, in agreement with the EST data \cite{Jochim2008,Dostalova2012}.  However, while the EST data showed no significant difference in expression under infection, we observed an increase in the expression of LuloPer32 at 6 and 24 hours and LuloPer2 at 6 hours followed by a decrease in expression at 24 hours \cite{Jochim2008}.  At 144 hours, LuloPer2 was down-regulated but LuloPer1 and LuloPer32 had no change in expression.
+
+Differential expression levels of LuloPer3a (LLOTMP002647) and LuloPer3b (LLOTMP004906) were observed in the RNASeq analysis but were not found in the EST expression analysis \cite{Jochim2008}. LuloPer3b was up-regulated in blood fed (vs sugar fed) across all three time points and down-regulated at 6 hours and up-regulated at 24 hours in infected blood fed (vs sugar fed) conditions.  Expression of LuloPer3a had no statistically-significantly difference between blood fed and sugar fed conditions but was up-regulated across all three time points under infected bood fed (vs blood fed) conditions.
+
+The RNASeq differential expression analysis confirmed the previous EST expression analysis of LuloPer1, LuloPer2, and LuloPer32 under blood fed (vs sugar fed) conditions and LuloPer1 under infected blood fed (vs blood fed) conditions.  We found differences in the expression of LuloPer2 and LuloPer32 under infected blood fed (vs blood fed) conditions, which had not been observed previously.  We also observed previously-unreported statistically-significant differences in expression of LuloPer3b under blood-fed (vs sugar-fed) conditions and LuloPer2 and LuloPer3b under infected blood-fed (vs blood-fed) conditions. Further analysis is needed to determine the exact functions of the peritrophins and the importance of the observed expression profiles.
+
+LuloPer1 and four peritropins without RNASeq results are located in a microsynteny block from \emph{L. longipalpis} and \emph{P. papatasi} (see Table~\ref{tab:synteny-llot-ppat-peritrophic}). As previously noted, highly-conserved noncoding elements, particularly associated with gene regulation, have been found previously in insect microsynteny blocks \cite{Engstrom2007}.  Further study of peritrophins could potentially lead to  better understanding the relationship between regulation mechanisms and microsynteny in general and the molecular mechanisms of the peritrophin's regulation specifically.
+
+
+
+
+The breakdown of the peritrophic matrix has been attributed to chitinases. We observed the up-regulation of LlIDGF4 (LLOTMP004095) and a chitinase-like gene (LLOTMP006041) at 6, 24, and in the case of LLOTMP006041, at 144 hours.   \textcolor{red}{LlChit1 up-regulated in SB comparison. CITE}
+
+\textcolor{red}{immunity}
+
+
 Depletion of Caspar, a negative regulator of the immune deficiency (IMD) pathway, with RNA interference was previously shown to reduce population infection rates from 85\% to 45\% suggesting that the IMD pathway plays a role frustrates infection by \emph{L. major} \cite{Telleria2012}.  Our observation of reduced expression of Caspar under infected blood fed conditions warrants further analysis
 
 \textcolor{red}{NPC2-like genes}
-
-\textcolor{red}{Peritrophins}
 
 \section{Conclusion}
 
