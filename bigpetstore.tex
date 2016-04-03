@@ -1,4 +1,4 @@
-\chapter{A Domain-Driven, Generative Data Model for BigPetStore}
+\chapter{\uppercase{A Domain-Driven, Generative Data Model for BigPetStore}}
 \epigraph{\textit{At the end of my fourth year, I took a full-time position as software engineer at Red Hat, Inc. and dropped from being a full-time Ph.D. student to a part-time student.  Shortly after starting, I designed a generative model to simulate customer transactions for a fictional chain of pet stores, with the intention of enabling testing and realistic demos of open-source ``big data'' platforms.  In collaboration with Jay Vyas, my friend, Red Hat colleague, and collaborator from my time at the University of Connecticut Health Center (UCHC), I described and published the model in the conference paper copied below.  I decided to include the paper here, even though it is not part of my dissertation, because it serves as additional evidence of my capacity to conduct and publish independent research.  More sentimentally, the work serves as a tribute to my academic research career, connecting, through Jay, the beginning of my academic research career at UCHC to its end as I defend my Ph.D. at Notre Dame and begin a new career at Red Hat.}}
 
 \section{Abstract}
@@ -33,8 +33,8 @@ The model generates data for four types of records: stores, customers, transacti
 
 \begin{figure}[!t]
   \centering
+  \caption{\uppercase{Relational Data Model for Generated Data}}
   \includegraphics[width=3.5in]{figures/bigpetstore/transactions_data_model.eps}
-  \caption{Relational Data Model for Generated Data}
   \label{fig:relational-data-model}
 \end{figure}
 
@@ -85,8 +85,8 @@ A transaction simulation is run for each customer. The transaction's store is se
 
 \begin{figure}[!t]
   \centering
+  \caption{\uppercase{Flowchart of Transaction Monte Carlo Simulation}}
   \includegraphics[width=3.5in]{figures/bigpetstore/transaction_simulation.eps}
-  \caption{Flowchart of Transaction Monte Carlo Simulation}
   \label{fig:trans_sim}
 \end{figure}
 
@@ -135,8 +135,8 @@ The proposed transaction time is accepted if $p(t_{n+1}=T_T) < r$, where $r \sim
 
 \begin{figure*}[!t]
   \centering
+  \caption{\uppercase{Example Shopping Cart Hidden Markov Model}}
   \includegraphics[width=6in]{figures/bigpetstore/shopping_cart_simulation.eps}
-  \caption{Example Shopping Cart Hidden Markov Model}
   \label{fig:shopping_cart_sim}
 \end{figure*}
 
@@ -226,8 +226,8 @@ First, we wanted to identify how close most customers live to a store since adve
 
 \begin{figure}[!t]
   \centering
+  \caption{\uppercase{Distributions of Distances of Customers to Closest Stores}}
   \includegraphics[width=3.5in]{figures/bigpetstore/customer_store_distances.eps}
-  \caption{Distributions of Distances of Customers to Closest Stores}
   \label{fig:cluster_analysis}
 \end{figure}
 
@@ -235,8 +235,10 @@ Secondly, we profiled our customers' purchasing habits to optimize the advertisi
 
 \begin{figure}[!t]
   \centering
+  \caption{\uppercase{Clustering of Brand and Flavor Purchasing Preferences}}
   \includegraphics[width=3.5in]{figures/bigpetstore/cluster_analysis.eps}
-  \caption{Clustering of Brand and Flavor Purchasing Preferences. Grey plus signs (+) represent customer data points, and cyan circles represent cluster centers.}
+
+  Grey plus signs (+) represent customer data points, and cyan circles represent cluster centers.
   \label{fig:cluster_analysis}
 \end{figure}
 
@@ -248,15 +250,15 @@ BigPetStore aims to scale from a local desktop to a large cluster. To evaluate t
 
 \begin{table}[!t]
 %% increase table row spacing, adjust to taste
-\renewcommand{\arraystretch}{1.3}
+%\renewcommand{\arraystretch}{1.3}
 % if using array.sty, it might be a good idea to tweak the value of
 % \extrarowheight as needed to properly center the text within the cells
-\caption{Benchmarks of Data Generator}
+\caption{\uppercase{Benchmarks of Data Generator}}
 \label{tab:benchmarks}
 \centering
 %% Some packages, such as MDW tools, offer better commands for making tables
 %% than the plain LaTeX2e tabular which is used here.
-\begin{tabular}{|p{0.75cm}||p{1.2cm}||p{1cm}||p{1.25cm}||p{1cm}||p{1cm}|}
+\begin{tabular}{ p{1cm} p{1.75cm} p{2cm} p{2.25cm} p{1.5cm} p{1.5cm} }
 \hline
 Stores & Customers & Simulated Time (years) & Transactions & Data Size (MB) & Run Time (min)\\ \hline
 10 & 10,000 & 1 & 279,870 & 18 & 3.5 \\ \hline
