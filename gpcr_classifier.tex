@@ -1,4 +1,4 @@
-\chapter{Identification of Novel Arthropod Vector G Protein-Coupled Receptors}
+\chapter{\uppercase{Identification of Novel Arthropod Vector G Protein-Coupled Receptors}}
 
 \section{Abstract}
 \paragraph*{Background:}
@@ -176,37 +176,47 @@ We also provided a new analysis of the GPCR repertoires of the three vector spec
 
 
 \begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{figures/gpcr_classifier/ensemble-diagram.eps}
-\caption{Flowchart describing the Ensemble*, GPCRHMM*, and Pfam* classifiers.  The diamonds represent sequences, while the rectangles represent steps of the classifiers.  The dashed rectangles describe to which classifiers the components belong. The input sequences are the sequences to be classified, while the training sequences are sequences which have known designations of either GPCR or not GPCR.}
+  \centering
+  \caption{ENSEMBLE* FLOWCHART}
+  \includegraphics[width=0.8\textwidth]{figures/gpcr_classifier/ensemble-diagram.eps}
+  
+Flowchart describing the Ensemble*, GPCRHMM*, and Pfam* classifiers.  The diamonds represent sequences, while the rectangles represent steps of the classifiers.  The dashed rectangles describe to which classifiers the components belong. The input sequences are the sequences to be classified, while the training sequences are sequences which have known designations of either GPCR or not GPCR.
 \label{fig:ensemble-diagram}
 \end{figure}
 
 \begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{figures/gpcr_classifier/combined_ensembl_roc.eps}
-\caption{ROC Curve Comparing Classifier Performance on Combined Data Set. The dashed (GPCRHMM*), dotted (Pfam*), and solid (Ensemble*) curves represent the relationship between the percentage of training set GPCRs correctly predicted (true positives) plotted against the percentage of sequences miss-classified as GPCRs (false positives) by the classifiers as the likelihood score threshold was decreased from 1 (accepting nothing) to 0 (accepting everything). GPCRHMM (diamond), Pfam (circle), and PredCouple (square) only produce true/false predictions for each sequence and hence are represented as single points. }
+  \centering
+  \caption{ROC CURVE FOR COMBINED DATA SET}
+  \includegraphics[width=0.8\textwidth]{figures/gpcr_classifier/combined_ensembl_roc.eps}
+  
+ROC Curve Comparing Classifier Performance on Combined Data Set. The dashed (GPCRHMM*), dotted (Pfam*), and solid (Ensemble*) curves represent the relationship between the percentage of training set GPCRs correctly predicted (true positives) plotted against the percentage of sequences miss-classified as GPCRs (false positives) by the classifiers as the likelihood score threshold was decreased from 1 (accepting nothing) to 0 (accepting everything). GPCRHMM (diamond), Pfam (circle), and PredCouple (square) only produce true/false predictions for each sequence and hence are represented as single points.
 \label{fig:combined-roc-curve}
 \end{figure}
 
 \begin{figure}[H]
-\centering
+  \centering
+  \caption{ROC CURVES FOR INDIVIDUAL ORGANISMS}
 \includegraphics[width=0.8\textwidth]{figures/gpcr_classifier/organism_ensembl_roc.eps}
-\caption{ROC Curves Comparing Classifier Performance on Individual Organisms.  For each ROC curve, the classifiers were trained on five of the organisms and then evaluated on the sixth organism (given in the title).  The solid (Ensemble*), dashed (GPCRHMM*), and dotted (Pfam*) lines represent the relationship between the percentage of correctly predicted training set GPCRs (true positives) and the percentage of incorrectly predicted non-GPCRS (false positives) as the likelihood score threshold is decreased from 1 (accept nothing) to 0 (accept everything).  GPCRHMM (diamond), Pfam (circle), and PredCouple (square) only produce true/false predictions for each sequence and hence are represented as single points.}
+
+ROC Curves Comparing Classifier Performance on Individual Organisms.  For each ROC curve, the classifiers were trained on five of the organisms and then evaluated on the sixth organism (given in the title).  The solid (Ensemble*), dashed (GPCRHMM*), and dotted (Pfam*) lines represent the relationship between the percentage of correctly predicted training set GPCRs (true positives) and the percentage of incorrectly predicted non-GPCRS (false positives) as the likelihood score threshold is decreased from 1 (accept nothing) to 0 (accept everything).  GPCRHMM (diamond), Pfam (circle), and PredCouple (square) only produce true/false predictions for each sequence and hence are represented as single points.
 \label{fig:individual-roc-curves}
 \end{figure}
 
 \begin{figure}[H]
-\centering
+  \centering
+  \caption{GPCR VALIDATION PIPELINE}
 \includegraphics[width=0.6\textwidth]{figures/gpcr_classifier/validation-pipeline.eps}
-\caption{GPCR Validation Pipeline.  Diamonds indicate input and output sequences.  Rectangles represent the validation programs and filters.  Arrows indicate the movement of sequences and are labeled with the number of sequences that passed from one validation step to the next.  Numbers for sequences that were identified as something other than GPCRs are not shown.  The first filter identifies sequences which are annotated as GPCRs in the database and removes any sequences which were annotated as something other than GPCRs or were identified by ScanPROSITE as having non-GPCR domains.  The second filter uses a combination of the BLAST hits, I-TASSER results, and identification of GPCR domains by ScanPROSITE to categorize the final 52 predicted but unconfirmed sequences.}
+
+GPCR Validation Pipeline.  Diamonds indicate input and output sequences.  Rectangles represent the validation programs and filters.  Arrows indicate the movement of sequences and are labeled with the number of sequences that passed from one validation step to the next.  Numbers for sequences that were identified as something other than GPCRs are not shown.  The first filter identifies sequences which are annotated as GPCRs in the database and removes any sequences which were annotated as something other than GPCRs or were identified by ScanPROSITE as having non-GPCR domains.  The second filter uses a combination of the BLAST hits, I-TASSER results, and identification of GPCR domains by ScanPROSITE to categorize the final 52 predicted but unconfirmed sequences.
 \label{fig:validation-pipeline}
 \end{figure}
 
 \begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{figures/gpcr_classifier/summary-independent-validation.eps}
-\caption{Distribution of the newly-discovered vector GPCR sequences according to their GPCR status for each vector species.}
+  \centering
+  \caption{DISTRIBUTION OF NEWLY-DISCOVERED GPCR SEQUENCES}
+  \includegraphics[width=0.8\textwidth]{figures/gpcr_classifier/summary-independent-validation.eps}
+  
+Distribution of the newly-discovered vector GPCR sequences according to their GPCR status for each vector species.
 \label{fig:summary-independent-validation}
 \end{figure}
 
@@ -215,9 +225,9 @@ We also provided a new analysis of the GPCR repertoires of the three vector spec
 
 \begin{table}[H]
 %  \centering
-  \caption{Data Set Sources and Construction}
+  \caption{\uppercase{Data Set Sources and Construction}}
   \small
-  \begin{tabular}{| l | l | l |}
+  \begin{tabular}{| l | p{5cm} | p{5cm} |}
     \hline
     \textbf{Organism} & \textbf{Predicted Proteome Source and Version} & \textbf{Training Set Source} \\ \hline
     \emph{Ae. aegypti} & VectorBase, v. AaegL1.2 & VB and GPCRDB annotations \\ \hline
@@ -233,11 +243,11 @@ We also provided a new analysis of the GPCR repertoires of the three vector spec
 
 \begin{table}[H]
 %  \begin{center}
-  \caption{Classifiers' True Positive Rates for Different False Positive Rates.}
+  \caption{\uppercase{Classifiers' True Positive Rates for Different False Positive Rates}}
   \small
-  \begin{tabular}{| l | p{2.5cm} | p{2.5cm} | p{2.5cm} | p{2.5cm} | p{2.5cm} |}
+  \begin{tabular}{| l | p{2.25cm} | p{2.25cm} | p{2.25cm} | p{2.25cm} | p{2.25cm} |}
     \hline
-    \textbf{Classifier} & \multicolumn{5}{c |}{\textbf{True Positive Rate (TPR)}*} \\ \hline
+    \textbf{Classifier} & \multicolumn{5}{c |}{\textbf{True Positive Rate (TPR)}} \\ \hline
                & GPCRHMM's FPR (0.0061) & PredCouple's FPR (0.0066) & Pfam's FPR (0.0067) & FPR where Ensemble*'s TPR Plateaus (0.01) & Best for all FPRs $\leq$ 0.01 \\ \hline
     Ensemble*  & 87\%                   & 89\%                      & 89\%                & 91\%                                      & 91\% \\ \hline
     GPCRHMM    & 81\%                   & --                        & --                  & --                                        & 81\% \\ \hline
@@ -246,14 +256,15 @@ We also provided a new analysis of the GPCR repertoires of the three vector spec
     Pfam*      & 80\%                   & 80\%                      & 80\%                & 80\%                                      & 80\% \\ \hline
     PredCouple & --                     & 86\%                      & --                  & --                                        & 86\% \\ \hline
   \end{tabular}
-%  \end{center}
-  *Percentage of training set GPCRs correctly predicted (true positive rates) for fixed percentages of sequences misclassified as GPCRs (false positive rates) are given.  The false positive rates (FPR) of GPCRHMM, PredCouple, Pfam, and at which Ensemble*'s true positive rate plateaus were chosen to provide the most direct comparisons between the classifiers.
+  %  \end{center}
+  
+  Percentage of training set GPCRs correctly predicted (true positive rates) for fixed percentages of sequences misclassified as GPCRs (false positive rates) are given.  The false positive rates (FPR) of GPCRHMM, PredCouple, Pfam, and at which Ensemble*'s true positive rate plateaus were chosen to provide the most direct comparisons between the classifiers.
   \label{tab:ensemble-results}
 \end{table}
 
 \begin{table}[H]
 %\begin{center}
-\caption{Number of Test Set Sequences Found / Missed by Species.}
+\caption{\uppercase{Number of Test Set Sequences Found / Missed by Species}}
 \small
 \begin{tabular}{| c | c | c | c | c |}
 \hline
@@ -270,19 +281,19 @@ Total (1517)                     & 1230 / 287 & 1237 / 280  & 1312 / 205  & \tex
 \end{tabular}
 %\end{center}
 
-*The number of test set sequences each classifier identified (found) and was unable to identify (missed) as GPCRs are given by species, vectors, and total. GPCRHMM, Pfam, and Predcouple were run using default settings. For Ensemble*, sequences with a positive likelihood score were considered to predicted GPCRs.  The best results are in bold.
+The number of test set sequences each classifier identified (found) and was unable to identify (missed) as GPCRs are given by species, vectors, and total. GPCRHMM, Pfam, and Predcouple were run using default settings. For Ensemble*, sequences with a positive likelihood score were considered to predicted GPCRs.  The best results are in bold.
 \label{tab:missed-sequences}
 \end{table}
 
 \newpage
 
-\begin{longtable}{| l | l | p{1.75cm} | p{3.5cm} | p{4cm} |}
-\caption{\label{tab:novel-gpcrs} Newly-Discovered GPCRs Identified by Ensemble*$^{\dagger}$.} \\ \hline
+\begin{longtable}{| l | l | p{2cm} | p{3.25cm} | p{3.5cm} |}
+\caption{\label{tab:novel-gpcrs} \uppercase{Newly-Discovered GPCRs Identified by Ensemble*}.} \\ \hline
 \textbf{Sequence ID} & \textbf{Species} & \textbf{Prediction Likelihood Value} & \textbf{Evidence} & \textbf{BLAST Sequence Name}
 \endfirsthead
 \hline
 \textbf{Sequence ID} & \textbf{Species} & \textbf{Prediction Likelihood Value} & \textbf{Evidence} & \textbf{BLAST Sequence Name} \endhead
-\caption*{$^{\dagger}$Sequences were predicted using the Ensemble* classifier.  Independent validation was performed using ScanPROSITE, I-TASSER, and homology to GPCRs in other organisms as determined by a BLAST search of the NCBI nr database.  Status as a newly-discovered GPCR was contingent upon identification by the Ensemble* classifier and the existence of no contrary evidence, while confirmed GPCRs also had to be validated by at least two independent methods.}\\
+\caption*{Sequences were predicted using the Ensemble* classifier.  Independent validation was performed using ScanPROSITE, I-TASSER, and homology to GPCRs in other organisms as determined by a BLAST search of the NCBI nr database.  Status as a newly-discovered GPCR was contingent upon identification by the Ensemble* classifier and the existence of no contrary evidence, while confirmed GPCRs also had to be validated by at least two independent methods.}\\
 \endlastfoot
 \hline
     AAEL013430-PA & \emph{Ae. aegypti} & 0.346 & ScanPROSITE and BLAST and I-TASSER & putative GPCR class a orphan receptor 5 \\ \hline
@@ -317,4 +328,6 @@ Total (1517)                     & 1230 / 287 & 1237 / 280  & 1312 / 205  & \tex
     PHUM288590-PA & \emph{Pe. humanus} & 0.136 & Unconfirmed & N/A \\ \hline
 
 \end{longtable}
+
+
 
