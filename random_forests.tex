@@ -1,4 +1,4 @@
-\chapter{Ranking Biologically-Interesting SNPs in Incipient Species of Malaria Vectors using Random Forests}
+\chapter{\uppercase{Ranking Biologically-Interesting SNPs in Incipient Species of Malaria Vectors using Random Forests}}
 
 \section{Abstract}
   \paragraph*{Background:}
@@ -191,6 +191,7 @@ We demonstrated that Random Forests can be used successfully to rank biologicall
 
 \begin{figure}[h!]
   \centering
+  \caption{ENCODING SCHEME VARIABLE IMPORTANCE SCORES}
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/random_forests/rf_bias_integer}
     \caption{Integer Encoded}
@@ -202,12 +203,14 @@ We demonstrated that Random Forests can be used successfully to rank biologicall
     \caption{One-Hot Encoded}
     \label{fig:one-hot}
   \end{subfigure}
-  \caption{Comparison of effect of encoding schemes for categorical variables on variable importance scores. The variables have randomly-chosen values with no correlation with output labels and 2-32 categories.}
+
+  Comparison of effect of encoding schemes for categorical variables on variable importance scores. The variables have randomly-chosen values with no correlation with output labels and 2-32 categories.
   \label{fig:encoding-schemes}
 \end{figure}
 
 \begin{figure}[h!]
   \centering
+  \caption{MISSING DATA VARIABLE IMPORTANCES SCORES}
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/random_forests/rf_missing_data_none}
     \caption{No Missing Data}
@@ -225,12 +228,14 @@ We demonstrated that Random Forests can be used successfully to rank biologicall
     \caption{Missing Data Imputed with Mode}
     \label{fig:missing-data-imputed}
   \end{subfigure}
-  \caption{Effect of missing data on variable importance scores.}
+  
+  Effect of missing data on variable importance scores.
   \label{fig:missing-data}
 \end{figure}
 
 \begin{figure}[h!]
   \centering
+  \caption{VARIABLE IMPORTANCES FOR DIFFERENT VARIABLE COUNTS}
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/random_forests/rf_variable_count_bias_5.png}
     \caption{5 Uninformative Variables}
@@ -248,12 +253,14 @@ We demonstrated that Random Forests can be used successfully to rank biologicall
     \caption{25 Uninformative Variables}
     \label{fig:var-count-25}
   \end{subfigure}
-  \caption{Distributions of variable importance scores with 5, 10, and 25 uninformative variables.}
+  
+  Distributions of variable importance scores with 5, 10, and 25 uninformative variables.
   \label{fig:var-count}
 \end{figure}
 
 \begin{figure}[h!]
   \centering
+  \caption{DIFFERENT NUMBERS OF CORRELATED VARIABLES}
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/random_forests/rf_correlated_1_0_1.png}
     \caption{1 Correlated Variable}
@@ -289,8 +296,8 @@ We demonstrated that Random Forests can be used successfully to rank biologicall
     \caption{25 Correlated Variables}
     \label{fig:corr-1-25-counts}
   \end{subfigure}
-  ~
-  \caption{Analysis of variables from generated data sets with 1, 10, and 25 out of 25 variables perfectly correlated with the output label. The left-hand side figures are distributions of variable importance scores. Right-hand side figures are number of trees using each variable.}
+  
+  Analysis of variables from generated data sets with 1, 10, and 25 out of 25 variables perfectly correlated with the output label. The left-hand side figures are distributions of variable importance scores. Right-hand side figures are number of trees using each variable.
   \label{fig:corr-1}
 \end{figure}
 
@@ -298,6 +305,7 @@ We demonstrated that Random Forests can be used successfully to rank biologicall
 
 \begin{figure}[h!]
   \centering
+  \caption{IMPURITY FOR BAGGING AND CONSTRAINED BAGGING}
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/random_forests/bagging_bias_bagging_hist.png}
     \caption{Bagging}
@@ -327,14 +335,15 @@ We demonstrated that Random Forests can be used successfully to rank biologicall
     \caption{Constrained Bagging, 1000 Resamples}
     \label{fig:bagging-bias-constrained-1000}
   \end{subfigure}
-  ~
-  \caption{Distributions of mean decreases in impurity when using bagging and constrained bagging with 0, 10, 100, and 1000 additional re-sampled instances.}
+
+  Distributions of mean decreases in impurity when using bagging and constrained bagging with 0, 10, 100, and 1000 additional re-sampled instances.
   \label{fig:bagging-bias}
 \end{figure}
 
 \section{Tables}
 \begin{table}[h!]
   \begin{center}
+    \caption{GENOTYPE EXAMPLES}
     \begin{tabular}{ c c c}
       \hline
       \textbf{Group} & \textbf{Before} & \textbf{After}\\ \hline
@@ -348,12 +357,14 @@ We demonstrated that Random Forests can be used successfully to rank biologicall
       3 & X/X & X/X \\
     \end{tabular}
   \end{center}
-  \caption{Examples of two groups with known and unknown genotypes, before and after imputation with a threshold frequency of 100\%.}
+  
+  Examples of two groups with known and unknown genotypes, before and after imputation with a threshold frequency of 100\%.
   \label{tab:unknown-genotypes-example}
 \end{table}
 
 \begin{table}[h!]
   \begin{center}
+    \caption{SNP EXAMPLES}
     \begin{tabular}{ c c c }
       \hline
       \textbf{Individual} & \textbf{(X, 1)} & \textbf{(X, 10)} \\ \hline
@@ -361,12 +372,14 @@ We demonstrated that Random Forests can be used successfully to rank biologicall
       2 & T/T & C/C \\
     \end{tabular}
   \end{center}
-  \caption{Examples of SNP values for two individuals.  The SNPs are labeled by pairs of chromosome and position.}
+
+  Examples of SNP values for two individuals.  The SNPs are labeled by pairs of chromosome and position.
   \label{tab:encoding-example-snps}
 \end{table}
 
 \begin{table}[h!]
   \begin{center}
+    \caption{FEATURE MATRIX EXAMPLE}
     \begin{tabular}{ c c c c c c c }
       \hline
       \textbf{Individual} & \textbf{X, 1, A/A} & \textbf{X, 1, T/T} & \textbf{X, 1, A/T} & \textbf{X, 10, C/C} & \textbf{X, 10, G/G} &\textbf{X, 10, C/G} \\ \hline
@@ -374,7 +387,8 @@ We demonstrated that Random Forests can be used successfully to rank biologicall
       2 & 0 & 1 & 0 & 1 & 0 & 0 \\
     \end{tabular}
   \end{center}
-  \caption{Feature matrix for the SNPs of the two individuals in Table~\ref{tab:encoding-example-snps}.  The features are labeled by triplets of chromosome, position, and genotype.}
+  
+  Feature matrix for the SNPs of the two individuals in Table~\ref{tab:encoding-example-snps}.  The features are labeled by triplets of chromosome, position, and genotype.
   \label{tab:encoding-example-features}
 \end{table}
 
