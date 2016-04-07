@@ -318,9 +318,32 @@ A three-way comparison of synteny between \emph{An. gambiae}, \emph{Lu. longipal
   \label{tab:synteny-three-way-npc2}
 \end{table}
 
-We analyzed the differential gene expression in \emph{Lu. longipalpis} of the Niemann Pick type C-2 (NPC2) genes found to be in synteny between \emph{An. gambiae}, \emph{Lu. longipalpis}, and \emph{P. papatasi}.  Two genes (LLOTMP001859 and LLOTMP001861) presented statistically-significant differences in expression. Both genes had higher expression levels in blood fed or infected blood fed individuals 24 hours compared with sugar-fed individuals; by 144 hours elapsed, the genes' expression levels were significantly reduced compared to sugar-fed individuals.  The differences in expression levels between blood fed and sugar fed individuals seems to support the involvement of NPC2-like genes in a signaling cascade linking blood meal intake with vitellogenesis as observed in \emph{Ae. aegypti} \cite{Sirot2011}.
+We analyzed the differential gene expression in \emph{Lu. longipalpis} of the Niemann Pick type C-2 (NPC2) genes found to be in synteny between \emph{An. gambiae}, \emph{Lu. longipalpis}, and \emph{P. papatasi}.  Two genes (LLOTMP001859 and LLOTMP001861) presented statistically-significant differences in expression. Both genes had higher expression levels in blood fed individuals 24 hours compared with sugar-fed individuals (see Table~\ref{tab:sandflies:stat-sig-npc2-sb}); by 144 hours elapsed, the genes' expression levels were significantly reduced compared to sugar-fed individuals.  The differences in expression levels between blood fed and sugar fed individuals seems to support the involvement of NPC2-like genes in a signaling cascade linking blood meal intake with vitellogenesis as observed in \emph{Ae. aegypti} \cite{Sirot2011}.
 
-Whereas LLOTMP001861 presented little difference in expression between blood fed and infected blood fed individuals, LLOTMP001859 had significantly higher expression levels in infected blood fed individuals at 6 and 24 hours. NPC2 genes have previously been associated with the immune defiency (IMD) pathways in \emph{D. melanogaster} \cite{Shi2012}, which has been linked to reductions in population infection rates by \emph{Le. major} in \emph{Lu. longipalpis} \cite{Telleria2012}. The differences in expression may indicate that LLOTMP001859 plays a role in immune response to the \emph{Leishmania} parasite.
+Whereas LLOTMP001861 presented no difference in expression between blood fed and infected blood fed individuals at more than one time point, LLOTMP001859 had significantly higher expression levels in infected blood fed individuals at 6 and 24 hours (see Table~\ref{tab:sandflies:stat-sig-npc2-bi}). NPC2 genes have previously been associated with the immune defiency (IMD) pathways in \emph{D. melanogaster} \cite{Shi2012}, which has been linked to reductions in population infection rates by \emph{Le. major} in \emph{Lu. longipalpis} \cite{Telleria2012}. The differences in expression may indicate that LLOTMP001859 plays a role in immune response to the \emph{Leishmania} parasite.
+
+\begin{table}[H]
+  \centering
+  \caption{NPC2 EXPRESSION (BLOOD-FED VS. SUGAR-FED)}
+  \begin{tabular}{ c c c c c } \hline
+    \emph{Gene} & \emph{Identifier} & \emph{6 hours} & \emph{24 hours} & \emph{144 hours} \\ \hline
+    NPC2 & LLOTMP001859 & Yes (-1.24707) & Yes (2.3397) & No \\
+    NPC2 & LLOTMP001861 & No & Yes (2.42737) & Yes (-3.8163)
+  \end{tabular}
+  \caption*{Niemann-Pick type C-2 genes with statistically-significant differences in expression between sugar fed and blood fed conditions. Log-fold change is given in parentheses. Positive and negative values indicate up- and down-regulation in blood fed, respectively.}
+  \label{tab:sandflies:stat-sig-npc2-sb}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{NPC2 EXPRESSION (INFECTED BLOOD-FED VS. BLOOD-FED)}
+  \begin{tabular}{ c c c c c } \hline
+    \emph{Gene} & \emph{Identifier} & \emph{6 hours} & \emph{24 hours} & \emph{144 hours} \\ \hline
+    NPC2 & LLOTMP001859 & Yes (2.31895) & Yes (1.52988) & No
+  \end{tabular}
+  \caption*{Niemann-Pick type C-2 genes with statistically-significant differences in expression between blood fed and infected blood fed conditions. Log-fold change is given in parentheses. Positive and negative values indicate up- and down-regulation in infected blood fed, respectively.}
+  \label{tab:sandflies:stat-sig-npc2-bi}
+\end{table}
 
 
 \section{Conclusion}
