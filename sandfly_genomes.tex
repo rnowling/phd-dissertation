@@ -41,18 +41,19 @@ Additionally, genes from manually-annotated families were analyzed.  Genes with 
 We performed a comparative analysis of the genomes of two sand flies species \emph{Lu. longipalpis} and \emph{P. papatasi}, using comparisons with and between \emph{Ae. aegypti}, \emph{An. gambiae}, \emph{D. melonagaster}, and \emph{D. simulans} as controls.
 
 \subsection{Genome Assembly Fragmentation}
-Fragmentation of a genome assembly significantly effects comparative genomic analysis.  We analyzed and compared the distribution of genes across the scaffolds from the genomes of the sand flies \emph{P. papatasi} and \emph{Lu. longipalpis}, mosquitoes \emph{Ae. aegypti} and \emph{An. gambiae}, and fruit flies \emph{D. melonagaster} and \emph{Dr. simulans} (Figure~\ref{fig:scaffolds}).  The six organisms have between 10,100 and 17,294 genes.  Assemblies of the \emph{An. gambiae} and \emph{D. melonagaster} genomes are relatively complete and are used as our standard for comparison; both have one scaffold per chromosome with between 1,000 and 4,000 genes located on the five largest scaffolds.
+Fragmentation of a genome assembly significantly effects comparative genomic analysis.  We analyzed and compared the distribution of genes across the scaffolds from the genomes of the sand flies \emph{P. papatasi} and \emph{Lu. longipalpis}, mosquitoes \emph{Ae. aegypti} and \emph{An. gambiae}, and fruit flies \emph{D. melonagaster} and \emph{Dr. simulans} (Figure~\ref{fig:scaffolds}).  The six organisms have between 10,100 and 17,294 genes (Figure~\ref{fig:number-genes}).  Assemblies of the \emph{An. gambiae} and \emph{D. melonagaster} genomes are relatively complete and are used as our standard for comparison; both have one scaffold per chromosome with between 1,069 and 3,991 genes located on the five largest scaffolds (Figure~\ref{fig:largest-scaffolds}).
 
-The assembly of the \emph{D. simulans} genome is partially fragmented but still relatively complete.  The assembly has more scaffolds (1,131) than chromosomes, but sizes (in terms of genes) of the five largest scaffolds are comparable to \emph{An. gambiae} and \emph{D. melonagaster}.  Comparison of the cumulative distribution of gene locations from largest to smallest scaffolds suggests that a majority of \emph{D. simulans}'s genes are located on a small number of large scaffolds with about 10\% of the genes distributed across a number of small scaffolds.
+The assembly of the \emph{D. simulans} genome is partially fragmented but still relatively complete.  The assembly has more scaffolds (1,131) than chromosomes (see Figure~\ref{fig:number-scaffolds}), but sizes (in terms of genes) of the five largest scaffolds are comparable to \emph{An. gambiae} and \emph{D. melonagaster} (see Figure~\ref{fig:largest-scaffolds}).  Comparison of the cumulative distribution of gene locations from largest to smallest scaffolds suggests that a majority of \emph{D. simulans}'s genes are located on a small number of large scaffolds with about 10\% of the genes distributed across a number of small scaffolds (Figure~\ref{fig:gene-scaffold-cdf}).
 
-Analysis of \emph{P. papatasi}, \emph{Lu. longipalpis}, and \emph{Ae. aegypti} suggest a different story, with high levels of fragmentation.  All three organisms have a large number of scaffolds (4,350, 1,928, and 1,633 scaffolds, respectively) and fewer than 100 genes are located on each of their five largest scaffolds (see Figure~\ref{fig:scaffolds}).  The cumulative distribution of genes indicates that the genes of \emph{P. papatasi} are nearly uniformly distributed across the scaffolds.  While not uniformally distributed, 90\% of the genes of \emph{Lu. longipalpis} and \emph{Ae. aegypti} are spread scross 1,000 scaffolds. The largest scaffolds of \emph{Ae. aegypti} (104 genes), \emph{Lu. longipalpis} (73), and \emph{P. papatasi} (84) are much smaller than the largest scaffolds sizes of \emph{D. melonagaster} (3,991 genes), \emph{D. simulans} (3,767 genes), and \emph{An. gambiae} (3,684) (see Table~\ref{tab:scaffold-sizes}).
+Analysis of \emph{P. papatasi}, \emph{Lu. longipalpis}, and \emph{Ae. aegypti} suggest a different story, with high levels of fragmentation.  All three organisms have a large number of scaffolds (4,350, 1,928, and 1,633 scaffolds, respectively) and fewer than 105 genes located on each of their five largest scaffolds (see Figure~\ref{fig:largest-scaffolds}).  The cumulative distribution of genes indicates that the genes of \emph{P. papatasi} are nearly uniformly distributed across the scaffolds (see Figure~\ref{fig:gene-scaffold-cdf}).  While not uniformally distributed, 90\% of the genes of \emph{Lu. longipalpis} and \emph{Ae. aegypti} are spread scross 1,000 scaffolds. The largest scaffolds of \emph{Ae. aegypti} (104 genes), \emph{Lu. longipalpis} (73), and \emph{P. papatasi} (84) are much smaller than the largest scaffolds sizes of \emph{D. melonagaster} (3,991 genes), \emph{D. simulans} (3,767 genes), and \emph{An. gambiae} (3,684) (see Table~\ref{tab:scaffold-sizes}).
 
 \begin{figure}[H]
   \centering
-  \caption{GENOME ASSEMBLY STATISTICS}
+  \caption{GENOME ASSEMBLY AND SCAFFOLD STATISTICS}
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/synteny/genome_size_genes.pdf}
     \caption{Genome Sizes (Genes)}
+    \label{fig:number-genes}
   \end{subfigure}
   ~
   \begin{subfigure}[b]{0.45\textwidth}
@@ -64,11 +65,13 @@ Analysis of \emph{P. papatasi}, \emph{Lu. longipalpis}, and \emph{Ae. aegypti} s
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/synteny/top5_scaffold_sizes.pdf}
     \caption{Top 5 Scaffold Sizes (Genes)}
+    \label{fig:largest-scaffolds}
   \end{subfigure}
   ~
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/synteny/gene_scaffold_cdf.pdf}
-    \caption{Scaffold Genes CDF}
+    \caption{Cumulative Distribution of Genes over Scaffolds}
+    \label{fig:gene-scaffold-cdf}
   \end{subfigure}
   \label{fig:scaffolds}
 \end{figure}
