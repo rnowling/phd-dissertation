@@ -1,1 +1,19 @@
 \chapter{\uppercase{Conclusion}}
+The thesis of this dissertation is that machine learning techniques can be used to augment or replace traditional, domain-specific methods in bioinformatics.  To argue this thesis, we presented several contributions:
+
+\begin{enumerate}
+\item Chapter 2: A comparative genomic analysis of two sand fly species, \emph{Lu. longipalpis} and \emph{P. papatasi}, and differential expression analysis of genes from \emph{Lu. longipalpis} females under sugar-fed, blood-fed, and infected blood-fed conditions. Our analysis of the sand flies illustrates several challenges arising in the study of insect vectors, including incomplete genome assemblies and high rates of genome shuffling.
+\item Chapter 3: We evaluated several popular methods (GPCRHMM, PredCouple, and Pfam GPCR Hidden Markov Models (HMMs)) for identifying G Protein-Coupled Receptors (GPCRs) in insect vector genomes. We demonstrated improved prediction performance on insect vector GPCRs from combining multiple classifiers into an ensemble, an application of a technique popularized by machine learning.
+\item Chapter 4: We demonstrated that Random Forests, a popular machine learning technique, can be applied to ranking biallelic SNPs in the context of insect vector population genetics while also describing multiple sources of bias and their solutions.  We implemented our workflow in a new software package called Asaph using Python and scikit-learn.
+\end{enumerate}
+
+We believe we believe our contributions are significant, we also believe that there are several interesting avenues for future work related to and enabled by the work described in this dissertation.
+
+As the number of sequenced genomes increases, not only in insect vector biology but in other areas such as personalized medicine, analysis software capable of scaling to larger data sets will be needed.  Researchers will need to consider not only issues of model accuracy but engineering processes for reducing development time and transitioning proof-of-concept implementations into production systems usable by industry. Such efforts should be supported by empirical evaluations of the practical utility, from a software engineering perspective, of machine learning libraries and distributed (``big data'') platforms such as Apache Spark in bioinformatics application development.
+
+Secondly, we successfully demonstrated that machine learning techniques could replace domain-specific techniques in at least one problem domain: population genetics. Further work could evaluate the applicability of machine learning to other problem domains within bioinformatics.
+
+Lastly, further studies are needed to address proper application apply machine learning methods in bioinformatics to avoid bias. There are a number of open questions about how to handle small sample sizes (to avoid overfitting), data representation, and how best to handle missing data.  As these questions are addressed, best practices and appropriate workflows can be established and codified through the availability of software and documentation.
+
+Ultimately, we hope to inspire other researchers to think about the accuracy of their models along with employing pragmatic software engineering strategies; both are important to enabling bioinformatics to achieve significant gains in improving human health.
+
