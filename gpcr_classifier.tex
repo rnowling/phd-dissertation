@@ -183,7 +183,7 @@ We also provided a new analysis of the GPCR repertoires of the three vector spec
 
 \begin{figure}[H]
   \centering
-  \caption{ENSEMBLE* FLOWCHART}
+  \caption{Ensemble* Flowchart}
   \includegraphics[width=0.8\textwidth]{figures/gpcr_classifier/ensemble-diagram.eps}
   
 Flowchart describing the Ensemble*, GPCRHMM*, and Pfam* classifiers.  The diamonds represent sequences, while the rectangles represent steps of the classifiers.  The dashed rectangles describe to which classifiers the components belong. The input sequences are the sequences to be classified, while the training sequences are sequences which have known designations of either GPCR or not GPCR.
@@ -192,7 +192,7 @@ Flowchart describing the Ensemble*, GPCRHMM*, and Pfam* classifiers.  The diamon
 
 \begin{figure}[H]
   \centering
-  \caption{ROC CURVE FOR COMBINED DATA SET}
+  \caption{ROC Curve for Combined Data Set}
   \includegraphics[width=0.8\textwidth]{figures/gpcr_classifier/combined_ensembl_roc.eps}
   
 ROC Curve Comparing Classifier Performance on Combined Data Set. The dashed (GPCRHMM*), dotted (Pfam*), and solid (Ensemble*) curves represent the relationship between the percentage of training set GPCRs correctly predicted (true positives) plotted against the percentage of sequences miss-classified as GPCRs (false positives) by the classifiers as the likelihood score threshold was decreased from 1 (accepting nothing) to 0 (accepting everything). GPCRHMM (diamond), Pfam (circle), and PredCouple (square) only produce true/false predictions for each sequence and hence are represented as single points.
@@ -201,7 +201,7 @@ ROC Curve Comparing Classifier Performance on Combined Data Set. The dashed (GPC
 
 \begin{figure}[H]
   \centering
-  \caption{ROC CURVES FOR INDIVIDUAL ORGANISMS}
+  \caption{ROC Curves for Individual Organisms}
 \includegraphics[width=0.8\textwidth]{figures/gpcr_classifier/organism_ensembl_roc.eps}
 
 ROC Curves Comparing Classifier Performance on Individual Organisms.  For each ROC curve, the classifiers were trained on five of the organisms and then evaluated on the sixth organism (given in the title).  The solid (Ensemble*), dashed (GPCRHMM*), and dotted (Pfam*) lines represent the relationship between the percentage of correctly predicted training set GPCRs (true positives) and the percentage of incorrectly predicted non-GPCRS (false positives) as the likelihood score threshold is decreased from 1 (accept nothing) to 0 (accept everything).  GPCRHMM (diamond), Pfam (circle), and PredCouple (square) only produce true/false predictions for each sequence and hence are represented as single points.
@@ -210,7 +210,7 @@ ROC Curves Comparing Classifier Performance on Individual Organisms.  For each R
 
 \begin{figure}[H]
   \centering
-  \caption{GPCR VALIDATION PIPELINE}
+  \caption{GPCR Validation Pipeline}
 \includegraphics[width=0.6\textwidth]{figures/gpcr_classifier/validation-pipeline.eps}
 
 GPCR Validation Pipeline.  Diamonds indicate input and output sequences.  Rectangles represent the validation programs and filters.  Arrows indicate the movement of sequences and are labeled with the number of sequences that passed from one validation step to the next.  Numbers for sequences that were identified as something other than GPCRs are not shown.  The first filter identifies sequences which are annotated as GPCRs in the database and removes any sequences which were annotated as something other than GPCRs or were identified by ScanPROSITE as having non-GPCR domains.  The second filter uses a combination of the BLAST hits, I-TASSER results, and identification of GPCR domains by ScanPROSITE to categorize the final 52 predicted but unconfirmed sequences.
@@ -219,7 +219,7 @@ GPCR Validation Pipeline.  Diamonds indicate input and output sequences.  Rectan
 
 \begin{figure}[H]
   \centering
-  \caption{DISTRIBUTION OF NEWLY-DISCOVERED GPCR SEQUENCES}
+  \caption{Distribution of Newly-Discovered GPCR Sequences}
   \includegraphics[width=0.8\textwidth]{figures/gpcr_classifier/summary-independent-validation.eps}
   
 Distribution of the newly-discovered vector GPCR sequences according to their GPCR status for each vector species.
