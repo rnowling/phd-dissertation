@@ -83,7 +83,7 @@ Each decision tree will calculate a mean decrease in impurity for every feature 
 VIM_f = \frac {1} {N_t} \sum_{t=1}^{N_t} \bar{\Delta}_{f, t}
 \]
 
-where $\bar{\Delta}_{f, t}$ is the mean decrease in impurity of feature $f$ for tree $t$ and $N_t$ is the total number of trees.
+\noindent where $\bar{\Delta}_{f, t}$ is the mean decrease in impurity of feature $f$ for tree $t$ and $N_t$ is the total number of trees.
 
 \subsubsection{Ranking SNPs and Determining Number of Trees for Stable Rankings}
 The Random Forests provide a variable importance score for each \emph{feature}, but we want variable importance scores for each \emph{SNP}. The variable importance score of each SNP are calculated by averaging the variable importance scores for its three associated features, or columns in the feature matrix.  The SNPs are ranked by sorting the SNPs by their corresponding variable importance scores in descending order.  
@@ -117,7 +117,7 @@ The variable importance scores are calculated at two levels.  For each tree, the
 VIM_f = \frac {1} {N_t} \sum_{t=1}^{N_t} \bar{\Delta}_{f, t}
 \]
 
-where $\bar{\Delta}_{f, t}$ is the mean decrease in impurity of feature $f$ for tree $t$ and $N_t$ is the total number of trees.
+\noindent where $\bar{\Delta}_{f, t}$ is the mean decrease in impurity of feature $f$ for tree $t$ and $N_t$ is the total number of trees.
 
 In the case where we have a large number of features but a small number of samples, only a small number of features will be used in each tree.  As a result, the feature importance scores will be down-weighted by a large number of 0's and vary with the number of trees used.
 
