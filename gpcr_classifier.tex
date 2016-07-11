@@ -230,9 +230,9 @@ Distribution of the newly-discovered vector GPCR sequences according to their GP
 
 
 \begin{table}[H]
-%  \centering
-  \caption{\uppercase{Data Set Sources and Construction}}
-  \small
+  \centering
+  \caption{\label{tab:data-sources} \uppercase{Data Set Sources and Construction}}
+  \footnotesize
   \begin{tabular}{| l | p{5cm} | p{5cm} |}
     \hline
     \textbf{Organism} & \textbf{Predicted Proteome Source and Version} & \textbf{Training Set Source} \\ \hline
@@ -243,14 +243,12 @@ Distribution of the newly-discovered vector GPCR sequences according to their GP
     \emph{Ho. sapiens} & Ensembl, v. 37.59 & \cite{Zhang2006}, Ensembl and GPCRDB annotations \\ \hline
     \emph{Pe. humanus} & VectorBase, v. 1.2 & VB and GPCRDB annotations \\ \hline
   \end{tabular}
-  \label{tab:data-sources}
-  
 \end{table}
 
 \begin{table}[H]
-%  \begin{center}
-  \caption{\uppercase{Classifiers' True Positive Rates for Different False Positive Rates}}
-  \small
+  \begin{center}
+  \caption{\label{tab:ensemble-results} \uppercase{Classifiers' True Positive Rates for Different False Positive Rates}}
+  \footnotesize
   \begin{tabular}{| l | p{2.25cm} | p{2.25cm} | p{2.25cm} | p{2.25cm} | p{2.25cm} |}
     \hline
     \textbf{Classifier} & \multicolumn{5}{c |}{\textbf{True Positive Rate (TPR)}} \\ \hline
@@ -262,16 +260,14 @@ Distribution of the newly-discovered vector GPCR sequences according to their GP
     Pfam*      & 80\%                   & 80\%                      & 80\%                & 80\%                                      & 80\% \\ \hline
     PredCouple & --                     & 86\%                      & --                  & --                                        & 86\% \\ \hline
   \end{tabular}
-  %  \end{center}
-  
-  Percentage of training set GPCRs correctly predicted (true positive rates) for fixed percentages of sequences misclassified as GPCRs (false positive rates) are given.  The false positive rates (FPR) of GPCRHMM, PredCouple, Pfam, and at which Ensemble*'s true positive rate plateaus were chosen to provide the most direct comparisons between the classifiers.
-  \label{tab:ensemble-results}
+  \end{center}
+  \tablenote{Percentage of training set GPCRs correctly predicted (true positive rates) for fixed percentages of sequences misclassified as GPCRs (false positive rates) are given.  The false positive rates (FPR) of GPCRHMM, PredCouple, Pfam, and at which Ensemble*'s true positive rate plateaus were chosen to provide the most direct comparisons between the classifiers.}
 \end{table}
 
 \begin{table}[H]
-%\begin{center}
-\caption{\uppercase{Number of Test Set Sequences Found / Missed by Species}}
-\small
+\begin{center}
+\caption{\label{tab:missed-sequences} \uppercase{Number of Test Set Sequences Found / Missed by Species}}
+\footnotesize
 \begin{tabular}{| c | c | c | c | c |}
 \hline
 \textbf{Species (Total Sequences)}                 & \multicolumn{4}{ c |}{\textbf{Number of Sequences Found / Missed}*} \\ \hline
@@ -285,21 +281,20 @@ Distribution of the newly-discovered vector GPCR sequences according to their GP
 Vectors (374)                    & 250 / 124  & 315 / 59    & 300 / 74    & \textbf{339 / 35} \\ \hline
 Total (1517)                     & 1230 / 287 & 1237 / 280  & 1312 / 205  & \textbf{1387 / 130} \\ \hline
 \end{tabular}
-%\end{center}
-
-The number of test set sequences each classifier identified (found) and was unable to identify (missed) as GPCRs are given by species, vectors, and total. GPCRHMM, Pfam, and Predcouple were run using default settings. For Ensemble*, sequences with a positive likelihood score were considered to predicted GPCRs.  The best results are in bold.
-\label{tab:missed-sequences}
+\end{center}
+\tablenote{The number of test set sequences each classifier identified (found) and was unable to identify (missed) as GPCRs are given by species, vectors, and total. GPCRHMM, Pfam, and Predcouple were run using default settings. For Ensemble*, sequences with a positive likelihood score were considered to predicted GPCRs.  The best results are in bold.}
 \end{table}
 
 \newpage
 
+{\small
 \begin{longtable}{| l | l | p{2cm} | p{3.25cm} | p{3.5cm} |}
 \caption{\label{tab:novel-gpcrs} \uppercase{Newly-Discovered GPCRs Identified by Ensemble*}} \\ \hline
 \textbf{Sequence ID} & \textbf{Species} & \textbf{Prediction Likelihood Value} & \textbf{Evidence} & \textbf{BLAST Sequence Name}
 \endfirsthead
 \hline
 \textbf{Sequence ID} & \textbf{Species} & \textbf{Prediction Likelihood Value} & \textbf{Evidence} & \textbf{BLAST Sequence Name} \endhead
-\caption*{Sequences were predicted using the Ensemble* classifier.  Independent validation was performed using ScanPROSITE, I-TASSER, and homology to GPCRs in other organisms as determined by a BLAST search of the NCBI nr database.  Status as a newly-discovered GPCR was contingent upon identification by the Ensemble* classifier and the existence of no contrary evidence, while confirmed GPCRs also had to be validated by at least two independent methods.}\\
+\caption*{\tablenote{Sequences were predicted using the Ensemble* classifier.  Independent validation was performed using ScanPROSITE, I-TASSER, and homology to GPCRs in other organisms as determined by a BLAST search of the NCBI nr database.  Status as a newly-discovered GPCR was contingent upon identification by the Ensemble* classifier and the existence of no contrary evidence, while confirmed GPCRs also had to be validated by at least two independent methods.}}\\
 \endlastfoot
 \hline
     AAEL013430-PA & \emph{Ae. aegypti} & 0.346 & ScanPROSITE and BLAST and I-TASSER & putative GPCR class a orphan receptor 5 \\ \hline
@@ -334,6 +329,7 @@ The number of test set sequences each classifier identified (found) and was unab
     PHUM288590-PA & \emph{Pe. humanus} & 0.136 & Unconfirmed & N/A \\ \hline
 
 \end{longtable}
+}
 
 
 

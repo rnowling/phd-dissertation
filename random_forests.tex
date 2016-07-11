@@ -339,10 +339,11 @@ We demonstrated that Random Forests can be used successfully to rank biologicall
 \section{Tables}
 \begin{table}[H]
   \begin{center}
-    \caption{GENOTYPE EXAMPLES}
+    \small
+    \caption{\label{tab:unknown-genotypes-example} GENOTYPE EXAMPLES}
     \begin{tabular}{ c c c}
       \hline
-      \textbf{Group} & \textbf{Before} & \textbf{After}\\ \hline
+      \emph{Group} & \emph{Before} & \emph{After}\\ \hline
       1 & A/T & A/T \\
       1 & A/T & A/T \\
       1 & A/T & A/T \\
@@ -354,37 +355,36 @@ We demonstrated that Random Forests can be used successfully to rank biologicall
     \end{tabular}
   \end{center}
   
-  Examples of two groups with known and unknown genotypes, before and after imputation with a threshold frequency of 100\%.
-  \label{tab:unknown-genotypes-example}
+  \tablenote{Examples of two groups with known and unknown genotypes, before and after imputation with a threshold frequency of 100\%.}
 \end{table}
 
 \begin{table}[H]
   \begin{center}
-    \caption{SNP EXAMPLES}
+    \small
+    \caption{\label{tab:encoding-example-snps} SNP EXAMPLES}
     \begin{tabular}{ c c c }
       \hline
-      \textbf{Individual} & \textbf{(X, 1)} & \textbf{(X, 10)} \\ \hline
+      \emph{Individual} & \emph{X, 1} & \emph{X, 10} \\ \hline
       1 & A/T & X/X \\
       2 & T/T & C/C \\
     \end{tabular}
   \end{center}
 
-  Examples of SNP values for two individuals.  The SNPs are labeled by pairs of chromosome and position.
-  \label{tab:encoding-example-snps}
+  \tablenote{Examples of SNP values for two individuals.  The SNPs are labeled by pairs of chromosome and position.}
 \end{table}
 
 \begin{table}[H]
   \begin{center}
-    \caption{FEATURE MATRIX EXAMPLE}
+    \small
+    \caption{\label{tab:encoding-example-features} FEATURE MATRIX EXAMPLE}
     \begin{tabular}{ c c c c c c c }
       \hline
-      \textbf{Individual} & \textbf{X, 1, A/A} & \textbf{X, 1, T/T} & \textbf{X, 1, A/T} & \textbf{X, 10, C/C} & \textbf{X, 10, G/G} &\textbf{X, 10, C/G} \\ \hline
+      \emph{Indiv.} & \emph{X, 1, A/A} & \emph{X, 1, T/T} & \emph{X, 1, A/T} & \emph{X, 10, C/C} & \emph{X, 10, G/G} &\emph{X, 10, C/G} \\ \hline
       1 & 0 & 0 & 1 & 0 & 0 & 0 \\
       2 & 0 & 1 & 0 & 1 & 0 & 0 \\
     \end{tabular}
   \end{center}
   
-  Feature matrix for the SNPs of two individuals.  The features are labeled by triplets of chromosome, position, and genotype.
-  \label{tab:encoding-example-features}
+  \tablenote{Feature matrix for the SNPs of two individuals.  The features are labeled by triplets of chromosome, position, and genotype.}
 \end{table}
 

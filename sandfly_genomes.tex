@@ -75,8 +75,9 @@ Analysis of \emph{P. papatasi}, \emph{Lu. longipalpis}, and \emph{Ae. aegypti} s
 
 
 \begin{table}[H]
-  \centering
-  \caption{SCAFFOLD SIZE STATISTICS}
+  \begin{center}
+  \small
+  \caption{\label{tab:scaffold-sizes} SCAFFOLD SIZE STATISTICS}
   \begin{tabular}{c p{1.25cm} p{1.25cm} c p{1.25cm} p{1.25cm} p{1.25cm} p{1.25cm}} \hline
     \emph{Species} & \emph{Genome Size (Mbp)} & \emph{Scaffold N50 (Mbp)} & \emph{Scaffolds} & \emph{Scaffold Size (Genes)} & \emph{Average} & \emph{Median} & \emph{Max.} \\ \hline
     \emph{Ae. aegypti} & 1,310.0 & 1.6 & 1,633 & 15,797 & 9.7 & 5 & 104 \\
@@ -86,8 +87,8 @@ Analysis of \emph{P. papatasi}, \emph{Lu. longipalpis}, and \emph{Ae. aegypti} s
     \emph{Lu. longipalpis} & 154.2 & 13.9 & 1,928 & 10,100 & 5.2 & 1 & 73\\
     \emph{P. papatasi} & 347.8 & 17.6 & 4,350 & 11,164 & 2.6 & 1 & 84
   \end{tabular}
-  \caption*{Genome sizes for \emph{D. melonagaster} and \emph{D. simulans} are from Ensembl \cite{Hubbard2002} and from Vectorbase \cite{Lawson2009,Lawson2007} for other species. Size statistics for the scaffolds are given in numbers of genes.}
-  \label{tab:scaffold-sizes}
+  \end{center}
+  \tablenote{Genome sizes for \emph{D. melonagaster} and \emph{D. simulans} are from Ensembl \cite{Hubbard2002} and from Vectorbase \cite{Lawson2009,Lawson2007} for other species. Size statistics for the scaffolds are given in numbers of genes.}
 \end{table}
 
 \subsection{Conservation of Gene Order (Synteny)}
@@ -140,18 +141,19 @@ We did not observe the presence of macrosynteny between the \emph{Lu. longipalpi
 Microsynteny was, however, observed between the sand flies species and each species with \emph{An. gambiae} (Table~\ref{tab:synteny-block-stats}). Microsynteny between \emph{Lu. longipalpis} and \emph{P. papatasi} is on-par with the microsynteny we observed and previously reported by others for \emph{An. gambiae} and \emph{D. melonagaster}.  Between the \emph{Lu. longipalpis} and \emph{P. papatasi} genomes, we identified a total of 499 synteny blocks with a maximum of 24 genes, average of 4.2 genes, and a median of 3 genes. By comparison, between the genomes of \emph{An. gambiae} and \emph{D. melonagaster}, we found 1,037 synteny blocks with a maximum of 10 genes, an average of 2.5 genes, and a median of 2 genes. Previous studies of \emph{An. gambiae} and \emph{D. melonagaster} reported a similar number of synteny blocks (948) with up to 39 genes \cite{Zdobnov2002}.
 
 \begin{table}[H]
-  \centering
-  \caption{MICROSYNTENY BLOCK STATISTICS}
-  \begin{tabular}{c c c c c} \hline
-    \emph{Species} & \emph{Count} & \emph{Average Size} & \emph{Median Size} & \emph{Maximum Size} \\ \hline
+  \begin{center}
+    \small
+  \caption{\label{tab:synteny-block-stats} MICROSYNTENY BLOCK STATISTICS}
+  \begin{tabular}{c c p{1cm} c c} \hline
+    \emph{Species} & \emph{Count} & \emph{Average Size} & \emph{Median Size} & \emph{Max. Size} \\ \hline
     \emph{Lu. longipalpis} vs. \emph{An. gambiae} & 504 & 4.3 & 3 & 39 \\
     \emph{Lu. longipalpis} vs. \emph{P. papatasi} & 499 & 4.2 & 3 & 24 \\
     \emph{P. papatasi} vs. \emph{An. gambiae} & 307 & 4.3 & 3 & 21 \\
     \emph{D. melanogaster} vs. \emph{D. simulans} & 243 & 41.6 & 5 & 700 \\
     \emph{D. melanogaster} vs. \emph{An. gambiae} & 1037 & 2.5 & 2 & 10
   \end{tabular}
-  \caption*{Sizes are given in number of genes.}
-  \label{tab:synteny-block-stats}
+  \end{center}
+  \tablenote{Sizes are given in number of genes.}
 \end{table}
 
 Microsynteny is more robust to genome assembly fragmentation and expected in organisms with the evolutionary distances of the sand flies and \emph{An. gambiae} \cite{Zdobnov2002}. Noncoding elements, particularly associated with gene regulation, have been found to be highly-conserved in insect microsynteny blocks, suggesting a cause for the preservation of small-scale gene order \cite{Engstrom2007}.
@@ -181,15 +183,16 @@ The $d_N$/$d_S$ distribution for single-copy orthologs from \emph{Lu. longipalpi
 RNASeq differental gene expression data was collected from \emph{Lu. longipalpis} females 6, 24, and 144 hours after being fed sugar, bloodmeals, and bloodmeals infected with the leishmaniasis parasite, \emph{Leishmania infantum}.  We identified a total of 6,979 genes with statistically-significant differences in expression between blood-fed and sugar-fed females over the three time points (see Table~\ref{tab:stat-sig-genes}).  Fewer genes (3,822) had statistically-significantly differences in expression when compared between blood-fed and infected blood-fed females.
 
 \begin{table}[H]
-  \centering
-  \caption{\uppercase{Number of Genes with Statistically-Significant Differential Expression}}
+  \begin{center}
+    \small
+  \caption{\label{tab:stat-sig-genes} \uppercase{Number of Genes with Statistically-Significant Differential Expression}}
   \begin{tabular}{c c c} \hline
   \emph{Time Point} & \emph{Blood Fed vs Sugar Fed} & \emph{Infected Blood Fed vs Blood Fed} \\ \hline
   6H & 4,062 & 1,332 \\
   24H & 4,486 & 2,483 \\
   144H & 5,209 & 1,410 \\
   \end{tabular}
-  \label{tab:stat-sig-genes}
+  \end{center}
 \end{table}
 
 Comparison of GO-slim term distributions yielded little insight into differences in expression between the conditions due to the overwhelming number of genes with statistically-significant differences in expression.  As such, we focused on comparing expression of genes from families and pathways associated with immunity between blood fed and infected blood fed conditions.
@@ -200,8 +203,9 @@ Host-parasite interactions are of particular interest.  Within a few hours, a pe
 We analyzed differences in expression of peritrophins between sugar-fed and blood-fed conditions and blood-fed and infected blood-fed conditions.  Due to data quality issues, CuffDiff only performed statistical tests on 8 of the 28 identified of the peritrophins (see Tables~\ref{tab:sandflies:stat-sig-peritrophins-sb}~and~\ref{tab:sandflies:stat-sig-peritrophins-bi}).  LuloPer4 (LLOTMP003410), LuloPer10 (LLOTMP007615), and LuloPer11 (LLOTMP002676) had no statistically-significant differences at two or more time points.
 
 \begin{table}[H]
-  \centering
-  \caption{PERITROPHIN EXPRESSION (BLOOD-FED VS. SUGAR-FED)}
+  \begin{center}
+    \small
+  \caption{\label{tab:sandflies:stat-sig-peritrophins-sb} PERITROPHIN EXPRESSION (BLOOD-FED VS. SUGAR-FED)}
   \begin{tabular}{ c c c c c } \hline
     \emph{Gene} & \emph{Identifier} & \emph{6 hours} & \emph{24 hours} & \emph{144 hours} \\ \hline
     LuloPer1 & LLOTMP006497 & Yes (3.96028) & Yes (10.5884) & No \\
@@ -209,13 +213,14 @@ We analyzed differences in expression of peritrophins between sugar-fed and bloo
     LuloPer3b & LLOTMP004906 & Yes (1.32142) & Yes (0.940809) & Yes (0.603129) \\
     LuloPer32 & LLOTMP004516 & Yes (-0.985627) & Yes (2.27779) & Yes (-2.2308)
   \end{tabular}
-  \caption*{Peritrophins with statistically-significant differences in expression between sugar fed and blood fed conditions. Log-fold change is given in parentheses. Positive and negative values indicate up- and down-regulation in blood fed, respectively.}
-  \label{tab:sandflies:stat-sig-peritrophins-sb}
+  \end{center}
+  \tablenote{Peritrophins with statistically-significant differences in expression between sugar fed and blood fed conditions. Log-fold change is given in parentheses. Positive and negative values indicate up- and down-regulation in blood fed, respectively.}
 \end{table}
 
 \begin{table}[H]
-  \centering
-  \caption{PERITROPHIN EXPRESSION (INFECTED BLOOD-FED VS. BLOOD-FED)}
+  \begin{center}
+    \small
+  \caption{\label{tab:sandflies:stat-sig-peritrophins-bi} PERITROPHIN EXPRESSION (INFECTED BLOOD-FED VS. BLOOD-FED)}
   \begin{tabular}{ c c c c c } \hline
     \emph{Gene} & \emph{Identifier} & \emph{6 hours} & \emph{24 hours} & \emph{144 hours} \\ \hline
     LuloPer1 & LLOTMP006497 & Yes (1.2595) & Yes (0.384657) & No \\
@@ -224,8 +229,8 @@ We analyzed differences in expression of peritrophins between sugar-fed and bloo
     LuloPer3b & LLOTMP004906 & Yes (-0.137809) & Yes (1.20303) & No \\
     LuloPer32 & LLOTMP004516 & Yes (1.14581) & Yes (0.612843) & No
   \end{tabular}
-  \caption*{Peritrophins with statistically-significant differences in expression between blood fed and infected blood fed conditions. Log-fold change is given in parentheses. Positive and negative values indicate up- and down-regulation in infected blood fed, respectively.}
-  \label{tab:sandflies:stat-sig-peritrophins-bi}
+  \end{center}
+  \tablenote{Peritrophins with statistically-significant differences in expression between blood fed and infected blood fed conditions. Log-fold change is given in parentheses. Positive and negative values indicate up- and down-regulation in infected blood fed, respectively.}
 \end{table}
 
 A previous EST (expression tag sequence) study reported increased expression of LuloPer1 (LLOTMP006497), LuloPer2 (LLOTMP003676), and LuloPer32 (LLOTMP004516) after blood feeding \cite{Jochim2008}. Similarly, we observed up-regulation of LuloPer1, LuloPer2, and LuloPer32 at 24 hours after blood-feeding, after the peritrophic matrix thickens and matures.  We also observed increased expression of LuloPer1 and LuloPer2 but decreased expression of LuloPer32 at 6 hours, prior to the maturation of the peritrophic matrix. At 144 hours, after the peritrophic matrix starts to degrade, we observed down-regulation of LuloPer2 and LuloPer32 but no change in expression of LuloPer1.
@@ -239,8 +244,9 @@ The RNASeq differential expression analysis confirmed the previous EST expressio
 LuloPer1 and four peritropins without RNASeq results are located in a microsynteny block from \emph{Lu. longipalpis} and \emph{P. papatasi} (see Table~\ref{tab:synteny-llot-ppat-peritrophic}). As previously noted, highly-conserved noncoding elements, particularly associated with gene regulation, have been found previously in insect microsynteny blocks \cite{Engstrom2007}.  Further study of peritrophins could potentially lead to  better understanding the relationship between regulation mechanisms and microsynteny in general and the molecular mechanisms of the peritrophin's regulation specifically.
 
 \begin{table}[H]
-  \centering
-  \caption{PERITROPHIN MICROSYNTENY BLOCK}
+  \begin{center}
+  \small
+  \caption{\label{tab:synteny-llot-ppat-peritrophic} PERITROPHIN MICROSYNTENY BLOCK}
   \begin{tabular}{c c l} \hline
     \emph{Lu. longipalpis} & \emph{P. papatasi} & \emph{Description} \\ \hline
     LLOTMP006493 & PPATMP009348 & SCP-related protein \\
@@ -252,8 +258,8 @@ LuloPer1 and four peritropins without RNASeq results are located in a microsynte
     LLOTMP006499 & PPATMP009355 & LuloPer18 \\
     LLOTMP006500 & PPATMP009356 & LuloPer17
   \end{tabular}
-  \caption*{Synteny block of peritrophins from \emph{Lu. longipalpis} vs. \emph{P. papatasi}.}
-  \label{tab:synteny-llot-ppat-peritrophic}
+  \end{center}
+  \tablenote{Synteny block of peritrophins from \emph{Lu. longipalpis} vs. \emph{P. papatasi}.}
 \end{table}
 
 
@@ -265,8 +271,8 @@ In a comparison of blood fed to sugar fed conditions, only two of the chitinases
 Five chitinases were down-regulated under blood fed vs sugar fed conditions at all time points for which differences were statistically significant: LlIDGF4 (LLOTMP008789), LlIDGF4 (LLOTMP004095), chitinase like protein (LLOTMP006041), Llcht10 (LLOTMP006362), and Llcht2 (LLOTMP008646).  In the comparisons of blood-fed vs blood-fed infected conditions, no statistically-significant differences in expression were observed for LlIDGF4 (LLOTMP008789) and Llcht2 and CuffDiff was not able to perform statistical tests on Llcht10 for two of the time points and no statistically-significant difference was found at the third time point. LlIDGF4 (LLOTMP004095) and chitinase like protein (LLOTMP006041) were the only chitinases with statistically-significant differences in expression in blood-fed vs infected blood-fed conditions (see Table~\ref{tab:sandflies:stat-sig-chitinases-bi}); both were up-regulated at 6 and 24 hours, while at 144 hours, chitinase like protein (LLOTMP006041) was still up-regulated but LlIDGF4 (LLOTMP004095) had no statistically-significant difference. Further work is needed to understand the the role and cause of up-regulation of LlIDGF4 (LLOTMP004095) and chitinase like protein (LLOTMP006041) in the presence of \emph{Leishmania}.
 
 \begin{table}[H]
-  \centering
-  \caption{CHITINASE EXPRESSION (BLOOD-FED VS. SUGAR-FED)}
+  \begin{center}
+  \caption{\label{tab:sandflies:stat-sig-chitinases-sb} CHITINASE EXPRESSION (BLOOD-FED VS. SUGAR-FED)}
   \begin{tabular}{ c c c c c } \hline
     \emph{Gene} & \emph{Identifier} & \emph{6 hours} & \emph{24 hours} & \emph{144 hours} \\ \hline
     LlIDGF4 & LLOTMP008789 & Yes (-0.391866) & Yes (-0.286923) & Yes (-0.547106) \\
@@ -277,20 +283,20 @@ Five chitinases were down-regulated under blood fed vs sugar fed conditions at a
     Llcht10 & LLOTMP006362 & Yes (-0.475676) & No & Yes (-1.04283) \\
     Llcht2 & LLOTMP008646 & Yes (-0.778297) & Yes (-1.14975) & Yes (-1.93176)
   \end{tabular}
-  \caption*{Chitinases with statistically-significant differences in expression between sugar fed and blood fed conditions. Log-fold change is given in parentheses. Positive and negative values indicate up- and down-regulation in blood fed, respectively.}
-  \label{tab:sandflies:stat-sig-chitinases-sb}
+  \end{center}
+  \tablenote{Chitinases with statistically-significant differences in expression between sugar fed and blood fed conditions. Log-fold change is given in parentheses. Positive and negative values indicate up- and down-regulation in blood fed, respectively.}
 \end{table}
 
 \begin{table}[H]
-  \centering
-  \caption{CHITINASE EXPRESSION (INFECTED BLOOD-FED VS. BLOOD-FED)}
+  \begin{center}
+  \caption{\label{tab:sandflies:stat-sig-chitinases-bi} CHITINASE EXPRESSION (INFECTED BLOOD-FED VS. BLOOD-FED)}
   \begin{tabular}{ c c c c c } \hline
     \emph{Gene} & \emph{Identifier} & \emph{6 hours} & \emph{24 hours} & \emph{144 hours} \\ \hline
     LlIDGF4 & LLOTMP004095 & Yes (0.654322) & Yes (0.56086) & No \\
     chitinase like protein & LLOTMP006041 & Yes (0.532128) & Yes (0.559772) & Yes (0.4717)
   \end{tabular}
-  \caption*{Chitinases with statistically-significant differences in expression between blood fed and infected blood fed conditions. Log-fold change is given in parentheses. Positive and negative values indicate up- and down-regulation in infected blood fed, respectively.}
-  \label{tab:sandflies:stat-sig-chitinases-bi}
+  \end{center}
+  \tablenote{Chitinases with statistically-significant differences in expression between blood fed and infected blood fed conditions. Log-fold change is given in parentheses. Positive and negative values indicate up- and down-regulation in infected blood fed, respectively.}
 \end{table}
 
 
@@ -298,8 +304,8 @@ Five chitinases were down-regulated under blood fed vs sugar fed conditions at a
 A three-way comparison of synteny between \emph{An. gambiae}, \emph{Lu. longipalpis}, and \emph{P. papatasi} revealed a block of Niemann Pick type C2 (NPC2) genes (Table~\ref{tab:synteny-three-way-npc2}). In insects, NPC genes are involved with sterol (e.g., cholesterol) homeostasis and biosynthesis of ecdysteroids, insect sex and moulting hormones. In humans, mutations in either of two Niemann Pick type C (NPC) genes, \emph{NPC1} and \emph{NPC2}, cause a fatal neurogenerative disorder associated with abnormal cholesterol accumulation in cells.  Previous work on NPC 2 in \emph{D. melanogaster} found that \emph{npc2a} and \emph{npc2b}, play a redundant role such that mutations in one have little discernable effect on biology; concurrent mutations in both genes lead to mortality and apoptotic neurodegeneration \cite{Huang2007}.  \emph{npc2e} and \emph{npc2a} have also been associated with the immune defiency (Imd) pathways in \emph{D. melanogaster} \cite{Shi2012}. Studies of NPC2-like genes in \emph{Ae. aegypti} have implicated ecdysteroids in a signaling cascade linking blood meal intake with vitellogenesis \cite{Sirot2011}.  Thus, the synteny of NPC2-like genes between \emph{An. gambiae}, \emph{Lu. longipalpis}, and \emph{P. papatasi}, may indicate similarity in sex, moulting, immunity, and feeding pathways between sand flies and mosquitoes.
 
 \begin{table}[H]
-  \centering
-  \caption{NPC2 MICROSYNTENY BLOCK}
+  \begin{center}
+  \caption{\label{tab:synteny-three-way-npc2} NPC2 MICROSYNTENY BLOCK}
   \begin{tabular}{c c c l} \hline
     \emph{Lu. longipalpis} & \emph{P. papatasi} & \emph{An. gambiae} & \emph{Description} \\ \hline
     LLOTMP001853 & PPATMP007803 & AGAP002847 & Niemann-Pick type C-2 \\
@@ -312,9 +318,9 @@ A three-way comparison of synteny between \emph{An. gambiae}, \emph{Lu. longipal
     LLOTMP001863 & & AGAP002854 & Niemann-Pick type C-2 \\
     LLOTMP001864 & & AGAP002855 & Niemann-Pick type C-2 \\
     LLOTMP001865 & & AGAP002857 & Niemann-Pick type C-2
-    \end{tabular}
-    \caption*{Synteny block of Niemann-Pick type C-2 genes from \emph{Lu. longipalpis}, \emph{P. papatasi}, and \emph{An. gambiae}.}
-  \label{tab:synteny-three-way-npc2}
+  \end{tabular}
+  \end{center}
+    \tablenote{Synteny block of Niemann-Pick type C-2 genes from \emph{Lu. longipalpis}, \emph{P. papatasi}, and \emph{An. gambiae}.}
 \end{table}
 
 We analyzed the differential gene expression in \emph{Lu. longipalpis} of the Niemann Pick type C-2 (NPC2) genes found to be in synteny between \emph{An. gambiae}, \emph{Lu. longipalpis}, and \emph{P. papatasi}.  Two genes (LLOTMP001859 and LLOTMP001861) presented statistically-significant differences in expression. Both genes had higher expression levels in blood fed individuals 24 hours compared with sugar-fed individuals (see Table~\ref{tab:sandflies:stat-sig-npc2-sb}); by 144 hours elapsed, the genes' expression levels were significantly reduced compared to sugar-fed individuals.  The differences in expression levels between blood fed and sugar fed individuals seems to support the involvement of NPC2-like genes in a signaling cascade linking blood meal intake with vitellogenesis as observed in \emph{Ae. aegypti} \cite{Sirot2011}.
@@ -322,26 +328,26 @@ We analyzed the differential gene expression in \emph{Lu. longipalpis} of the Ni
 Whereas LLOTMP001861 presented no difference in expression between blood fed and infected blood fed individuals at more than one time point, LLOTMP001859 had significantly higher expression levels in infected blood fed individuals at 6 and 24 hours (see Table~\ref{tab:sandflies:stat-sig-npc2-bi}). NPC2 genes have previously been associated with the immune defiency (IMD) pathways in \emph{D. melanogaster} \cite{Shi2012}, which has been linked to reductions in population infection rates by \emph{Le. major} in \emph{Lu. longipalpis} \cite{Telleria2012}. The differences in expression may indicate that LLOTMP001859 plays a role in immune response to the \emph{Leishmania} parasite.
 
 \begin{table}[H]
-  \centering
-  \caption{NPC2 EXPRESSION (BLOOD-FED VS. SUGAR-FED)}
+  \begin{center}
+  \caption{\label{tab:sandflies:stat-sig-npc2-sb} NPC2 EXPRESSION (BLOOD-FED VS. SUGAR-FED)}
   \begin{tabular}{ c c c c c } \hline
     \emph{Gene} & \emph{Identifier} & \emph{6 hours} & \emph{24 hours} & \emph{144 hours} \\ \hline
     NPC2 & LLOTMP001859 & Yes (-1.24707) & Yes (2.3397) & No \\
     NPC2 & LLOTMP001861 & No & Yes (2.42737) & Yes (-3.8163)
   \end{tabular}
-  \caption*{Niemann-Pick type C-2 genes with statistically-significant differences in expression between sugar fed and blood fed conditions. Log-fold change is given in parentheses. Positive and negative values indicate up- and down-regulation in blood fed, respectively.}
-  \label{tab:sandflies:stat-sig-npc2-sb}
+  \end{center}
+  \tablenote{Niemann-Pick type C-2 genes with statistically-significant differences in expression between sugar fed and blood fed conditions. Log-fold change is given in parentheses. Positive and negative values indicate up- and down-regulation in blood fed, respectively.}
 \end{table}
 
 \begin{table}[H]
-  \centering
-  \caption{NPC2 EXPRESSION (INFECTED BLOOD-FED VS. BLOOD-FED)}
+  \begin{center}
+  \caption{\label{tab:sandflies:stat-sig-npc2-bi} NPC2 EXPRESSION (INFECTED BLOOD-FED VS. BLOOD-FED)}
   \begin{tabular}{ c c c c c } \hline
     \emph{Gene} & \emph{Identifier} & \emph{6 hours} & \emph{24 hours} & \emph{144 hours} \\ \hline
     NPC2 & LLOTMP001859 & Yes (2.31895) & Yes (1.52988) & No
   \end{tabular}
-  \caption*{Niemann-Pick type C-2 genes with statistically-significant differences in expression between blood fed and infected blood fed conditions. Log-fold change is given in parentheses. Positive and negative values indicate up- and down-regulation in infected blood fed, respectively.}
-  \label{tab:sandflies:stat-sig-npc2-bi}
+  \end{center}
+  \tablenote{Niemann-Pick type C-2 genes with statistically-significant differences in expression between blood fed and infected blood fed conditions. Log-fold change is given in parentheses. Positive and negative values indicate up- and down-regulation in infected blood fed, respectively.}
 \end{table}
 
 
