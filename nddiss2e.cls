@@ -390,8 +390,10 @@
     \begin{copyrightpage}
     \normalfont\normalsize
     \copyright\space Copyright by \\
-    \@copyrightholder \\
-    \@copyrightyear\\
+    %\@copyrightholder \\
+    %\@copyrightyear\\
+    Ronald J. Nowling \\
+    2016 \\
     All Rights Reserved \\[10mm]
     \end{copyrightpage}
   \fi
